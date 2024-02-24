@@ -13,7 +13,7 @@ const ContactForm = () => {
     setIsSubmitted(true);
   };
   return (
-    <div className=' flex items-center justify-center ' style={{ background: 'white', backgroundPosition: 'center top', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', minHeight: '30vh' }}>
+    <div className=' flex items-center justify-center  ' style={{ background: 'white', backgroundPosition: 'center top', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', minHeight: '30vh' }}>
         <div className="container my-10 px- mx-auto ">
           <section className=" text-gray-800">
             <div className=" container text-gray-800 px-4 md:px-20 ">

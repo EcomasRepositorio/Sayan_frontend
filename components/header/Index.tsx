@@ -15,10 +15,10 @@ const Header = () => {
   }
   return (
   <>
-    <div className="bg-[#006eb0] border-gray-200">
+    <div className="bg-primaryblue border-gray-200">
     <div className="flex lg:justify-between justify-center mx-auto max-w-screen-2xl p-2 ">
       <div className="hidden lg:flex">
-      <Link href="/certificate" className="text-lg text-gray-50 hover:underline font-semibold">Verificar certificado</Link>
+      
       </div>
         <div className="flex space-x-6 rtl:space-x-reverse">
             <Link href="/certificate" className="text-lg text-gray-50 hover:underline font-semibold">Verificar certificado</Link>
@@ -33,7 +33,7 @@ const Header = () => {
     <div className="max-w-screen-2xl mx-auto p-2">
         <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="/image/logo_cimade.webp" className="h-8 mx-2" alt="cimade Logo" />
+              <img src="/image/logo.png" className="h-8 mx-2" alt="cimade Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap "></span>
             </Link>
 
@@ -45,21 +45,21 @@ const Header = () => {
             }
             </div>
 
-            <ul className="hidden uppercase font-semibold lg:flex text-[#006eb0] flex-wrap p-3 mx-auto space-x-8 rtl:space-x-reverse text-xm">
+            <ul className="hidden uppercase font-semibold lg:flex text-primaryblue flex-wrap p-3 mx-auto space-x-8 rtl:space-x-reverse text-xm">
                 <li>
-                    <Link href="/" className="hover:text-pink-500" aria-current="page">Inicio</Link>
+                    <Link href="/" className="hover:text-textgreen" aria-current="page">Inicio</Link>
                 </li>
                 <li>
-                    <Link href="/graduate" className="hover:text-pink-500">Diplomados</Link>
+                    <Link href="/graduate" className="hover:text-textgreen">Diplomados</Link>
                 </li>
                 <li>
-                    <Link href="/certs" className="hover:text-pink-500">Certificados</Link>
+                    <Link href="/certs" className="hover:text-textgreen">Certificados</Link>
                 </li>
                 <li>
-                    <Link href="/about" className="hover:text-pink-500">Nosotros</Link>
+                    <Link href="/about" className="hover:text-textgreen">Nosotros</Link>
                 </li>
                 <li>
-                    <Link href="#" className="hover:text-pink-500">Blog</Link>
+                    <Link href="#" className="hover:text-textgreen">Blog</Link>
                 </li>
                 <li>
                 </li>

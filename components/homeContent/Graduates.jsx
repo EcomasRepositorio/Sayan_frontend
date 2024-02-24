@@ -4,10 +4,9 @@ const Graduates = () => {
   return (
     <div>
       <div
-        className="p-5 "
-        style={{
-          backgroundImage: "linear-gradient(to right, #002e79, #006eb0)",
-        }}
+        className="p-5 bg-primaryblue"
+        
+     
       >
         <div className="text-center font-semibold font-poppins">
           <p className="font-extrabold text-white text-[60px] mt-8 mb-5">

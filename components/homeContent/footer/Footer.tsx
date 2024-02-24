@@ -8,11 +8,11 @@ export const Footer = () => {
   return (
     <div className=''>
     <div className='flex-grow'>
-    <footer className="px-4 py-20 text-white" style={{ background: 'linear-gradient(0deg, #006eb0, #002e79)' }}>
+    <footer className="px-4 py-20 bg-primaryblue text-white" >
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-2 gap-4 mb-3 md:grid-cols-3">
           <div title="Go to Kutty Home Page" className="col-span-2 mb-6 md:col-span-1 text-white">
-            <img className="w-auto h-12 mx-auto mb-8" src="/footer/logo.svg" alt="Tu logo" />
+            <img className="w-auto h-12 mx-auto mb-8" src="/footer/logo.png" alt="Tu logo" />
             <nav className="mb-2 ml-8">
               <p className="mb-5 text-x1 font-bold tracking-wider text-gray-50 uppercase">Contáctanos</p>
               <a href="https://api.whatsapp.com/send?phone=51900102090" className="flex mb-3 text-lg font-medium transition md:mb-2">

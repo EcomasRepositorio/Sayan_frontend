@@ -11,14 +11,14 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
       },
       colors: {
-        'primaryrosa': '#ff00d4', // Cambia esto al color rosado que prefieras
-        'primaryblue' : '#002e79',
-        'primaryceleste' : '#006eb0'
+        'primaryblue': '#0d617b', // Cambia esto al color rosado que prefieras
+        'primarygreen' : '#b6d900',
+        'primaryceleste' : '#12a9be'
       },
       textColor: {
-        'textrosa': '#ff00d4', // Cambia esto al color rosado que prefieras
-        'textblue' : '#002e79',
-        'textceleste' : '#006eb0'
+        'textblue': '#0d617b', // Cambia esto al color rosado que prefieras
+        'textgreen' : '#b6d900',
+        'textceleste' : '#12a9be'
       },
       animation: {
         'fade-in-left': 'fade-in-left 0.5s ease-in-out',

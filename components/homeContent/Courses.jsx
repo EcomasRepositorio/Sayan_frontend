@@ -5,10 +5,8 @@ const Courses = () => {
     <div>
       {/* CURSOS-INFORMACION */}
       <div
-        className="p-5"
-        style={{
-          backgroundImage: "linear-gradient(to right, #002e79, #006eb0)",
-        }}
+        className="p-5 bg-primaryblue"
+        
       >
         <div className="text-center font-semibold font-poppins">
           <p style={{ color: "white", fontSize: "60px" }}>
