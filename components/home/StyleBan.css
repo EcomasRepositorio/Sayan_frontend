@@ -60,12 +60,12 @@ header a{
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
-    font-size: 5em;
+    font-size:  75px;
     font-weight: bold;
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color: #f1683a;
+    color:#0d617b ;
 }
 .carousel .list .item .buttons{
     display: grid;
@@ -73,6 +73,7 @@ header a{
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 20px;
+
 }
 .carousel .list .item .buttons button{
     border: none;
@@ -84,7 +85,7 @@ header a{
 .carousel .list .item .buttons button:nth-child(2){
     background-color: transparent;
     border: 1px solid #fff;
-    color: #eee;
+    color: #fff;
 }
 /* thumbail */
 .thumbnail{

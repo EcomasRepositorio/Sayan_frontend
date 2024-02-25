@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bodyy, .nav, .nav ul, .nav ul li, .nav ul li a {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.bodyy {
+  width: 100%;
+  background: black;
+  font-family: 'Outfit', sans-serif;
+  padding: 0 25px;
+}
+
+.nav {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  list-style-type: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #00000097;
+}
+
+.nav ul li a:hover {
+  color: #0d6efd;
+  border-bottom: 3px solid #e91e61;
+}
+
+.menu {
+  display: none;
+}
+
+.hero-container {
+  margin-top: 55px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  padding-top: 80px;
+}
+
+.content {
+  width: 50%;
+}
+
+.content h2 {
+  font-size: 3.8em;
+}
+
+.content p {
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: white;
+  line-height: 2.18rem;
+}
+
+button {
+  padding: 0.75rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all ease-in-out 0.15s;
+  align-items: center;
+}
+
+.btn {
+  background: #4384e6;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background: #0066ff;
+}
+
+.btn-outline {
+  border: 1px solid #0d6efd;
+  background: transparent;
+  color: #0d6efd;
+  margin-left: 5px;
+}
+
+button i {
+  font-size: 0.78em;
+}
+
+.blob {
+  background: url(https://img.freepik.com/fotos-premium/hombre-que-lleva-casco-amarillo-gafas-esta-pie-brazos-cruzados_66339-1038.jpg?w=740) center center / cover;
+  width: 520px;
+  height: 680px;
+  margin: 20px;
+  box-shadow: 0 5px 5px 5px #b6d900;
+  animation: animate 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+
+
+
+
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid #000;  /* Ajusta el estilo del cursor */
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.15em;  /* Ajusta el espaciado entre letras si es necesario */
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #000;
+    }
+  }
+  
