@@ -11,7 +11,7 @@ const Graduates = () => {
         </div>
 
         <div className="team-area">
-            <figure className="box">
+            <figure className="boxG">
                 <figcaption>
                     <h2>UX Designer</h2>
                     <p>Lorem ipsum dolor sit amet</p>
@@ -25,7 +25,7 @@ const Graduates = () => {
                 <img alt="" src="/image/presentation.jpg" />
             </figure>
 
-            <figure className="box">
+            <figure className="boxG">
                 <figcaption>
                     <h2>Web Designer</h2>
                     <p>Lorem ipsum dolor sit amet</p>
@@ -39,7 +39,7 @@ const Graduates = () => {
                 <img alt="" src="/image/presentation.jpg" />
             </figure>
 
-            <figure className="box">
+            <figure className="boxG">
                 <figcaption>
                     <h2>Developer</h2>
                     <p>Lorem ipsum dolor sit amet</p>
@@ -56,7 +56,7 @@ const Graduates = () => {
        
       
         <div className="team-area">
-            <figure className="box">
+            <figure className="boxG">
                 <figcaption>
                     <h2>UX Designer</h2>
                     <p>Lorem ipsum dolor sit amet</p>
@@ -70,7 +70,7 @@ const Graduates = () => {
                 <img alt="" src="/image/presentation.jpg" />
             </figure>
 
-            <figure className="box">
+            <figure className="boxG">
                 <figcaption>
                     <h2>Web Designer</h2>
                     <p>Lorem ipsum dolor sit amet</p>
@@ -84,7 +84,7 @@ const Graduates = () => {
                 <img alt="" src="/image/presentation.jpg" />
             </figure>
 
-            <figure className="box">
+            <figure className="boxG">
                 <figcaption>
                     <h2>Developer</h2>
                     <p>Lorem ipsum dolor sit amet</p>

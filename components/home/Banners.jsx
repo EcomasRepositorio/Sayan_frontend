@@ -3,50 +3,44 @@ import "./StyleBan.css";
 
 const Banners = () => {
   useEffect(() => {
-    // Tu código JavaScript existente aquí
     let nextDom = document.getElementById("next");
     let prevDom = document.getElementById("prev");
 
     let carouselDom = document.querySelector(".carousel");
     let SliderDom = carouselDom.querySelector(".carousel .list");
     let thumbnailBorderDom = document.querySelector(".carousel .thumbnail");
-    let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
     let timeDom = document.querySelector(".carousel .time");
 
-    thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
     let timeRunning = 3000;
     let timeAutoNext = 7000;
-
-    nextDom.onclick = function () {
-      showSlider("next");
-    };
-
-    prevDom.onclick = function () {
-      showSlider("prev");
-    };
-
     let runTimeOut;
-    let runNextAuto = setTimeout(() => {
-      nextDom.click();
-    }, timeAutoNext);
+    let runNextAuto;
 
+    // Agregamos el listener de click a los elementos de React
+    if (nextDom && prevDom) {
+      nextDom.addEventListener("click", () => showSlider("next"));
+      prevDom.addEventListener("click", () => showSlider("prev"));
+    }
+
+    // Función para mostrar el slider
     function showSlider(type) {
       let SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
       let thumbnailItemsDom = document.querySelectorAll(
         ".carousel .thumbnail .item"
       );
 
-      if (type === "next") {
+      if (type === "next" && thumbnailItemsDom.length > 0) {
         SliderDom.appendChild(SliderItemsDom[0]);
         thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
         carouselDom.classList.add("next");
-      } else {
+      } else if (thumbnailItemsDom.length > 0) {
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
         thumbnailBorderDom.prepend(
           thumbnailItemsDom[thumbnailItemsDom.length - 1]
         );
         carouselDom.classList.add("prev");
       }
+
       clearTimeout(runTimeOut);
       runTimeOut = setTimeout(() => {
         carouselDom.classList.remove("next");
@@ -58,22 +52,31 @@ const Banners = () => {
         nextDom.click();
       }, timeAutoNext);
     }
-  }, []); // El array vacío indica que este efecto se ejecuta solo una vez después de que el componente se monta
 
+    // Limpieza del efecto
+    return () => {
+      if (nextDom && prevDom) {
+        nextDom.removeEventListener("click", () => showSlider("next"));
+        prevDom.removeEventListener("click", () => showSlider("prev"));
+      }
+    };
+  }, []);
+
+  
   return (
     <div>
+      
       <header></header>
-
-      <div className="carousel">
+      <div className="carousel">    
         <div className="list">
           <div className="item">
-            <img src="image/banner1.jpg" />
+            <img src="image/banner2.jpg" />
             <div className="content">
               <div className="author">Jhosy</div>
               <div className="title">
-                Somos Corporación <div className="topic">SAYAN</div>
+                Somos Corporación <div className="topic"></div>
               </div>
-              <div className="topic">SAYAN</div>
+              <div className="topic">SAYANnnn</div>
               <div className="des">
               Descubre Diplomados y Cursos virtuales de excelencia. CONOCE MAS
                 Inicia un programa 100% online y certifícate. Inscribete Ahora
@@ -99,7 +102,7 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/banner3.jpg" />
+            <img src="image/banner2.jpg" />
             <div className="content">
               <div className="author">Jhosy</div>
               <div className="title">DESIGN AVICII</div>
@@ -116,7 +119,7 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/banner4.jpg" />
+            <img src="image/banner2.jpg" />
             <div className="content">
               <div className="author">Jhosy</div>
               <div className="title">DESIGN AVICII</div>
