@@ -124,25 +124,28 @@ button i {
 }
 
 
+.spyFamily {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 17ch;
+  overflow: hidden; /* Para ocultar el cursor parpadeante al final */
 
+  animation: typing 2s steps(12),blink .5s infinite step-end alternate;
+  overflow:hidden ;
+}
 
-
-.typing-animation {
-    display: inline-block;
-    overflow: hidden;
-    border-right: 0.15em solid #000;  /* Ajusta el estilo del cursor */
-    white-space: nowrap;
-    margin: 0;
-    letter-spacing: 0.15em;  /* Ajusta el espaciado entre letras si es necesario */
-    animation: blink-caret 0.75s step-end infinite;
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  @keyframes blink-caret {
-    from, to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #000;
-    }
+}
+
+@keyframes blink {
+  to {
+    border-color: transparent;
   }
+}
+
   

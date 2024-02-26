@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./StylePresentation.css";
-import TypingAnimation from './typing';
+
 
 const Presentation = () => {
  
@@ -9,7 +9,7 @@ const Presentation = () => {
       <section className="hero-container mb-8">
         <div className="content">
         <h2 className="text-primaryceleste font-semibold">
-            <TypingAnimation texto="SAYAN" />
+         <span className='spyFamily text-6xl'>CORPORACIÓN SAYAN</span> 
           </h2>
           <p className="text-stone-50">
             Somos una empresa que brinda un servicio de especializacion para

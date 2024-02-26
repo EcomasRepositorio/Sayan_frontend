@@ -78,10 +78,7 @@ const Banners = () => {
               Descubre Diplomados y Cursos virtuales de excelencia. CONOCE MAS
                 Inicia un programa 100% online y certifícate. Inscribete Ahora
               </div>
-              <div className="buttons">
-                <button>FIRST</button>
-                <button>SUBSCRIBE</button>
-              </div>
+             
             </div>
           </div>
           <div className="item">
@@ -98,10 +95,7 @@ const Banners = () => {
                 laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
                 exercitationem eum aperiam illo illum laudantium?
               </div>
-              <div className="buttons">
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
-              </div>
+              
             </div>
           </div>
           <div className="item">
@@ -118,10 +112,7 @@ const Banners = () => {
                 laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
                 exercitationem eum aperiam illo illum laudantium?
               </div>
-              <div className="buttons">
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
-              </div>
+              
             </div>
           </div>
           <div className="item">
@@ -138,10 +129,7 @@ const Banners = () => {
                 laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
                 exercitationem eum aperiam illo illum laudantium?
               </div>
-              <div className="buttons">
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
-              </div>
+            
             </div>
           </div>
         </div>

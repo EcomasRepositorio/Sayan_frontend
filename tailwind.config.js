@@ -16,7 +16,7 @@ module.exports = {
         'primaryceleste' : '#12a9be'
       },
       textColor: {
-        'textblue': '#0d617b', // Cambia esto al color rosado que prefieras
+        'textblue': '#0d617b', // Colores de Sayan 
         'textgreen' : '#b6d900',
         'textceleste' : '#12a9be'
       },
