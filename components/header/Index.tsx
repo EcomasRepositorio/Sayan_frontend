@@ -15,7 +15,8 @@ const Header = () => {
   }
   return (
   <>
-    <div className="bg-black border-gray-200">
+    <div className=" bg-primaryblue ">
+
     <div className="flex lg:justify-between justify-center mx-auto max-w-screen-2xl p-2 ">
       <div className="hidden lg:flex">
       
@@ -29,11 +30,11 @@ const Header = () => {
         </div>
     </div>
 </div>
-<div className="bg-black border shadow-2xl">
+<div className="bg-white shadow-2xl mb-10">
     <div className="max-w-screen-2xl mx-auto p-2">
         <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="/image/logo.png" className="h-8 mx-2" alt="cimade Logo" />
+              <img src="/icons/logo.png" className="h-8 mx-2" alt="sayan Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap "></span>
             </Link>
 
@@ -109,10 +110,10 @@ const Header = () => {
               className="text-white ">
               <IoPersonAddOutline  className='text-4xl hover:text-pink-500 mb-6'/>
           </Link>
-          <Link href='https://api.whatsapp.com/send?phone=51900102090' target='_blank'
+          <Link href='https://api.whatsapp.com/send?phone=51978490739' target='_blank'
             className="text-green-500 border border-gray-100 rounded-2xl px-8 py-2 uppercase font-bold">
             <BsWhatsapp className='text-2xl inline-block mr-2'/>
-              +51 900102090
+              +51 978490739
           </Link>
         </div>
       </div>

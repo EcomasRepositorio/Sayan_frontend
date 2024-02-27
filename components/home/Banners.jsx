@@ -66,7 +66,7 @@ const Banners = () => {
   return (
     <div>
       
-      <header></header>
+      
       <div className="carousel">    
         <div className="list">
           <div className="item">
@@ -139,35 +139,35 @@ const Banners = () => {
 
         <div className="thumbnail">
           <div className="item">
-            <img src="image/letra.jpg" />
+            <img src="icons/letra.jpg" />
             <div className="content">
               <div className="title">Name Sliderrrrrrr</div>
               <div className="description">Description</div>
             </div>
           </div>
           <div className="item">
-            <img src="image/letra.jpg" />
+            <img src="icons/letra.jpg" />
             <div className="content">
               <div className="title">Name Sliderrrrrrr</div>
               <div className="description">Description</div>
             </div>
           </div>
           <div className="item">
-            <img src="image/letra.jpg" />
+            <img src="icons/letra.jpg" />
             <div className="content">
               <div className="title">Name Sliderrrrr</div>
               <div className="description">Descriptionrrrr</div>
             </div>
           </div>
           <div className="item">
-            <img src="image/letra.jpg" />
+            <img src="icons/letra.jpg" />
             <div className="content">
               <div className="title">Name Sliderrrrrr</div>
               <div className="description">Descriptionrrrrr</div>
             </div>
           </div>
           <div className="item">
-            <img src="image/letra.jpg" />
+            <img src="icons/letra.jpg" />
             <div className="content">
               <div className="title">Name Sliderrrrrr</div>
               <div className="description">Descriptionrrrrr</div>

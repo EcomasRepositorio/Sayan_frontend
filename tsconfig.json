@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/homeContent/Courses.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/homeContent/Courses.jsx", "components/graduate/GraduateAgronomy.jsx"],
   "exclude": ["node_modules"]
 }

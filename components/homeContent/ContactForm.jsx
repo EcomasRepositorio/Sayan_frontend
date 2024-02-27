@@ -17,7 +17,7 @@ const ContactForm = () => {
         <div className="container my-10 px- mx-auto ">
           <section className=" text-gray-800">
             <div className=" container text-gray-800 px-4 md:px-20 ">
-            <div className=" rounded-3xl shadow-lg py-2 md:py-8 px-2 md:px-20 mt-4  backdrop-filter  " style={{ background: 'linear-gradient(0deg, #006eb0, #002e79)',maxWidth: '100%' }}>
+            <div className=" rounded-3xl shadow-lg py-2 md:py-8 px-2 md:px-20 mt-4  backdrop-filter  " style={{ background: 'linear-gradient(0deg, #0d617b , #12a9be )',maxWidth: '100%' }}>
               <h2 className="lg:text-5xl text-3xl text-center font-black leading-10 pb-5 mt-4"style={{ color: 'white' }}>
 
                 Contáctanos

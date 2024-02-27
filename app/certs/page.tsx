@@ -37,7 +37,7 @@ const Certificate: React.FC = () => {
             Certificados
           </h2>
           <p className="font-semibold text-gray-500 sm:text-xl">
-            En este módulo podrá realizar la búsqueda de certificados de los diferentes eventos ofrecidos por CIMADE.
+            En este módulo podrá realizar la búsqueda de certificados de los diferentes eventos ofrecidos por SAYAN.
           </p>
           <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-gray-500">
             Buscar por:

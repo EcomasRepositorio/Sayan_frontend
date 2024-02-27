@@ -9,6 +9,7 @@ import Whatsapp from '@/components/whatsapp/Index'
 export default function Main() {
   return (
     <main >
+
       <Home />
       <HomeContent />
       <Whatsapp />
