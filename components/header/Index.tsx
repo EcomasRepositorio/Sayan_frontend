@@ -46,7 +46,7 @@ const Header = () => {
             }
             </div>
 
-            <ul className="hidden uppercase font-semibold lg:flex text-white flex-wrap p-3 mx-auto space-x-8 rtl:space-x-reverse text-xm">
+            <ul className="hidden uppercase font-semibold lg:flex text-primaryblue flex-wrap p-3 mx-auto space-x-8 rtl:space-x-reverse text-xm">
                 <li>
                     <Link href="/" className="hover:text-textgreen" aria-current="page">Inicio</Link>
                 </li>
