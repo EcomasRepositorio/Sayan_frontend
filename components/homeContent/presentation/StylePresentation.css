@@ -25,11 +25,11 @@
 .hero-container{
     margin-top: 25px;
     display: flex;
-    gap: 20px;
+    gap: 80px;
     justify-content: space-between;
     align-items: center;
-    height: 90vh;
-    padding-top: 80px;
+    height: 75vh;
+    padding-top: 50px;
 }
 
 .content{

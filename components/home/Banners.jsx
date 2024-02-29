@@ -139,38 +139,38 @@ const Banners = () => {
 
         <div className="thumbnail">
           <div className="item">
-            <img src="icons/letra.jpg" />
+            <img src="icons/icono_banner_white.png" />
             <div className="content">
-              <div className="title">Name Sliderrrrrrr</div>
-              <div className="description">Description</div>
+              <div className="title"></div>
+              <div className="description"></div>
             </div>
           </div>
           <div className="item">
-            <img src="icons/letra.jpg" />
+          <img src="icons/icono_banner_white.png" />
             <div className="content">
-              <div className="title">Name Sliderrrrrrr</div>
-              <div className="description">Description</div>
+              <div className="title"></div>
+              <div className="description"></div>
             </div>
           </div>
           <div className="item">
-            <img src="icons/letra.jpg" />
+          <img src="icons/icono_banner_white.png" />
             <div className="content">
-              <div className="title">Name Sliderrrrr</div>
-              <div className="description">Descriptionrrrr</div>
+              <div className="title"></div>
+              <div className="description"></div>
             </div>
           </div>
           <div className="item">
-            <img src="icons/letra.jpg" />
+          <img src="icons/icono_banner_white.png" />
             <div className="content">
-              <div className="title">Name Sliderrrrrr</div>
-              <div className="description">Descriptionrrrrr</div>
+              <div className="title"></div>
+              <div className="description"></div>
             </div>
           </div>
           <div className="item">
-            <img src="icons/letra.jpg" />
+          <img src="icons/icono_banner_white.png" />
             <div className="content">
-              <div className="title">Name Sliderrrrrr</div>
-              <div className="description">Descriptionrrrrr</div>
+              <div className="title"></div>
+              <div className="description"></div>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const Certificate: React.FC = () => {
       <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">
       <div className='flex justify-center mb-4 lg:gap-10 mt-12'>
             <img src={'/certificate/logo_unp.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain"/>
-            <img src={'/certificate/logo_cimade.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain"/>
+            <img src={'/certificate/logo_certificados.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain"/>
             <img src={'/certificate/logo_cip_tacna.png'}className="lg:w-44 lg:h-44 w-32 h-32 object-contain "/>
           </div>
       </div>

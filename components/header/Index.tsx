@@ -66,11 +66,11 @@ const Header = () => {
                 </li>
             </ul>
             <div className="hidden lg:flex flex-wrap justify-end max-w-screen-2xl space-x-9">
-                  <Link href='https://api.whatsapp.com/send?phone=51900102090' target='_blank'
+                  <Link href='https://api.whatsapp.com/send?phone=51978490739' target='_blank'
                     className="text-lg font-semibold text-green-600 hover:text-green-500">
 
                     <BsWhatsapp className='inline-block align-middle mr-1'/>
-                    +51 900102090</Link>
+                    +51 978490739</Link>
                   <Link href="/login" className="text-blue-600">
                   <IoPersonAddOutline  className='text-2xl hover:text-pink-500'/>
                   </Link>
