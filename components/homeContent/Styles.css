@@ -179,7 +179,7 @@ button {  font-size: 18px;
 
 .bodyGra {
 	font-family: "Montserrat", sans-serif;
-	background: #17374c;
+	background: #1e4c17;
 }
 .team-area {
 	display: flex;
@@ -279,4 +279,9 @@ button {  font-size: 18px;
 
 .group:hover .group-hover\:my-rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+
+.blur-backgroundd {
+  backdrop-filter: blur(15px); /* Ajusta el valor según el nivel de desenfoque deseado */
 }

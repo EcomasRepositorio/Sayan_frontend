@@ -30,7 +30,7 @@ const Header = () => {
         </div>
     </div>
 </div>
-<div className="bg-white shadow-2xl mb-10">
+<div className="bg-white shadow-2xl mb-0">
     <div className="max-w-screen-2xl mx-auto p-2">
         <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -46,7 +46,7 @@ const Header = () => {
             }
             </div>
 
-            <ul className="hidden uppercase font-semibold lg:flex text-primaryblue flex-wrap p-3 mx-auto space-x-8 rtl:space-x-reverse text-xm">
+            <ul className="hidden uppercase font-semibold lg:flex text-primaryblue flex-wrap p-2 mx-auto space-x-8 rtl:space-x-reverse text-xm">
                 <li>
                     <Link href="/" className="hover:text-textgreen" aria-current="page">Inicio</Link>
                 </li>

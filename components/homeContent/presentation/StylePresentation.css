@@ -23,9 +23,9 @@
 
 /* hero section */
 .hero-container{
-    margin-top: 25px;
+    margin-top: 45px;
     display: flex;
-    gap: 80px;
+    gap: 25px;
     justify-content: space-between;
     align-items: center;
     height: 75vh;
@@ -51,16 +51,16 @@
 
 /* blob */
 .blob {
-    width: 500px;
-    height: 500px;
-    margin: 20px;
+    width: 400px;
+    height: 450px;
+    margin: 5px;
     box-shadow: 0 10px 10px 10px rgba(0, 181, 226, 0.2);
     animation: animate 3s ease-in-out infinite;
     transition: all 1s ease-in-out;
 }
 
 .blob {
-    background-image: url(https://images.unsplash.com/photo-1509839862600-309617c3201e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+    background-image: url('/certificate/banner_certs5.jpg');
     background-size: cover;
     -webkit-background-position: center;
     background-position: center center;

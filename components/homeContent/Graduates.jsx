@@ -1,15 +1,18 @@
 import "./Styles.css";
 
+
 const Graduates = () => {
+
+  
+
   return (
     <div>
       <div className="p-5 bg-primaryblue">
-        <div className="text-center font-semibold font-poppins">
-          <p className="font-extrabold text-white text-[60px] mt-8 mb-5">
+          <div className="text-center font-semibold font-poppins">
+          <p className="font-extrabold text-white text-[70px] mt-8 mb-5">
             Nuestros Diplomados
           </p>
         </div>
-
         <div className="team-area">
             <figure className="boxG">
                 <figcaption>

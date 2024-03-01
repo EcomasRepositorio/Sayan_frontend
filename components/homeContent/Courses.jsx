@@ -4,9 +4,14 @@ import "./Styles.css"
 
 const Course = () => {
   return (
-    <section className='bg-primaryblue'>
+    <section className='p-5 bg-primaryblue'>
+      <div className="text-center font-semibold font-poppins">
+          <p className="font-extrabold text-white text-[70px] mt-0 mb-4">
+            Nuestros Cursos
+          </p>
+        </div>
     <div className="grid lg:grid-cols-3 md:grid-cols-2 max-w-screen-xl mx-auto justify-center items-center gap-10 text-white ">
-
+     
       <div className="lg:w-[400px] w-[300px] h-[420px] bg-transparent cursor-pointer group perspective mt-20">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
           <div className="absolute backface-hidden border-2 w-full h-full rounded-lg">

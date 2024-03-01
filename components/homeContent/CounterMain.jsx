@@ -37,14 +37,13 @@ const CounterMain = () => {
         <div className="mx-auto container w-full flex flex-col justify-center items-center">
           <div className="flex justify-center items-center flex-col">
             <div className="mt-20">
-              <h1 className="lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-primaryblue text-center">
-                Sayan: Tu Socio en el Éxito Profesional.
+              <h1 className="lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-primaryceleste text-center">
+              Sayan: Tu Aliado en el Camino hacia el Éxito Profesional.
               </h1>
             </div>
             <div className="mt-6 mx-2 md:mx-0 text-center">
-              <p className="lg:text-xl md:text-lg leading-6 text-sm text-neutral-500 subtitulo">
-                ¡Únete a nosotros y marca la diferencia en tu trayectoria
-                profesional! <br />
+              <p className="lg:text-xl md:text-lg leading-6 text-sm text-primaryblue subtitulo">
+            
               </p>
             </div>
           </div>
