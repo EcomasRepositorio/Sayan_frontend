@@ -70,7 +70,7 @@ const Banners = () => {
       <div className="carousel">    
         <div className="list">
           <div className="item">
-            <img src="image/banner2.jpg" />
+            <img src="image/prueba2.jpg" />
             <div className="content">
               <div className="author">Jhosy</div>
               <div className="title">
@@ -85,7 +85,7 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/banner2.jpg" />
+            <img src="image/prueba4.jpg" />
             <div className="content">
               <div className="author">Jhosy</div>
               <div className="title">DESIGN AVICII</div>
@@ -102,7 +102,7 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/banner2.jpg" />
+            <img src="image/prueba7.jpg" />
             <div className="content">
               <div className="author">Jhosy</div>
               <div className="title">DESIGN AVICII</div>
@@ -119,7 +119,7 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/banner2.jpg" />
+            <img src="image/prueba3.jpg" />
             <div className="content">
               <div className="author">Jhosy</div>
               <div className="title">DESIGN AVICII</div>
