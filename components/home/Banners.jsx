@@ -70,110 +70,46 @@ const Banners = () => {
       <div className="carousel">    
         <div className="list">
           <div className="item">
-            <img src="image/prueba2.jpg" />
+            <img src="image/black.jpg" />
             <div className="content">
-              <div className="author">Jhosy</div>
-              <div className="title">
-                Somos Corporación <div className="topic"></div>
+              <div className="author">Corporación Sayan</div>
+              <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
+              <div className="topic"> </div>
               </div>
-              <div className="topic">SAYANnnn</div>
+              <div className="topic"></div>
               <div className="des">
-              Descubre Diplomados y Cursos virtuales de excelencia. CONOCE MAS
-                Inicia un programa 100% online y certifícate. Inscribete Ahora
+              
               </div>
              
             </div>
           </div>
           <div className="item">
-            <img src="image/prueba4.jpg" />
+            <img src="image/black.jpg" />
             <div className="content">
-              <div className="author">Jhosy</div>
-              <div className="title">DESIGN AVICII</div>
-              <div className="topic">SAYAN</div>
+              <div className="author">Corporación Sayan</div>
+              <div className="title">❝Aprende con Pasión: Explora Nuestras Oportunidades de Formación❝</div>
+              <div className="topic"></div>
               <div className="des">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                officiis unde, eaque optio ratione aliquid assumenda facere ab
-                et quasi ducimus aut doloribus non numquam. Explicabo,
-                laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
-                exercitationem eum aperiam illo illum laudantium?
+             
               </div>
               
             </div>
           </div>
           <div className="item">
-            <img src="image/prueba7.jpg" />
+            <img src="image/black.jpg" />
             <div className="content">
-              <div className="author">Jhosy</div>
-              <div className="title">DESIGN AVICII</div>
-              <div className="topic">SAYAN</div>
+              <div className="author">Corporación Sayan</div>
+              <div className="title">❝Descubre el Conocimiento del Futuro: Empieza ahora❝</div>
+              <div className="topic"></div>
               <div className="des">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                officiis unde, eaque optio ratione aliquid assumenda facere ab
-                et quasi ducimus aut doloribus non numquam. Explicabo,
-                laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
-                exercitationem eum aperiam illo illum laudantium?
+               
               </div>
               
-            </div>
-          </div>
-          <div className="item">
-            <img src="image/prueba3.jpg" />
-            <div className="content">
-              <div className="author">Jhosy</div>
-              <div className="title">DESIGN AVICII</div>
-              <div className="topic">SAYAN</div>
-              <div className="des">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                officiis unde, eaque optio ratione aliquid assumenda facere ab
-                et quasi ducimus aut doloribus non numquam. Explicabo,
-                laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
-                exercitationem eum aperiam illo illum laudantium?
-              </div>
-            
             </div>
           </div>
         </div>
 
-        <div className="thumbnail">
-          <div className="item">
-            <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-          <div className="item">
-          <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-          <div className="item">
-          <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-          <div className="item">
-          <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-          <div className="item">
-          <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-        </div>
+        
 
         <div className="arrows">
           <button id="prev">{"<"}</button>

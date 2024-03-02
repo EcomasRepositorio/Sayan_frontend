@@ -33,12 +33,13 @@
     text-shadow: 0 5px 10px #0004;
 }
 .carousel .list .item .author{
+    color:#12a9be ;
     font-weight: bold;
     letter-spacing: 10px;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
-    font-size:  75px;
+    font-size:  60px;
     font-weight: bold;
     line-height: 1.3em;
 }
@@ -103,7 +104,7 @@
 /* arrows */
 .arrows{
     position: absolute;
-    top: 80%;
+    top: 75%;
     right: 52%;
     z-index: 100;
     width: 300px;
@@ -111,6 +112,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    
 }
 .arrows button{
     width: 40px;
@@ -215,7 +217,7 @@
     z-index: 1000;
     width: 0%;
     height: 3px;
-    background-color: #b6d900;
+    background-color: transparent;
     left: 0;
     top: 0;
 }

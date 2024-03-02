@@ -30,7 +30,7 @@ const Presentation = () => {
           transition={{ duration: 0.5 }}
           className="content "
         >
-        <div className="flex items-center font-semibold font-poppins lg:text-8xl text-6xl p-1 mb-4 text-center"  style={{ background: 'linear-gradient(to right, #0d617b, #b6d900)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Alcanza nuevos límites, con SAYAN!</div>
+        <div className="flex items-center font-semibold font-poppins lg:text-8xl text-6xl p-1 mb-4 text-center"  style={{ background: 'linear-gradient(to right, #0d617b, #b6d900)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Alcanza nuevos límites, con Nosotros!</div>
 
 
 
