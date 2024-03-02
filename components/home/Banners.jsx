@@ -8,7 +8,6 @@ const Banners = () => {
 
     let carouselDom = document.querySelector(".carousel");
     let SliderDom = carouselDom.querySelector(".carousel .list");
-    let thumbnailBorderDom = document.querySelector(".carousel .thumbnail");
     let timeDom = document.querySelector(".carousel .time");
 
     let timeRunning = 3000;
@@ -25,19 +24,12 @@ const Banners = () => {
     // Función para mostrar el slider
     function showSlider(type) {
       let SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
-      let thumbnailItemsDom = document.querySelectorAll(
-        ".carousel .thumbnail .item"
-      );
 
-      if (type === "next" && thumbnailItemsDom.length > 0) {
+      if (type === "next") {
         SliderDom.appendChild(SliderItemsDom[0]);
-        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
         carouselDom.classList.add("next");
-      } else if (thumbnailItemsDom.length > 0) {
+      } else {
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
-        thumbnailBorderDom.prepend(
-          thumbnailItemsDom[thumbnailItemsDom.length - 1]
-        );
         carouselDom.classList.add("prev");
       }
 
@@ -65,8 +57,6 @@ const Banners = () => {
   
   return (
     <div>
-      
-      
       <div className="carousel">    
         <div className="list">
           <div className="item">
@@ -74,42 +64,63 @@ const Banners = () => {
             <div className="content">
               <div className="author">Corporación Sayan</div>
               <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
-              <div className="topic"> </div>
+                <div className="topic"> </div>
               </div>
               <div className="topic"></div>
-              <div className="des">
-              
-              </div>
-             
+              <div className="des"></div>
             </div>
           </div>
           <div className="item">
             <img src="image/black.jpg" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
-              <div className="title">❝Aprende con Pasión: Explora Nuestras Oportunidades de Formación❝</div>
+              <div className="title">❝Aprende con Pasión: Explora Nuestras Oportunidades de Formación en Sayan❝</div>
               <div className="topic"></div>
-              <div className="des">
-             
-              </div>
-              
+              <div className="des"></div>
             </div>
           </div>
           <div className="item">
             <img src="image/black.jpg" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
-              <div className="title">❝Descubre el Conocimiento del Futuro: Empieza ahora❝</div>
+              <div className="title">❝Descubre el Conocimiento del Futuro: Únete a Sayan para tu Formación❝</div>
               <div className="topic"></div>
-              <div className="des">
-               
-              </div>
-              
+              <div className="des"></div>
             </div>
           </div>
         </div>
 
-        
+        {/* Eliminado el bloque de miniaturas */}
+        {/* <div className="thumbnail">
+          <div className="item">
+            <img src="icons/icono_banner_white.png" />
+            <div className="content">
+              <div className="title"></div>
+              <div className="description"></div>
+            </div>
+          </div>
+          <div className="item">
+            <img src="icons/icono_banner_white.png" />
+            <div className="content">
+              <div className="title"></div>
+              <div className="description"></div>
+            </div>
+          </div>
+          <div className="item">
+            <img src="icons/icono_banner_white.png" />
+            <div className="content">
+              <div className="title"></div>
+              <div className="description"></div>
+            </div>
+          </div>
+          <div className="item">
+            <img src="icons/icono_banner_white.png" />
+            <div className="content">
+              <div className="title"></div>
+              <div className="description"></div>
+            </div>
+          </div>
+        </div> */}
 
         <div className="arrows">
           <button id="prev">{"<"}</button>
