@@ -16,7 +16,7 @@ export const ItemCard = ({ number, description, animated, animation, icon }) => 
 
   return (
     <div
-      className={`flex justify-center flex-col items-center w-36 h-36 md:w-44 md:h-48 lg:w-56 lg:h-56 blur-backgroundd border-2 border-primarygreen border-opacity-80 shadow-md rounded-2xl ${animated ? `animate-${animation}` : ''}`}
+      className={`flex justify-center flex-col items-center w-36 h-36 md:w-44 md:h-48 lg:w-56 lg:h-46 blur-backgroundd border-2 border-primarygreen border-opacity-80 shadow-md rounded-2xl ${animated ? `animate-${animation}` : ''}`}
       style={{
         position: "relative",
         zIndex: 1, // Asegura que este elemento esté por encima del video

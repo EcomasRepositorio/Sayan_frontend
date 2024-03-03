@@ -56,7 +56,7 @@ const Banners = () => {
 
   
   return (
-    <div>
+    <div className="">
       <div className="carousel">    
         <div className="list">
           <div className="item">

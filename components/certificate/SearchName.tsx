@@ -172,8 +172,7 @@ const SearchName:React.FC<SearchNameProps> = ({ onSearchName }) => {
                   <Modal open={openModals[index]} onClose={() => closeStudentModal(index)}>
                     <div className='flex justify-center mb-4'>
                       <img src={'/certificate/logo_unp.png'} className="lg:w-32 lg:h-32 w-28 h-28 object-contain"/>
-                      <img src={'/certificate/logo_cimade.png'} className="lg:w-32 lg:h-32 w-28 h-28 object-contain"/>
-                      <img src={'/certificate/logo_cip_tacna.png'}className="lg:w-32 lg:h-32 w-28 h-28 object-contain "/>
+                      <img src={'/certificate/logo_certificados.png'} className="lg:w-24 lg:h-32 w-28 h-28 object-contain"/>
                     </div>
                     <div className="max-w-md mx-auto p-6 bg-white rounded-md">
                       {tableRows.map((row, index) => (
