@@ -3,7 +3,7 @@
     text-align: center;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #ffffff;
+    color: #0d617b;
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
@@ -42,7 +42,7 @@
   }
 
   .bg-imagee {
-    background-image: url('/certificate/blue.jpg');
+    background-image: url('/certificate/yellow.jpg');
     background-size: cover;
     background-position: center;
   }

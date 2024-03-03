@@ -23,7 +23,7 @@ const Certificate: React.FC = () => {
 
   return (
     <section id="certs" className="p-2 bg-imagee">
-      <div className=" max-w-screen-xl mx-auto mb-12 border mt-12 rounded-3xl shadow-2xl text-center lg:mb-20 p-2 blur-background">
+      <div className=" max-w-screen-lg mx-auto mb-12 border mt-12 rounded-3xl shadow-2xl text-center lg:mb-20 p-2 blur-background">
         <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">
           <div className="flex justify-center mb-4 lg:gap-10 mt-12">
             <img
@@ -42,14 +42,14 @@ const Certificate: React.FC = () => {
           <h2 className="mb-4 mt-20 text-4xl font-extrabold text-primaryblue">
             Certificados
           </h2>
-          <p className="font-semibold text-white sm:text-xl">
+          <p className="font-semibold text-primaryblue sm:text-xl px-36">
             En este módulo podrá realizar la búsqueda de certificados de los
             diferentes eventos ofrecidos por SAYAN.
           </p>
-          <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-white">
+          <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-primaryblue">
             Buscar por:
           </p>
-          <div className="lg:flex flex-wrap justify-center items-center text-center lg:ml-56 lg:mr-56">
+          <div className="lg:flex flex-wrap justify-center items-center text-center lg:ml-40 lg:mr-40">
             <button
               onClick={() => handleButton("documentNumber")}
               className={`buttonGlobal lg:mb-20 mb-4 font-bold rounded-lg text-md px-7 py-3 text-center inline-block
