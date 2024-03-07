@@ -39,14 +39,14 @@ const Certificate: React.FC = () => {
           </div>
         </div>
         <div className="">
-          <h2 className="mb-4 mt-20 text-4xl font-extrabold text-primaryblue">
+          <h2 className="mb-4 mt-20 text-4xl font-extrabold text-white">
             Certificados
           </h2>
-          <p className="font-semibold text-primaryblue sm:text-xl px-36">
+          <p className="font-semibold text-white sm:text-xl px-36">
             En este módulo podrá realizar la búsqueda de certificados de los
             diferentes eventos ofrecidos por SAYAN.
           </p>
-          <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-primaryblue">
+          <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-white">
             Buscar por:
           </p>
           <div className="lg:flex flex-wrap justify-center items-center text-center lg:ml-40 lg:mr-40">
