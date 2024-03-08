@@ -60,7 +60,7 @@ const Banners = () => {
       <div className="carousel">    
         <div className="list">
           <div className="item">
-            <img src="image/black.jpg" />
+            <img src="image/banner.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
               <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
