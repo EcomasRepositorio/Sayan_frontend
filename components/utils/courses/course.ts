@@ -48,21 +48,7 @@ export const coursesIngenieriaPuentes = [
 
 ];
 
-export const coursesAsistenteViales = [
-    {name: "Hidrología e hidráulica", text:"Hola, deseo más información sobre el curso de Hidrología e hidráulica"},
-    {name: "Estructuras en carreteras - puentes", text:"Hola, deseo más información sobre el curso de Estructuras en carreteras - puentes"},
-    {name: "Metrados, costos y presupuesto – cronograma en obras viales", text:"Hola, deseo más información sobre el curso de Metrados, costos y presupuesto – cronograma en obras viales"},
-    {name: "Arqueología en proyectos viales", text:"Hola, deseo más información sobre el curso de Arqueología en proyectos viales"},
-    {name: "Estudio medio ambiental – derecho de vía – interferencias", text:"Hola, deseo más información sobre el curso de Estudio medio ambiental – derecho de vía – interferencias"},
-    {name: "Diseño, construcción y mantenimiento de Túneles", text:"Hola, deseo más información sobre el curso de Diseño, construcción y mantenimiento de Túneles"},
-    {name: "Integración de proyectos de infraestructura vial", text:"Hola, deseo más información sobre el curso de Integración de proyectos de infraestructura vial"},
-    {name: "Tráfico y carga", text:"Hola, deseo más información sobre el curso de Integración de Tráfico y carga"},
-    {name: "Topografía, diseño geométrico, señalización y seguridad vial", text:"Hola, deseo más información sobre el curso de Topografía, diseño geométrico, señalización y seguridad vial"},
-    {name: "Geología – Geotecnia en obras viales", text:"Hola, deseo más información sobre el curso de Geología – Geotecnia en obras viales"},
-    {name: "Suelos y pavimentos", text:"Hola, deseo más información sobre el curso de Suelos y pavimentos"},
-   
-   
-];
+
 
 /* INGENIERIA AMBIENTAL */
 

@@ -2,7 +2,7 @@ import React from "react";
 import GraduateIngenieriaVial from "@/components/graduate/IngenieriaCivil/GraduateIngVial";
 import GraduateTecnicoObras from "@/components/graduate/IngenieriaCivil/GraduateTecnicoO";
 import GraduateIngenieriaPuentes from "@/components/graduate/IngenieriaCivil/GraduateIngPuentes";
-import GraduateTecnicoViales from "@/components/graduate/IngenieriaCivil/GraduateTecnicoOV";
+
 
 import GraduateImpacto from "@/components/graduate/IngenieriaAmbiental/GraduateImpactoA";
 import GraduateSolidos from "@/components/graduate/IngenieriaAmbiental/GraduateManejoSolidos";
@@ -42,7 +42,7 @@ const Graduate = () => {
         <GraduateTecnicoObras />
         <GraduateIngenieriaVial />
         <GraduateIngenieriaPuentes />
-        <GraduateTecnicoViales />
+       
       </div>
 
       <div className="text-primaryceleste text-center  text-4xl  lg:text-6xl xl:text-6xl  font-bold font-poppins mb-12 ">
