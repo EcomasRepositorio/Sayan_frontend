@@ -15,7 +15,7 @@ const Header = () => {
   }
   return (
   <>
-    <div className=" bg-black ">
+    <div className=" bg-black  ">
 
     <div className="flex lg:justify-between justify-center mx-auto max-w-screen-2xl p-2 ">
       <div className="hidden lg:flex">
@@ -30,7 +30,7 @@ const Header = () => {
         </div>
     </div>
 </div>
-<div className="bg-black shadow-2xl mb-0">
+<div className="bg-black shadow-2xl mb-0 ">
     <div className="max-w-screen-2xl mx-auto p-2">
         <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -38,11 +38,11 @@ const Header = () => {
               <span className="self-center text-2xl font-semibold whitespace-nowrap "></span>
             </Link>
 
-            <div onClick={handleMenu} className="flex lg:hidden justify-end p-4">
+            <div onClick={handleMenu} className=" flex lg:hidden justify-end p-4">
               {menu?
-              ( <AiOutlineClose size={30} className="flex justify-end"/> )
+              ( <AiOutlineClose size={30} className="text-purple-50 flex justify-end"/> )
               :
-              ( <AiOutlineMenu size={30} className="flex justify-end"/> )
+              ( <AiOutlineMenu size={30} className="text-purple-50 flex justify-end"/> )
             }
             </div>
 
@@ -65,7 +65,7 @@ const Header = () => {
                 <li>
                 </li>
             </ul>
-            <div className="hidden lg:flex flex-wrap justify-end max-w-screen-2xl space-x-9">
+            <div className=" hidden lg:flex flex-wrap justify-end max-w-screen-2xl space-x-9">
                   <Link href='https://api.whatsapp.com/send?phone=51978490739' target='_blank'
                     className="text-lg font-semibold text-green-600 hover:text-green-500">
 
@@ -79,12 +79,12 @@ const Header = () => {
     </div>
 </div>
 
-  <div className={menu ?
-    'lg:hidden top-[125px] right-0 bottom-0 left-0 flex justify-center items-center w-full h-screen bg-[#002e79] text-white text-center ease-in duration-300 fixed z-10'
+  <div className={menu  ?
+    ' lg:hidden top-[125px] right-0 bottom-0 left-0 flex justify-center items-center w-full h-screen bg-primaryblue text-white text-center ease-in duration-300 fixed z-10'
     :
-    'lg:hidden absolute top-[100px] right-0 left-[-1000px] flex justify-center items-center w-full h-screen bg-[#002e79] text-white text-center ease-in duration-300'
+    ' lg:hidden absolute top-[100px] right-0 left-[-1000px] flex justify-center items-center w-full h-screen bg-primaryblue text-white text-center ease-in duration-300'
   }>
-      <div className="w-full mt-[-310px]">
+      <div className="w-full mt-[-400px] ">
         <ul className="uppercase font-mono font-bold text-xl mt-20">
           <li onClick={handleMenu} className='py-5'>
             <Link href={'/'}></Link>
