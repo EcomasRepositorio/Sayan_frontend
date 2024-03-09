@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { coursesAsistenteTecnico   } from "@/components/utils/courses/course";
+import { coursesGestionAlimentaria   } from "@/components/utils/courses/course";
 import { BiChevronDown, BiChevronUp, BiChevronRight } from "react-icons/bi";
 import { FaRegFilePdf, FaWhatsapp } from "react-icons/fa6";
 import Modal  from "@/components/share/Modal";
@@ -57,7 +57,7 @@ const [imageUrl, setImageUrl] = useState('');
           </div>
           <div className="p-5 sm:w-1/2 md:px-20 sm:px-5 lg:mt-8 ">
             <div className="text-primaryblue font-extrabold font-poppins lg:text-4xl text-3xl my-2 mb-2">
-            ASISTENTE TÉCNICO EN OBRAS
+            GESTIÓN DE LA CALIDAD E INOCUIDAD ALIMENTARIA
             </div>
             <div className="mb-4">
               <p className="text-sm font-semibold text-gray-600">
@@ -150,7 +150,7 @@ const [imageUrl, setImageUrl] = useState('');
                 animate={{ opacity: 1, transition: { duration: 0.1} }}>
                 <div className="text-sm font-sans font-semibold">
                   <ul className="">
-                  {coursesAsistenteTecnico.map((item , index) => (
+                  {coursesGestionAlimentaria.map((item , index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0 }}
