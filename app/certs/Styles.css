@@ -3,11 +3,11 @@
     text-align: center;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #ffffff;
+    color: #0d617b;
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
-    border: 1px solid #b6d900;
+    border: 2px solid #b6d900;
     border-radius: 10px;
     box-shadow: inset 0 0 0 0 #006eb0;
   
@@ -41,12 +41,7 @@
     }
   }
 
-  .bg-imagee {
-    background-image: url('/certificate/yellow.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-
+ 
 
   .blur-background {
     backdrop-filter: blur(12px); /* Ajusta el valor según el nivel de desenfoque deseado */

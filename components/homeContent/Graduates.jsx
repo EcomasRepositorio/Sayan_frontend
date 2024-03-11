@@ -9,7 +9,7 @@ const Graduates = () => {
     <div>
       <div className="p-5 bg-primaryblue">
           <div className="text-center font-semibold font-poppins">
-          <p className="font-extrabold text-white text-[70px] mt-8 mb-5">
+          <p className="font-extrabold text-white lg:text-7xl text-5xl mt-8 mb-16">
             Nuestros Diplomados
           </p>
         </div>

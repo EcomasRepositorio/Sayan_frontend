@@ -71,16 +71,16 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/black.jpg" />
+            <img src="image/sayan.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
-              <div className="title">❝Aprende con Pasión: Explora Nuestras Oportunidades de Formación en Sayan❝</div>
+              <div className="title">❝Aprende con Pasión: Descubre nuestras oportunidades de formación en Sayan.❝</div>
               <div className="topic"></div>
               <div className="des"></div>
             </div>
           </div>
           <div className="item">
-            <img src="image/black.jpg" />
+            <img src="image/sayan.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
               <div className="title">❝Descubre el Conocimiento del Futuro: Únete a Sayan para tu Formación❝</div>

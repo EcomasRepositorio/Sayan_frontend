@@ -15,7 +15,7 @@ export const Footer = () => {
             <img className="w-auto h-14 mx-auto mb-8" src="/footer/logo.png" alt="Tu logo" />
             <nav className="mb-2 ml-8">
               <p className="mb-5 text-x1 font-bold tracking-wider text-gray-50 uppercase">Contáctanos</p>
-              <a href="https://api.whatsapp.com/send?phone=51978490739" className="flex mb-3 text-lg font-medium transition md:mb-2">
+              <a href="https://api.whatsapp.com/send?phone=51978490739" target='_blank' className="flex mb-3 text-lg font-medium transition md:mb-2">
                 <img src="/footer/footer_whatsapp.svg" alt="Phone Icon" className="w-6 h-6 mr-2" />
                 <button className="a text">978 490 739</button>
               </a>

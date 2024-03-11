@@ -96,11 +96,12 @@ const GraduateIngenieriaV = () => {
               </p>
             </div>
           </div>
+
           <div className="">
             <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-2">
               <div className="w-full">
                 <Link
-                  className="border-2 border-primaryceleste flex items-center justify-center text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+                  className="border-2 border-primaryceleste flex items-center justify-center text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300 more-info-button"
                   href="https://wa.me/51978490739?text=Hola,%20deseo%20más%20información%20sobre%20el%20diplomado%20de%20Riego%20y%20Fertirriego"
                   target="_blank"
                 >
@@ -110,28 +111,32 @@ const GraduateIngenieriaV = () => {
                   </div>
                 </Link>
               </div>
-              <div className="w-full">
-                <button
-                  onClick={handleClick}
-                  className="border-2 border-primaryceleste w-full flex items-center justify-center mb- text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
-                  rel="noopener noreferrer"
-                >
-                  <div className="items-center text-xs uppercase inline-flex">
-                    <FaRegFilePdf className="text-red-500 text-lg" />
-                    <h1 className="ml-1">Plan de estudios</h1>
-                  </div>
-                </button>
+
+              <div className="w-full cursor-pointer">
+                <div>
+                  <a
+                    onClick={handleClick}
+                    className="border-2 border-primaryceleste w-full flex items-center justify-center text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="items-center text-xs uppercase inline-flex">
+                      <FaRegFilePdf className="text-red-500 text-lg" />
+                      <h1 className="ml-1">Plan de estudios</h1>
+                    </div>
+                  </a>
+                </div>
               </div>
-              <div>
-                <button
-                  className="border-2 border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+
+              <div className="w-full">
+                <a
+                  className="border-2  border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
                   onClick={() => handleImageClick("/IMAGEN.png")}
                 >
-                  <div className="items-center text-xs uppercase inline-flex">
+                  <div className="items-center text-xs uppercase inline-flex cursor-pointer">
                     <PiCertificate className="text-primaryceleste text-lg" />
                     <h1 className="ml-1">Certificación</h1>
                   </div>
-                </button>
+                </a>
                 {showModal && (
                   <Modal open={showModal} onClose={() => setShowModal(false)}>
                     <Image
@@ -145,6 +150,7 @@ const GraduateIngenieriaV = () => {
               </div>
             </div>
           </div>
+
           <div className="z-0">
             <button
               onClick={toggleAccordion1}

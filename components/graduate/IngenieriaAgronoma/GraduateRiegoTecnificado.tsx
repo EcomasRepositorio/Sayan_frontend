@@ -110,27 +110,27 @@ const GraduateTecnico = () => {
                 </Link>
               </div>
               <div className="w-full">
-                <button
+                <a
                   onClick={handleClick}
-                  className="border-2 border-primaryceleste w-full flex items-center justify-center mb- text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+                  className="cursor-pointer border-2 border-primaryceleste w-full flex items-center justify-center mb- text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
                   rel="noopener noreferrer"
                 >
-                  <div className="items-center text-xs uppercase inline-flex">
+                  <div className=" items-center text-xs uppercase inline-flex">
                     <FaRegFilePdf className="text-red-500 text-lg" />
                     <h1 className="ml-1">Plan de estudios</h1>
                   </div>
-                </button>
+                </a>
               </div>
               <div>
-                <button
-                  className="border-2 border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+                <a
+                  className="cursor-pointer border-2 border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
                   onClick={() => handleImageClick("/IMAGEN.png")}
                 >
                   <div className="items-center text-xs uppercase inline-flex">
                     <PiCertificate className="text-primaryceleste text-lg" />
                     <h1 className="ml-1">Certificación</h1>
                   </div>
-                </button>
+                </a>
                 {showModal && (
                   <Modal open={showModal} onClose={() => setShowModal(false)}>
                     <Image
