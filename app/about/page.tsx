@@ -74,7 +74,7 @@ const About = () => {
                   Nuestra Misión
                 </h2>
                 <p className="lg:text-3xl text-lg text-center  text-gray-600 animated-fadeIn">
-                ❝Nuestra misión es catalizar el progreso y la excelencia a
+                  ❝Nuestra misión es catalizar el progreso y la excelencia a
                   través de servicios de consultoría y capacitación de
                   vanguardia. Nos comprometemos a proporcionar a nuestros
                   clientes las herramientas, conocimientos y estrategias
@@ -99,9 +99,11 @@ const About = () => {
                   <div className="contentt">
                     <p className="headingg ">Excelencia</p>
                     <p className="para">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Modi laboriosam at voluptas minus culpa deserunt delectus
-                      sapiente inventore pariatur
+                      Compromiso con la excelencia en la prestación de servicios
+                      de consultoría y capacitación. Buscar constantemente la
+                      calidad en cada aspecto de nuestras operaciones, desde la
+                      entrega de soluciones personalizadas hasta la
+                      implementación de programas de capacitación efectivos.
                     </p>
                   </div>
                 </div>
@@ -113,9 +115,10 @@ const About = () => {
                   <div className="contentt">
                     <p className="headingg">Aprendizaje Continuo</p>
                     <p className="para">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Modi laboriosam at voluptas minus culpa deserunt delectus
-                      sapiente inventore pariatur
+                      una mentalidad de aprendizaje constante, tanto a nivel
+                      individual como organizacional. Fomentar la actualización
+                      continua de conocimientos y habilidades para mantenernos a
+                      la vanguardia de las tendencias y tecnologías emergentes.
                     </p>
                   </div>
                 </div>
@@ -127,9 +130,10 @@ const About = () => {
                   <div className="contentt">
                     <p className="headingg">Integridad</p>
                     <p className="para">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Modi laboriosam at voluptas minus culpa deserunt delectus
-                      sapiente inventore pariatur
+                      Actuar con honestidad, transparencia y ética en todas
+                      nuestras interacciones. Mantener la integridad en la toma
+                      de decisiones, la gestión de proyectos y las relaciones
+                      con clientes y colaboradores.
                     </p>
                   </div>
                 </div>

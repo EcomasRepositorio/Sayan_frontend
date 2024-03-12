@@ -1,9 +1,11 @@
 .cardio {
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: 320px;
+  height:400px ;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   padding: 32px;
   overflow: hidden;
@@ -39,7 +41,7 @@
   bottom: 0;
   width: 5px;
   height: 100%;
-  background: linear-gradient(-45deg, #12a9be 0%, #b6d900 100% );
+  background: linear-gradient(-45deg, #b6d900 100%,  #12a9be 60% );
   z-index: -1;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
@@ -51,21 +53,6 @@
 }
 
 .cardio:hover {
-  box-shadow: none;
-}
-
-.cardio:hover .btnn {
-  color: #212121;
-  background: #e8e8e8;
-}
-
-.contentt .btn:hover {
-  outline: 2px solid #e8e8e8;
-  background: transparent;
-  color: #e8e8e8;
-}
-
-.contentt .btnn:active {
   box-shadow: none;
 }
 

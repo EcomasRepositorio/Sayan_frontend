@@ -60,7 +60,7 @@ const Banners = () => {
       <div className="carousel">    
         <div className="list">
           <div className="item">
-            <img src="image/banner.png" />
+            <img src="image/bannerOne.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
               <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
@@ -71,7 +71,7 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/sayan.png" />
+            <img src="image/bannerTwo.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
               <div className="title">❝Aprende con Pasión: Descubre nuestras oportunidades de formación en Sayan.❝</div>
@@ -80,7 +80,7 @@ const Banners = () => {
             </div>
           </div>
           <div className="item">
-            <img src="image/sayan.png" />
+            <img src="image/bannerThree.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
               <div className="title">❝Descubre el Conocimiento del Futuro: Únete a Sayan para tu Formación❝</div>
@@ -88,40 +88,9 @@ const Banners = () => {
               <div className="des"></div>
             </div>
           </div>
+          
         </div>
-
-        {/* Eliminado el bloque de miniaturas */}
-        {/* <div className="thumbnail">
-          <div className="item">
-            <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="icons/icono_banner_white.png" />
-            <div className="content">
-              <div className="title"></div>
-              <div className="description"></div>
-            </div>
-          </div>
-        </div> */}
-
+        
         <div className="arrows">
           <button id="prev">{"<"}</button>
           <button id="next">{">"}</button>
