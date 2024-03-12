@@ -1,181 +1,144 @@
 "use client";
 import React from "react";
 import "./StyleAbout.css";
-import Whatsapp from '@/components/whatsapp/Index'
+import Whatsapp from "@/components/whatsapp/Index";
 
 const About = () => {
   return (
     <div id="/about">
-      <div>
-        <div>
-          <section className="relative bg-blueGray-50">
-            <div className="relative pt-80 pb-80 flex content-center items-center justify-center min-h-screen-75 ">
-              <div
-                className="absolute top-0 w-full h-full bg-center bg-current"
-                style={{ backgroundImage: 'url("/image/about.webp")' }}
-              >
-                <span
-                  id="blackOverlay"
-                  className="w-full h-full absolute opacity-75 bg-black"
-                ></span>
-              </div>
-              <div className="container relative mx-auto">
-                <div className="items-center flex flex-wrap">
-                  <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                    <div className="pr-12">
-                      <h1 className="text-white font-semibold text-6xl mb-20">
-                        Acerca de nosotros
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-                style={{ transform: "translateZ(0px)" }}
-              >
-                <svg
-                  className="absolute bottom-0 overflow-hidden"
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
-                  version="1.1"
-                  viewBox="0 0 2560 100"
-                  x="0"
-                  y="0"
-                >
-                  <polygon
-                    className="text-blueGray-200 fill-current"
-                    points="2560 0 2560 100 0 100"
-                  ></polygon>
-                </svg>
-              </div>
-            </div>
-            <section className="pb-10 bg-blueGray-200 -mt-24">
-              <div className="container mx-auto px-4">
-                <div className="flex flex-wrap">
-                  <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center transform hover:-translate-y-1 transition duration-600">
-                    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                      <div className="px-4 py-5 flex-auto">
-                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-primaryblue">
-                          <i className="fas fa-award"></i>
-                        </div>
-                        <h6 className="text-xl font-semibold">Misión</h6>
-                        <p className="mt-2 mb-4 text-blueGray-500">
-                          Nuestro propósito es ofrecer servicios especializados
-                          a empresas e individuos, destacando la excelencia de
-                          nuestros ponentes con tecnología y un equipo
-                          comprometido con una educación de primer nivel.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-4/12 px-4 text-center transform hover:-translate-y-1 transition duration-600">
-                    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                      <div className="px-4 py-5 flex-auto">
-                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-primaryrosa">
-                          <i className="fas fa-retweet"></i>
-                        </div>
-                        <h6 className="text-xl font-semibold">
-                          ¿Quiénes Somos?
-                        </h6>
-                        <p className="mt-2 mb-4 text-blueGray-500">
-                          Nos esforzamos por ser una empresa destacada,
-                          innovadora y ampliamente reconocida a nivel nacional,
-                          liderando en el ámbito de la capacitación, recursos
-                          humanos y consultoría, y manteniendo un compromiso
-                          constante con la calidad de nuestros servicios.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-6 w-full md:w-4/12 px-4 text-center transform hover:-translate-y-1 transition duration-600">
-                    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                      <div className="px-4 py-5 flex-auto">
-                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-primaryblue">
-                          <i className="fas fa-fingerprint"></i>
-                        </div>
-                        <h6 className="text-xl font-semibold">Visión</h6>
-                        <p className="mt-2 mb-4 text-blueGray-500">
-                          Ser una empresa líder, innovadora y reconocida a nivel
-                          nacional, estableciendo un liderazgo en
-                          capacitaciones, recursos humanos y ofrecer servicio de
-                          calidad en consultoría.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <footer className="relative pt-8 pb-6 mt-1">
-                  <div className="container mx-auto px-4">
-                    <div className="flex flex-wrap items-center md:justify-between justify-center">
-                      <div className="w-full md:w-6/12 px-4 mx-auto text-center">
-                        <div className="text-sm text-blueGray-500 font-semibold py-1">
-                          <div className="text-textblue font-semibold text-6xl mb-20">
-                            Nuestros Valores
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </footer>
-
-                <div className="justify-items-center mx-auto  mt-1 grid max-w-2xl grid-cols-1 gap-x-0 gap-y-0 sm:grid-cols-2 lg:mx-15 lg:max-w-7xl lg:grid-cols-3">
-                  <div className="cardss mb-8 ">
-                    <div className="logo"></div>
-                    <div className="titlee">COMPROMISO</div>
-                    <div className="icons-container"></div>
-                    <div className="box box3">
-                      <div className="content">
-                        <span className="box-titlee">
-                          {" "}
-                          Siempre nos vemos comprometidos en ayudar a los
-                          participantes, tanto los que se inscriben en los
-                          diplomados y en los cursos.
-                        </span>
-                        <span className="box-text"></span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="cardss mb-8 ">
-                    <div className="logo"></div>
-                    <div className="titlee">RESPONSABILIDAD</div>
-                    <div className="icons-container"></div>
-                    <div className="box box3">
-                      <div className="content">
-                        <span className="box-titlee">
-                          Los miembros de esta empresa siempre se ponen tareas
-                          al inicio de la jornada laboral, tarea la cual se debe
-                          de cumplir al final de la jornada, hecho que siempre
-                          suele cumplirse con éxito.
-                        </span>
-                        <span className="box-text"></span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="cardss mb-8 ">
-                    <div className="logo"></div>
-                    <div className="titlee">PUNTUALIDAD</div>
-                    <div className="icons-container"></div>
-                    <div className="box box3">
-                      <div className="content">
-                        <span className="box-titlee">
-                          Antes de llegar a la hora, debemos llegar antes para
-                          poder limpiar nuestras oficinas y dar una mejor imagen
-                          de estas a los participantes que quieran recoger sus
-                          respectivos certificados.
-                        </span>
-                        <span className="box-text"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </section>
+      <div className="relative pt-12 lg:pt-40 pb-28 lg:pb-40 mb-8">
+        <div
+          className=" absolute top-0 w-full h-full bg-center bg-cover"
+          style={{
+            height: "100%",
+            width: "100%",
+            backgroundImage: 'url("/about/aboutt.jpg") ',
+          }}
+        >
+          <span
+            id="blackOverlay"
+            className="w-full h-full absolute opacity-50 bg-gray-800"
+          ></span>
+        </div>
+        <div className="relative mx-auto max-w-screen-xl p-2 text-white">
+          <h1 className=" font-extrabold text-5xl lg:text-6xl animated-fadeIn">
+            Acerca de Nosotros
+          </h1>
+          <p></p>
         </div>
       </div>
+
+      <div className="2xl:container 2xl:mx-auto py-9 lg:py-0 px-4 lg:px-0">
+        {/* Description */}
+        <div className="flex items-center lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
+          <div className="w-full lg:w-6/12">
+            <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft">
+              ¿Quiénes Somos?
+            </h2>
+            <p className="w-full text-gray-600 lg:text-3xl text-2xl lg:leading-10 leading-9 text-center sm:text-start animated-fadeIn">
+              Nos destacamos como referentes en el diseño y ejecución de
+              programas de desarrollo profesional, brindando un enfoque
+              personalizado que impulsa el crecimiento y el éxito de nuestros
+              clientes.
+            </p>
+          </div>
+          <div className="w-full lg:w-6/12 ">
+            <img
+              className="lg:block w-full rounded-md  "
+              src="/about/about.png"
+              alt="people discussing on board"
+            />
+          </div>
+        </div>
+
+        <div className="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-5 mt-16">
+          {/* Misión y Visión */}
+          <div className="w-full lg:w-6/12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
+              {/* Card team */}
+              <div className="bg-red-70 p-6 rounded-md">
+                <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft ">
+                  Nuestra Visión
+                </h2>
+                <p className="lg:text-3xl text-lg text-center text-gray-600 animated-fadeIn">
+                  ❝Nos visualizamos como la firma de consultoría y capacitación
+                  líder, siendo reconocidos a nivel global por nuestra
+                  excelencia en el diseño e implementación de soluciones
+                  innovadoras.❞
+                </p>
+              </div>
+
+              {/* Card Task */}
+              <div className="bg-red-70 p-6 rounded-md">
+                <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft ">
+                  Nuestra Misión
+                </h2>
+                <p className="lg:text-3xl text-lg text-center  text-gray-600 animated-fadeIn">
+                ❝Nuestra misión es catalizar el progreso y la excelencia a
+                  través de servicios de consultoría y capacitación de
+                  vanguardia. Nos comprometemos a proporcionar a nuestros
+                  clientes las herramientas, conocimientos y estrategias
+                  necesarios para superar desafíos, optimizar sus operaciones y
+                  alcanzar sus objetivos comerciales.❞
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-red-70 p-6 rounded-md ">
+          <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start ">
+            Nuestros Valores
+          </h2>
+        </div>
+        <div className="mb-8">
+          <div className="flex flex-wrap justify-center items-center">
+            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+              <section className="bg-red-70">
+                <div className="cardio">
+                  <div className="contentt">
+                    <p className="headingg ">Excelencia</p>
+                    <p className="para">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Modi laboriosam at voluptas minus culpa deserunt delectus
+                      sapiente inventore pariatur
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+              <section className="bg-red-70">
+                <div className="cardio">
+                  <div className="contentt">
+                    <p className="headingg">Aprendizaje Continuo</p>
+                    <p className="para">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Modi laboriosam at voluptas minus culpa deserunt delectus
+                      sapiente inventore pariatur
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+              <section className="bg-red-70">
+                <div className="cardio">
+                  <div className="contentt">
+                    <p className="headingg">Integridad</p>
+                    <p className="para">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Modi laboriosam at voluptas minus culpa deserunt delectus
+                      sapiente inventore pariatur
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Whatsapp />
     </div>
   );

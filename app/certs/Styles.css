@@ -3,13 +3,13 @@
     text-align: center;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #0d617b;
+    color: #ffffff;
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
-    border: 2px solid #b6d900;
+    border: 2px solid #12a9be;
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #006eb0;
+    box-shadow: inset 0 0 0 0 #12a9be;
   
     /* Centra el botón utilizando Flexbox */
     display: flex;
@@ -26,10 +26,13 @@
   }
   
   .buttonGlobal:hover {
-    color: white;
+    
+    color: #0d617b ;
     box-shadow: inset 0 -100px 0 0 #b6d900;
+
   }
-  
+
+
   .buttonGlobal:active {
     transform: scale(0.9);
   }
@@ -46,3 +49,37 @@
   .blur-background {
     backdrop-filter: blur(12px); /* Ajusta el valor según el nivel de desenfoque deseado */
   }
+
+
+
+
+
+
+
+
+  /*FONDO INTERACTIVO*/
+
+
+  .interactive {
+    z-index: 1;
+    background: linear-gradient(-15deg, #0d617b, #12a9be, #b6d900);
+    background-size: 400% 400%;
+    width: 100%;
+    animation: animate 15s ease infinite;
+  }
+
+
+
+  @keyframes animate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+

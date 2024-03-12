@@ -11,16 +11,21 @@ import GraduateMonitoreo from "@/components/graduate/IngenieriaAmbiental/Graduat
 import GraduateFertirriego from "@/components/graduate/IngenieriaAgronoma/GraduateFertirriego";
 import GraduateRiego from "@/components/graduate/IngenieriaAgronoma/GraduateRiegoTecnificado";
 
-import Image from "next/image";
+
 import GraduateCalidadAlimentaria from "@/components/graduate/IngenieriaAlimentaria/GraduateCalidadAlimentaria";
 import GraduateSeguridadOcupa from "@/components/graduate/ProfesionalesGeneral/GraduateSeguridadOcupa";
+import "./graduate.css";
+
+
+
 const Graduate = () => {
   return (
     <section id="/graduate">
+
       <div className="relative pt-12 lg:pt-40 pb-28 lg:pb-40 mb-8">
         <div
           className="absolute top-0 w-full h-full bg-center bg-cover"
-          style={{ backgroundImage: 'url("/image/diplomado.jpg")' }}
+          style={{ backgroundImage: 'url("/image/about.jpg")' }}
         >
           <span
             id="blackOverlay"
@@ -28,17 +33,17 @@ const Graduate = () => {
           ></span>
         </div>
         <div className="relative mx-auto max-w-screen-xl p-2 text-white">
-          <h1 className="font-extrabold text-5xl lg:text-6xl">
+          <h1 className=" font-extrabold text-5xl lg:text-6xl animated-fadeIno">
             Nuestros Diplomados
           </h1>
-          <p></p>
+         
         </div>
       </div>
 
-      <div className="text-primaryceleste text-center  text-4xl  lg:text-6xl xl:text-6xl  font-bold font-poppins mb-8 ">
+      <div className="text-primaryceleste text-center  text-4xl  lg:text-6xl xl:text-6xl  font-bold font-poppins mb-8 animated-slideInLeftt">
         INGENIERIA CIVIL
       </div>
-      <div className=" mb-16">
+      <div className=" mb-16 animated-fadeIno">
         <GraduateTecnicoObras />
         <GraduateIngenieriaVial />
         <GraduateIngenieriaPuentes />

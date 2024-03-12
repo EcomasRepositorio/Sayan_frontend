@@ -119,7 +119,7 @@ const GraduateTecnico = () => {
               <div>
                 <a
                   className="cursor-pointer border-2 border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
-                  onClick={() => handleImageClick("/IMAGEN.png")}
+                  onClick={() => handleImageClick("/image/image.jpg")}
                 >
                   <div className=" items-center text-xs uppercase inline-flex">
                     <PiCertificate className="text-primaryceleste text-lg" />

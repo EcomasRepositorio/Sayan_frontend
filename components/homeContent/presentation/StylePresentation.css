@@ -55,16 +55,23 @@
     height: 450px;
     margin: 5px;
     box-shadow: 0 10px 10px 10px rgba(0, 181, 226, 0.2);
-    animation: animate 3s ease-in-out infinite;
+    animation: animate 5s ease-in-out infinite;
     transition: all 1s ease-in-out;
+    border-radius: 20px;
+  
 }
 
 .blob {
-    background-image: url('/certificate/banner_certs3.jpg');
+    background-image: url('/image/white1.jpg');
     background-size: cover;
     -webkit-background-position: center;
     background-position: center center;
 }
+
+.blob:hover {
+    background-image: url('/image/white2.jpg'); /* Segunda imagen al pasar el ratón */
+  }
+
 
 /* Estilos para dispositivos móviles (ancho de pantalla menor a 600px, puedes ajustar según tus necesidades) */
 @media screen and (max-width: 100px) {
@@ -74,14 +81,6 @@
     }
 }
 
-@keyframes animate {
-    0%, 100%{
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50%{
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
-}
 
 
 

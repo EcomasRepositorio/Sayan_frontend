@@ -41,7 +41,7 @@ const Login: React.FC = () => {
   const onSubmit = async () => {
     try {
       const response = await axios.post(
-        "https://backend.cimade.edu.pe/api/v1/user/login",
+        "https://backend.sayan.edu.pe/api/v1/user/login",
         form
       );
       if (response.data.token) {

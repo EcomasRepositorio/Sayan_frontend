@@ -9,15 +9,15 @@ const Graduates = () => {
     <div>
       <div className="p-5 bg-primaryblue">
           <div className="text-center font-semibold font-poppins">
-          <p className="font-extrabold text-white lg:text-7xl text-5xl mt-8 mb-16">
+          <p className="font-extrabold text-white lg:text-7xl text-5xl mt-8 mb-16 ">
             Nuestros Diplomados
           </p>
         </div>
         <div className="team-area">
             <figure className="boxG">
                 <figcaption>
-                    <h2>UX Designer</h2>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <h2>INGENIERÍA CIVIL</h2>
+                    <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
                         <i className="fa fa-twitter"></i>
@@ -30,8 +30,8 @@ const Graduates = () => {
 
             <figure className="boxG">
                 <figcaption>
-                    <h2>Web Designer</h2>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <h2>INGENIERÍA AMBIENTAL</h2>
+                    <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
                         <i className="fa fa-twitter"></i>
@@ -44,8 +44,8 @@ const Graduates = () => {
 
             <figure className="boxG">
                 <figcaption>
-                    <h2>Developer</h2>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <h2>INGENIERÍA AGRÓNOMA</h2>
+                    <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
                         <i className="fa fa-twitter"></i>
@@ -61,8 +61,8 @@ const Graduates = () => {
         <div className="team-area">
             <figure className="boxG">
                 <figcaption>
-                    <h2>UX Designer</h2>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <h2>INGENIERÍA AlIMENTARIA</h2>
+                    <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
                         <i className="fa fa-twitter"></i>
@@ -75,7 +75,7 @@ const Graduates = () => {
 
             <figure className="boxG">
                 <figcaption>
-                    <h2>Web Designer</h2>
+                    <h2>PROFESIONES EN GENERAL</h2>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
