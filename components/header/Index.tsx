@@ -46,7 +46,7 @@ const Header = () => {
             }
             </div>
 
-            <ul className="hidden uppercase font-semibold lg:flex text-slate-200 flex-wrap p-2 mx-auto space-x-8 rtl:space-x-reverse text-xm">
+            <ul className="hidden uppercase font-semibold lg:flex text-slate-200 flex-wrap p-5 mx-auto space-x-8 rtl:space-x-reverse text-xm">
                 <li>
                     <Link href="/" className="hover:text-textgreen" aria-current="page">Inicio</Link>
                 </li>
@@ -65,6 +65,7 @@ const Header = () => {
                 <li>
                 </li>
             </ul>
+
             <div className=" hidden lg:flex flex-wrap justify-end max-w-screen-2xl space-x-9">
                   <Link href='https://api.whatsapp.com/send?phone=51978490739' target='_blank'
                     className="text-lg font-semibold text-green-600 hover:text-green-500">

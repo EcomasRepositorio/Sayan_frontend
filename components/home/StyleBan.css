@@ -6,11 +6,12 @@
 
 .carousel{
     
-    height: 75vh;
+    height: 65vh;
     margin-top: -5px;
     width: 100%;
     overflow: hidden;
     position: relative;
+
 }
 .carousel .list .item{
     width: 100%;
@@ -36,7 +37,7 @@
     text-shadow: 0 5px 10px #0004;
 }
 .carousel .list .item .author{
-    color:#12a9be ;
+    color: #b6d900 ;
     font-weight: bold;
     letter-spacing: 10px;
 }
@@ -47,7 +48,7 @@
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color:#0d617b ;
+    color:#357b0d ;
 }
 .carousel .list .item .buttons{
     display: grid;
@@ -87,7 +88,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: rgba(0, 0, 0, 0.267);
     border: none;
     color: #fff;
     font-family: monospace;
@@ -156,6 +157,11 @@
     }
 }
 
+
+
+
+
+
 .carousel.next .thumbnail .item:nth-last-child(1){
     overflow: hidden;
     animation: showThumbnail .5s linear 1 forwards;
@@ -185,8 +191,8 @@
     position: absolute;
     z-index: 1000;
     width: 0%;
-    height: 3px;
-    background-color: transparent;
+    height: 1.5px;
+    background-color: white;
     left: 0;
     top: 0;
 }

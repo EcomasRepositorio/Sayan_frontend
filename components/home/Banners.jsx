@@ -15,12 +15,6 @@ const Banners = () => {
     let runTimeOut;
     let runNextAuto;
 
-    // Agregamos el listener de click a los elementos de React
-    if (nextDom && prevDom) {
-      nextDom.addEventListener("click", () => showSlider("next"));
-      prevDom.addEventListener("click", () => showSlider("prev"));
-    }
-
     // Función para mostrar el slider
     function showSlider(type) {
       let SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
@@ -39,10 +33,22 @@ const Banners = () => {
         carouselDom.classList.remove("prev");
       }, timeRunning);
 
+      // Iniciamos el cambio automático después de que ha transcurrido el tiempo especificado
       clearTimeout(runNextAuto);
       runNextAuto = setTimeout(() => {
         nextDom.click();
       }, timeAutoNext);
+    }
+
+    // Mostrar el slider después de que la página se carga completamente
+    setTimeout(() => {
+      showSlider("next");
+    }, timeAutoNext);
+
+    // Agregamos el listener de click a los elementos de React
+    if (nextDom && prevDom) {
+      nextDom.addEventListener("click", () => showSlider("next"));
+      prevDom.addEventListener("click", () => showSlider("prev"));
     }
 
     // Limpieza del efecto
@@ -54,13 +60,25 @@ const Banners = () => {
     };
   }, []);
 
+
   
   return (
     <div className="">
       <div className="carousel">    
         <div className="list">
-          <div className="item">
+        <div className="item ">
             <img src="image/bannerOne.png" />
+            <div className="content">
+              <div className="author">Corporación Sayan</div>
+              <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
+                <div className="topic"> </div>
+              </div>
+              <div className="topic"></div>
+              <div className="des"></div>
+            </div>
+          </div>
+          <div className="item ">
+            <img src="image/bannerFour.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
               <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
@@ -74,7 +92,7 @@ const Banners = () => {
             <img src="image/bannerTwo.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
-              <div className="title">❝Aprende con Pasión: Descubre nuestras oportunidades de formación en Sayan.❝</div>
+              <div className="title">❝Aprende con Pasión: Descubre nuestras oportunidades❝</div>
               <div className="topic"></div>
               <div className="des"></div>
             </div>
@@ -83,7 +101,7 @@ const Banners = () => {
             <img src="image/bannerThree.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
-              <div className="title">❝Descubre el Conocimiento del Futuro: Únete a Sayan para tu Formación❝</div>
+              <div className="title">❝Descubre el Conocimiento del Futuro❝</div>
               <div className="topic"></div>
               <div className="des"></div>
             </div>

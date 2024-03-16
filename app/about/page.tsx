@@ -115,7 +115,7 @@ const About = () => {
                   <div className="contentt">
                     <p className="headingg">Aprendizaje Continuo</p>
                     <p className="para">
-                      una mentalidad de aprendizaje constante, tanto a nivel
+                      Una mentalidad de aprendizaje constante, tanto a nivel
                       individual como organizacional. Fomentar la actualización
                       continua de conocimientos y habilidades para mantenernos a
                       la vanguardia de las tendencias y tecnologías emergentes.
