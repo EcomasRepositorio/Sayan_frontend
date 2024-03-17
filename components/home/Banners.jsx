@@ -67,17 +67,6 @@ const Banners = () => {
       <div className="carousel">    
         <div className="list">
         <div className="item ">
-            <img src="image/bannerOne.png" />
-            <div className="content">
-              <div className="author">Corporación Sayan</div>
-              <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
-                <div className="topic"> </div>
-              </div>
-              <div className="topic"></div>
-              <div className="des"></div>
-            </div>
-          </div>
-          <div className="item ">
             <img src="image/bannerFour.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
@@ -88,15 +77,18 @@ const Banners = () => {
               <div className="des"></div>
             </div>
           </div>
-          <div className="item">
+          <div className="item ">
             <img src="image/bannerTwo.png" />
             <div className="content">
               <div className="author">Corporación Sayan</div>
-              <div className="title">❝Aprende con Pasión: Descubre nuestras oportunidades❝</div>
+              <div className="title">❝Desata tu Potencial: Explora Nuestros Cursos Innovadores❝
+                <div className="topic"> </div>
+              </div>
               <div className="topic"></div>
               <div className="des"></div>
             </div>
           </div>
+          
           <div className="item">
             <img src="image/bannerThree.png" />
             <div className="content">

@@ -22,17 +22,18 @@ const Certificate: React.FC = () => {
   };
 
   return (
-    <section id="certs" className="p-2 interactive "  >
+    <section id="certs" className="p-2  fondoo blur-background"  >
+      
     <div className="bg-black/30 max-w-screen-lg mx-auto  mb-12 border mt-24 rounded-3xl shadow-2xl text-center lg:mb-24 p-2  ">
         <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500 ">
-          <div className="flex justify-center mb-4 lg:gap-10 mt-12 ">
+          <div className=" flex justify-center mb-4 gap-10 mt-12 ">
             <img
-              src={"/certificate/logo_unp.png"}
-              className="lg:w-44 lg:h-44 w-42 h-42 object-contain md:w-26 md:h-26 sm:w-24 sm:h-24"
+              src={"/certificate/unp_blanco.png"}
+              className="lg:w-44 lg:h-44 w-26 h-26 object-contain md:w-26 md:h-26 sm:w-24 sm:h-24"
               alt="Logo UNP"
             />
             <img
-              src={"/certificate/logo_certificados.png"}
+              src={"/certificate/logo_blanco.png"}
               className="lg:w-34 lg:h-44 w-28 h-48 object-contain md:w-32 md:h-32 sm:w-16 sm:h-16"
               alt="Logo de Certificados"
             />

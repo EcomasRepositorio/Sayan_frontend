@@ -31,6 +31,7 @@ export const ItemCard = ({ number, description, animated, animation, icon }) => 
       />
 
       {/* Contenido del card */}
+      <img src="" alt="" />
       {icon && <img src={icon} alt="Icono" className="w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-4" />}
       <h3 className="lg:text-5xl md:text-4xl text-2xl font-extrabold leading-10 text-center text-white">
         { "+" + count }

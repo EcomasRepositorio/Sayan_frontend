@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
+        'bebas-neue': ['Bebas Neue', 'sans-serif'],
       },
       colors: {
         'primaryblue': '#0d617b', // Cambia esto al color rosado que prefieras

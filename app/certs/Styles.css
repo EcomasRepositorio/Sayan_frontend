@@ -81,5 +81,11 @@
       background-position: 0% 50%;
     }
   }
-  
 
+  .fondoo {
+    background: #f0f0f0 url('/certificate/banner.png') no-repeat center;
+    background-size: cover; /* Ajustar la imagen de fondo para cubrir todo el elemento */
+ 
+    width: 100%;
+    height: 100%;
+}
