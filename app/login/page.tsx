@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Whatsapp from "@/components/whatsapp/Index";
+import "./login.css";
 
 type ResErrors = {
   message: string;
@@ -72,116 +73,68 @@ const Login: React.FC = () => {
     }
   };
   const buttonStyle = {
-    background: "linear-gradient(to right, #0d617b, #b6d900)",
+    background: "#12a9be",
   };
   return (
-    <section className="flex justify-center gradient-form h-full bg-neutral-100">
-      <div className="container h-full p-10 mb-2 lg:mb-24 lg:mt-16 mt-0">
-        <div className="g-6 flex h-full flex-wrap items-center justify-center text-gray-600">
-          <div className="w-full">
-            <div className="block rounded-3xl bg-neutral-200 shadow-lg">
-              <div className="g-0 lg:flex lg:flex-wrap">
-                <div className="px-4 md:px-0 lg:w-6/12">
-                  <div className="md:mx-6 md:p-12">
-                    <div className="text-center">
-                      <img
-                        className="mx-auto w-24"
-                        src="/certificate/logo_certificados.png"
-                        alt="logo"
-                      />
-                      <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold"></h4>
-                    </div>
-                    <form>
-                      <p className="flex justify-center text-gray-600 mb-8 font-semibold text-xl">
-                        Iniciar sesión
-                      </p>
-                      {resErrors?.message && (
-                        <span className="text-error text-sm">
-                          {resErrors.message}
-                        </span>
-                      )}
-
-                      <div
-                        className="flex justify-center relative mb-6"
-                        data-te-input-wrapper-init
-                      >
-                        <input
-                          type="text"
-                          className="peer block min-h-[auto] lg:w-96 w-full rounded-lg border-2 border-gray-500 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none "
-                          id="exampleFormControlInput1"
-                          placeholder="Email"
-                          onChange={(event) => handleFormData(event, "email")}
-                        />
-                        <label
-                          htmlFor="exampleFormControlInput1"
-                          className=""
-                        ></label>
-                      </div>
-
-                      <div
-                        className="flex justify-center relative mb-4"
-                        data-te-input-wrapper-init
-                      >
-                        <input
-                          type="password"
-                          className="peer block min-h-[auto] lg:w-96 w-full rounded-lg border-2 border-gray-500 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none"
-                          id="exampleFormControlInput11"
-                          placeholder="Password"
-                          autoComplete="on"
-                          onChange={(event) =>
-                            handleFormData(event, "password")
-                          }
-                        />
-                        <label
-                          htmlFor="exampleFormControlInput11"
-                          className=""
-                        ></label>
-                      </div>
-                      <div className="mb-12 pb-1 pt-1 text-center">
-                        <button
-                          className="mb-3 inline-block w-36 rounded-lg px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
-                          type="button"
-                          data-te-ripple-init
-                          data-te-ripple-color="light"
-                          style={buttonStyle}
-                          value="login"
-                          onClick={() => onSubmit()}
-                        >
-                          Iniciar sesión
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-
-                <div className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-3xl lg:rounded-bl-none">
-                  <div
-                    className="lg:rounded-r-3xl lg:rounded-bl-none"
-                    style={{
-                      background: 'url("/image/login.png")',
-                      backgroundSize: "100% 100%",
-                      backgroundPosition: "center",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  >
-                    <div className="px-4 py-6 text-white md:mx-6 md:p-12">
-                      <h4 className="flex justify-center mb-6 text-xl font-semibold">
-                       
-                      </h4>
-                      <p className="text-lg font-semibold">
-                        
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="flex justify-center items-center h-screen bg-primaryceleste" style={{ backgroundImage: "url('image/login.jpg')" }}>
+  <div className="container p-4 lg:p-10">
+    <div className="slider-login">
+      <form className="form-login  rounded-lg shadow-lg p-8 max-w-sm mx-auto">
+        <div className="text-center mb-4">
+          <img
+            className="mx-auto w-24 lg:w-32"
+            src="/certificate/logo_blanco.png"
+            alt="logo"
+          />
         </div>
-      </div>
-      <Whatsapp />
-    </section>
+        <h2 className="text-center text-xl lg:text-2xl font-semibold mb-4 text-white">Inicio de Sesión</h2>
+        {resErrors?.message && (
+          <div className="border border-red-800 bg-red-600 text-white text-sm p-2 rounded-md mb-4">
+            {resErrors.message}
+          </div>
+        )}
+
+        <div className="form-control mb-4">
+          <input
+            type="text"
+            id="exampleFormControlInput1"
+            className="input-login"
+            autoComplete="off"
+            required
+            onChange={(event) =>
+              handleFormData(event, "email")
+            }
+          />
+          <label className="label-login">Correo</label>
+        </div>
+
+        <div className="form-control mb-4">
+          <input
+            type="password"
+            className="input-login"
+            required
+            id="exampleFormControlInput11"
+            onChange={(event) =>
+              handleFormData(event, "password")
+            }
+          />
+          <label className="label-login">Contraseña</label>
+        </div>
+        <button
+          onClick={onSubmit}
+          type="button"
+          value="login"
+          className="w-full  text-white font-semibold py-2 px-4 rounded"
+        >
+          Iniciar Sesión
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
   );
 };
 
