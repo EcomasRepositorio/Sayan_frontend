@@ -1,5 +1,5 @@
 import "./Styles.css";
-
+import Link from "next/link";
 
 const Graduates = () => {
 
@@ -16,22 +16,32 @@ const Graduates = () => {
           </p>
         </div>
         <div className="team-area">
-            <figure className="boxG">
-                <figcaption>
-                <div className="lg:text-4xl text-3xl  font-bebas-neue mt-4">INGENIERÍA CIVIL</div>
-                    <p></p>
-                    <p className="socials">
-                        <i className="fa fa-facebook"></i>
-                        <i className="fa fa-twitter"></i>
-                        <i className="fa fa-pinterest"></i>
-                        <i className="fa fa-linkedin"></i>
-                    </p>
-                </figcaption>
-                <img className="" alt="" src="/graduate/tecnico.png" /> 
-            </figure>
 
             <figure className="boxG">
-                <figcaption>
+                 <Link href="/graduate">
+                 <div className="figuree">
+                  
+                  <div className="lg:text-4xl text-3xl  font-bebas-neue mt-4">INGENIERÍA CIVIL</div>
+                  <p></p>
+                  <p className="socials">
+                      <i className="fa fa-facebook"></i>
+                      <i className="fa fa-twitter"></i>
+                      <i className="fa fa-pinterest"></i>
+                      <i className="fa fa-linkedin"></i>
+                  </p>
+                  
+                </div>
+                <img className="" alt="" src="/graduate/tecnico.png" /> 
+                 </Link>
+               
+
+            </figure>
+
+
+
+            <figure className="boxG">
+                <Link href="/graduate">
+                <div className="figuree">
                     <div className="lg:text-4xl text-3xl  font-bebas-neue mt-4">INGENIERÍA AMBIENTAL</div>
                     <p></p>
                     <p className="socials">
@@ -40,12 +50,17 @@ const Graduates = () => {
                         <i className="fa fa-pinterest"></i>
                         <i className="fa fa-linkedin"></i>
                     </p>
-                </figcaption>
+                </div>
                 <img className="" alt="" src="/graduate/ambiental.png" /> 
+                </Link>
+                
             </figure>
 
+
+
             <figure className="boxG">
-                <figcaption>
+                <Link href="/graduate">
+                <div className="figuree">
                     <div className="lg:text-4xl text-3xl  font-bebas-neue mt-4">INGENIERÍA AGRÓNOMA</div>
                     <p></p>
                     <p className="socials">
@@ -54,15 +69,21 @@ const Graduates = () => {
                         <i className="fa fa-pinterest"></i>
                         <i className="fa fa-linkedin"></i>
                     </p>
-                </figcaption>
+                </div>
                 <img className="" alt="" src="/graduate/agronomo.png" /> 
+
+                </Link>
+               
             </figure>
         </div>
        
       
         <div className="team-area">
+
+
             <figure className="boxG">
-                <figcaption>
+                <Link href="/graduate">
+                <div className="figuree">
                     <div className="lg:text-4xl text-3xl  font-bebas-neue mt-4">INGENIERÍA AlIMENTARIA</div>
                     <p></p>
                     <p className="socials">
@@ -71,13 +92,16 @@ const Graduates = () => {
                         <i className="fa fa-pinterest"></i>
                         <i className="fa fa-linkedin"></i>
                     </p>
-                </figcaption>
+                </div>
                 <img className="" alt="" src="/graduate/alimentaria.png" /> 
+                </Link>
+                
             </figure>
             
 
             <figure className="boxG">
-                <figcaption>
+                <Link href="/graduate">
+                <div className="figuree">
                     <div className="lg:text-4xl text-3xl  font-bebas-neue mt-4">PROFESIONES EN GENERAL</div>
                     <p></p>
                     <p className="socials">
@@ -86,8 +110,10 @@ const Graduates = () => {
                         <i className="fa fa-pinterest"></i>
                         <i className="fa fa-linkedin"></i>
                     </p>
-                </figcaption>
+                </div>
                 <img className="" alt="" src="/graduate/profesionales.png" /> 
+                </Link>
+               
             </figure>
 
         </div>

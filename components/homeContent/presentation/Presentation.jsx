@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import "./StylePresentation.css";
 
 const Presentation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const controls = useAnimation();
 
-  const handleScroll = () => {
-    // Puedes ajustar el valor de offset según tus necesidades
-    if (window.scrollY > 100) {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100 && !isScrolled) {
+        setIsScrolled(true);
+      } else if (window.scrollY <= 100 && isScrolled) {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isScrolled]);
+
+  useEffect(() => {
+    if (isScrolled) {
       controls.start({ opacity: 1, y: 0 });
     } else {
       controls.start({ opacity: 0, y: 50 });
     }
-  };
-
-  // Agrega un listener para el evento de scroll
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    // Limpia el listener al desmontar el componente
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isScrolled, controls]);
 
   return (
     <div className="lg:p-32  bg-black">

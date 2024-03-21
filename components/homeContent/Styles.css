@@ -202,7 +202,7 @@ button {  font-size: 18px;
 .boxG:hover {
 	transform: scale(1.05);
 }
-.boxG figcaption {
+.boxG .figuree {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
@@ -213,7 +213,7 @@ button {  font-size: 18px;
 	transition: transform 0.5s ease;
 	border-radius: 100px 100px 0 0;
 }
-.boxG:hover figcaption {
+.boxG:hover .figuree {
 	transform: translateY(0);
 }
 

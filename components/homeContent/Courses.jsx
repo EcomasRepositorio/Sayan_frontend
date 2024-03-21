@@ -36,11 +36,12 @@ const Course = () => {
                   del clima, la purificación del aire y el agua, la recreación y
                   el turismo, entre otros.
                 </p>
-                <button className="bg-primaryceleste  px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
+                <a  href="https://api.whatsapp.com/send?phone=51978490739" target='_blank'  className="bg-primaryceleste px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
                   Mas Información
-                </button>
+                </a>
               </div>
             </div>
+                     
           </div>
         </div>
 
@@ -70,9 +71,9 @@ const Course = () => {
                   procesos, toma de decisiones basada en evidencias y mejora
                   continua.
                 </p>
-                <button className="bg-primaryceleste  px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
+                <a  href="https://api.whatsapp.com/send?phone=51978490739" target='_blank'  className="bg-primaryceleste px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
                   Mas Información
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -100,9 +101,9 @@ const Course = () => {
                   construcción se lleven a cabo de manera eficiente, segura y
                   cumpliendo con los estándares de calidad establecidos.
                 </p>
-                <button className="bg-primaryceleste  px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
+                <a  href="https://api.whatsapp.com/send?phone=51978490739" target='_blank'  className="bg-primaryceleste px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
                   Mas Información
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -131,9 +132,9 @@ const Course = () => {
                   atmósfera para determinar su nivel de concentración y su
                   impacto en la salud humana y el medio ambiente.
                 </p>
-                <button className="bg-primaryceleste  px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
+                <a  href="https://api.whatsapp.com/send?phone=51978490739" target='_blank'  className="bg-primaryceleste px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
                   Mas Información
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -163,9 +164,9 @@ const Course = () => {
                   relacionadas con la conservación de recursos naturales y
                   producción de alimentos.
                 </p>
-                <button className="bg-primaryceleste  px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
+                <a  href="https://api.whatsapp.com/send?phone=51978490739" target='_blank'  className="bg-primaryceleste px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
                   Mas Información
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -195,9 +196,9 @@ const Course = () => {
                   de manera controlada y precisa, adaptándose a las necesidades
                   de los cultivos en cada etapa de su crecimiento.
                 </p>
-                <button className="bg-primaryceleste  px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
+                <a  href="https://api.whatsapp.com/send?phone=51978490739" target='_blank'  className="bg-primaryceleste px-7 py-4 font-semibold text-white rounded-full absolute bottom-10 transition duration-300 ease-in-out hover:bg-primaryblue">
                   Mas Información
-                </button>
+                </a>
               </div>
             </div>
           </div>
