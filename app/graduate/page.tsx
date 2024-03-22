@@ -40,10 +40,10 @@ const Graduate = () => {
         </div>
       </div>
 
-      <div className="text-primaryceleste text-center  text-4xl  lg:text-6xl xl:text-6xl  font-bold font-poppins mb-8 animated-slideInLeftt">
+      <div className="text-primaryceleste text-center  text-4xl  lg:text-6xl xl:text-6xl  font-bold font-poppins mb-8 ">
         INGENIERIA CIVIL
       </div>
-      <div className=" mb-16 animated-fadeIno">
+      <div className=" mb-16">
         <GraduateTecnicoObras />
         <GraduateIngenieriaVial />
         <GraduateIngenieriaPuentes />
