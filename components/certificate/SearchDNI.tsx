@@ -104,7 +104,7 @@ const SearchName:React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
           onChange={onChange}
           value={queryValue}
           />
-        <button type="submit" className="botonCert bg-primaryblue absolute end-1.5 bottom-3 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-1.5">Buscar</button>
+        <button  className=" bg-primaryblue absolute end-1.5 bottom-3 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-1.5">Buscar</button>
     </div>
   </form>
     {loading && <p>Cargando...</p>}

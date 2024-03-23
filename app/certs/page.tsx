@@ -54,7 +54,7 @@ const Certificate: React.FC = () => {
 
             <button
               onClick={() => handleButton("documentNumber")}
-              className={`buttonGlobal  lg:mb-20 mb-4 font-bold rounded-lg text-md px-7 py-3 text-center inline-block
+              className={`buttonGloball  lg:mb-20 mb-4 font-bold rounded-lg text-md px-7 py-3 text-center inline-block
               ${searchType === "documentNumber" && ""}`}
             >
               <BsPersonVcard className="text-xl inline-block align-text-top mr-1" />
@@ -62,7 +62,7 @@ const Certificate: React.FC = () => {
             </button>
             <button
               onClick={() => handleButton("name")}
-              className={`buttonGlobal lg:mb-20 mb-4 ml-6 mr-6 font-bold rounded-lg text-md px-3 py-3 text-center
+              className={`buttonGloball lg:mb-20 mb-4 ml-6 mr-6 font-bold rounded-lg text-md px-3 py-3 text-center
               ${searchType === "name" && ""}`}
             >
               <BsPersonSquare className="text-lg inline-block align-text-top mr-1" />
@@ -70,7 +70,7 @@ const Certificate: React.FC = () => {
             </button>
             <button
               onClick={() => handleButton("code")}
-              className={`buttonGlobal lg:mb-20 mb-5 font-bold rounded-lg text-md px-4 py-3 text-center inline-block
+              className={`buttonGloball lg:mb-20 mb-5 font-bold rounded-lg text-md px-4 py-3 text-center inline-block
             ${searchType === "code" && ""}`}
             >
               <BsQrCodeScan className="text-lg inline-block align-text-top mr-1" />{" "}
@@ -79,9 +79,9 @@ const Certificate: React.FC = () => {
           </div>
 
           {isActive && (
-            <div>
+            <div >
               {searchType === "documentNumber" && (
-                <SearchDNI onSearchDNI={handleSearch} />
+                <SearchDNI  onSearchDNI={handleSearch} />
               )}
               {searchType === "name" && (
                 <SearchName onSearchName={handleSearch} />

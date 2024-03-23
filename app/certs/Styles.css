@@ -1,4 +1,4 @@
-.buttonGlobal {
+.buttonGloball {
   display: inline-block;
   text-align: center;
   letter-spacing: 1px;
@@ -26,7 +26,7 @@
   /* Asegura que el ancho incluya el padding y el borde */
 }
 
-.buttonGlobal:hover {
+.buttonGloball:hover {
 
   color: #0d617b;
   box-shadow: inset 0 -100px 0 0 #fff;
@@ -34,12 +34,12 @@
 }
 
 
-.buttonGlobal:active {
+.buttonGloball:active {
   transform: scale(0.9);
 }
 
 @media (max-width: 0px) {
-  .buttonGlobal {
+  .buttonGloball {
     font-size: 16px;
     padding: 12px 40px
   }

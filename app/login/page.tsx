@@ -124,7 +124,7 @@ const Login: React.FC = () => {
           onClick={onSubmit}
           type="button"
           value="login"
-          className="w-full  text-white font-semibold py-2 px-4 rounded"
+          className="buttonLog w-full  text-white font-semibold py-2 px-4 rounded"
         >
           Iniciar Sesión
         </button>

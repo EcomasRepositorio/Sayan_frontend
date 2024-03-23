@@ -85,7 +85,7 @@ form .form-control .input-login:valid + .label-login {
     transform: translate(-150%, -50%);
 }
 
-form button {
+form .buttonLog {
     width: 100%;
     background-color: transparent;
     border: none;
@@ -98,7 +98,7 @@ form button {
     box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
 }
 
-form button:active {
+form .buttonLog:active {
     box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 3px 3px 4px #0e0e0e, inset -3px -3px 4px #5f5e5e;
 }
 
