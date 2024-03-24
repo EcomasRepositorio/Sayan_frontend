@@ -32,10 +32,11 @@ const Counter = () => {
     <div id="counter-section">
       <div className="mx-auto container md:-mt-28 -mt-20 flex justify-center items-center ">
         <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-x-2 gap-y-2 lg:gap-x-6 md:gap-x-6 md:gap-y-6 transform hover:-translate-y-1 transition duration-600">
-          <ItemCard number={"2000"} description={"Egresados"} animated={counterAnimated} />
-          <ItemCard number={"7000"} description={"Alumnos"} animated={counterAnimated} />
-          <ItemCard number={"70"} description={"Diplomados"} animated={counterAnimated} />
-          <ItemCard number={"700"} description={"Cursos"} animated={counterAnimated} />
+
+          <ItemCard number={"2000"} description={"Egresados"} animated={counterAnimated} icon="/icons/egresados.png" />
+          <ItemCard number={"7000"} description={"Alumnos"} animated={counterAnimated} icon="/icons/alumnos.png"/>
+          <ItemCard number={"70"} description={"Diplomados"} animated={counterAnimated} icon="/icons/diplomado.png" />
+          <ItemCard number={"700"} description={"Cursos"} animated={counterAnimated} icon="/icons/courses.png" />
         </div>
       </div>
     </div>

@@ -49,10 +49,10 @@ const GraduateTecnico = () => {
         <div className="sm:w-96 mb-4 sm:mb-0">
           <Image
             className="flex items-center sm:justify-center bg-cover h-96 w-96 sm:h-auto rounded-3xl mx-auto"
-            src="/graduate/tecnico_obras.png"
+            src="/graduate/residuos-solidos.webp"
             alt="icon"
-            width={200}
-            height={200}
+            width={1200}
+            height={1200}
           />
         </div>
         <div className="p-5 sm:w-1/2 md:px-20 sm:px-5 lg:mt-8 ">

@@ -31,11 +31,11 @@ export const ItemCard = ({ number, description, animated, animation, icon }) => 
       />
 
       {/* Contenido del card */}
-      <img src="" alt="" />
-      {icon && <img src={icon} alt="Icono" className="w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-4" />}
-      <h3 className="lg:text-5xl md:text-4xl text-2xl font-extrabold leading-10 text-center text-white">
+ 
+      {icon && <img src={icon} alt="Icono" className="w-10 h-10 md:w-10 md:h-10 lg:w-20 lg:h-20 mb-4" />}
+      <div className="lg:text-5xl md:text-4xl text-2xl font-extrabold leading-10 text-center text-white">
         { "+" + count }
-      </h3>
+      </div>
       <p className="mt-4 text-sm md:text-base lg:text-lg leading-none text-center text-white font-bold">
         {description}
       </p>

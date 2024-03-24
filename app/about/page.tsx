@@ -21,9 +21,9 @@ const About = () => {
           ></span>
         </div>
         <div className="relative mx-auto max-w-screen-xl p-2 text-white">
-          <h1 className=" font-extrabold text-5xl lg:text-6xl animated-fadeIn">
+          <div className=" font-extrabold text-5xl lg:text-6xl animated-fadeIn">
             Acerca de Nosotros
-          </h1>
+          </div>
           <p></p>
         </div>
       </div>
@@ -32,9 +32,9 @@ const About = () => {
         {/* Description */}
         <div className="flex items-center lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
           <div className="w-full lg:w-6/12">
-            <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft">
+            <div className="lg:ml-16 text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft ">
               ¿Quiénes Somos?
-            </h2>
+            </div>
             <p className="w-full text-gray-600 lg:text-3xl text-2xl lg:leading-10 leading-9 text-center sm:text-start animated-fadeIn">
               Nos destacamos como referentes en el diseño y ejecución de
               programas de desarrollo profesional, brindando un enfoque
@@ -57,7 +57,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
               {/* Card team */}
               <div className="bg-red-70 p-6 rounded-md">
-                <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft ">
+                <h2 className="lg:ml-32 text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft ">
                   Nuestra Visión
                 </h2>
                 <p className="lg:text-3xl text-lg text-center text-gray-600 animated-fadeIn">
@@ -70,7 +70,7 @@ const About = () => {
 
               {/* Card Task */}
               <div className="bg-red-70 p-6 rounded-md">
-                <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft ">
+                <h2 className="lg:ml-32 text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start animated-slideInLeft ">
                   Nuestra Misión
                 </h2>
                 <p className="lg:text-3xl text-lg text-center  text-gray-600 animated-fadeIn">
@@ -87,7 +87,7 @@ const About = () => {
         </div>
 
         <div className="bg-red-70 p-6 rounded-md ">
-          <h2 className="text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start ">
+          <h2 className="lg:ml-40 text-5xl font-black leading-10 pb-5 text-primaryceleste text-center sm:text-start ">
             Nuestros Valores
           </h2>
         </div>

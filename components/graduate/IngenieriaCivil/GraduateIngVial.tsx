@@ -45,12 +45,10 @@ const GraduateIngenieriaV = () => {
     <div id="irrigation" className="">
       <div className="md:px-20 flex flex-col sm:flex-row justify-center mb-16 ">
         <div className="sm:w-96 mb-4 sm:mb-0">
-          <Image
-            className="flex items-center sm:justify-center bg-cover h-96 w-96 sm:h-auto rounded-3xl mx-auto"
-            src="/graduate/tecnico_obras.png"
-            alt="icon"
-            width={200}
-            height={200}
+        <img
+            className="bg-cover h-96 w-96 sm:h-auto rounded-3xl  transform hover:-translate-y-1 transition duration-600"
+            src="/graduate/ingenieria-vial.webp"
+            alt="image_sayan"
           />
         </div>
         <div className="p-5 sm:w-1/2 md:px-20 sm:px-5 lg:mt-8 ">

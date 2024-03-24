@@ -11,7 +11,7 @@ const Course = () => {
         </p>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 max-w-screen-xl mx-auto justify-center items-center gap-10 text-white mb-6 ">
-        <div className="lg:w-[400px] sm:w-[450px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
+        <div className="lg:w-[400px] md:w-[380px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
             <div className="absolute backface-hidden border-2 w-full h-full rounded-lg overflow-hidden">
               <Image
@@ -45,7 +45,7 @@ const Course = () => {
           </div>
         </div>
 
-        <div className="lg:w-[400px] sm:w-[450px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
+        <div className="lg:w-[400px] md:w-[380px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
             <div className="absolute backface-hidden border-2 w-full h-full rounded-lg overflow-hidden">
               <Image
@@ -78,7 +78,7 @@ const Course = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-[400px] sm:w-[450px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
+        <div className="lg:w-[400px] md:w-[380px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
             <div className="absolute backface-hidden border-2 w-full h-full rounded-lg overflow-hidden">
               <Image
@@ -109,7 +109,7 @@ const Course = () => {
           </div>
         </div>
 
-        <div className="lg:w-[400px] sm:w-[450px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
+        <div className="lg:w-[400px] md:w-[380px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
             <div className="absolute backface-hidden border-2 w-full h-full rounded-lg overflow-hidden">
               <Image
@@ -139,7 +139,7 @@ const Course = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-[400px] sm:w-[450px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
+        <div className="lg:w-[400px] md:w-[380px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
             <div className="absolute backface-hidden border-2 w-full h-full rounded-lg overflow-hidden">
               <Image
@@ -171,7 +171,7 @@ const Course = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-[400px] sm:w-[450px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
+        <div className="lg:w-[400px] md:w-[380px] w-[380px] h-[420px] bg-gray-200 cursor-pointer group perspective mt-5 rounded-xl">
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
             <div className="absolute backface-hidden border-2 w-full h-full rounded-lg overflow-hidden">
               <Image

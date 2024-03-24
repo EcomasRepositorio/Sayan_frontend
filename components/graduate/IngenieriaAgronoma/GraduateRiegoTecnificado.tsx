@@ -48,11 +48,11 @@ const GraduateTecnico = () => {
       <div className="md:px-20 flex flex-col sm:flex-row justify-center mb-16 ">
         <div className="sm:w-96 mb-4 sm:mb-0">
           <Image
-            className="flex items-center sm:justify-center bg-cover h-96 w-96 sm:h-auto rounded-3xl mx-auto"
-            src="/graduate/tecnico_obras.png"
+            className="flex items-center sm:justify-center bg-cover h-96 w-96 sm:h-auto rounded-3xl mx-auto border-2 border-primaryceleste"
+            src="/graduate/sistemas-de-riego-fertirriego.webp"
             alt="icon"
-            width={200}
-            height={200}
+            width={1200}
+            height={1200}
           />
         </div>
         <div className="p-5 sm:w-1/2 md:px-20 sm:px-5 lg:mt-8 ">

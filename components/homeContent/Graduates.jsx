@@ -11,7 +11,7 @@ const Graduates = () => {
       
 
           <div className="text-center font-semibold font-poppins">
-          <p className="font-extrabold text-white lg:text-7xl text-5xl mt-8 mb-16 ">
+          <p className="font-extrabold text-white lg:text-7xl md:text-5xl text-5xl mt-8 mb-16 ">
             Nuestros Diplomados
           </p>
         </div>

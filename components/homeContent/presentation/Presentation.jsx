@@ -37,7 +37,7 @@ const Presentation = () => {
           className="content"
         >
           <div
-            className="flex items-center font-semibold font-poppins lg:text-7xl text-6xl p-1 mb-16 text-center lg:ml-24"
+            className="flex items-center font-semibold font-poppins lg:text-7xl md:text-5xl text-6xl p-1 mb-16 text-center lg:ml-24"
             style={{
               background: "linear-gradient(to right, #0d617b, #12a9be)",
               WebkitBackgroundClip: "text",
