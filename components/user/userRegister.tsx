@@ -5,13 +5,15 @@ import React, { useEffect, useState } from 'react';
 import { useRouteData } from '@/hooks/hooks';
 import tokenConfig, { URL } from '@/components/utils/format/tokenConfig';
 import { UserData } from '@/interface/interface';
-import PasswordInput from '../utils/format/passwordHash';
+import PasswordInputs from '../utils/format/passwordHash';
+
 
 interface CreateUserModal {
-    onCloseModal: () => void;
-    onCreateSuccess: (createdUserId: number) => void;
-  }
+  onCloseModal: () => void;
+  onCreateSuccess: (createdUserId: number) => void;
+}
 
+const { PasswordInputRegister } = PasswordInputs;
 const UserRegister: React.FC<CreateUserModal> = ({ onCloseModal, onCreateSuccess}) => {
   const { register, handleSubmit } = useForm<UserData>();
   const [dataLoaded, setDataLoaded] = useState(true);
@@ -91,7 +93,7 @@ const UserRegister: React.FC<CreateUserModal> = ({ onCloseModal, onCreateSuccess
           <input {...register('email', { required: true })} className="border rounded-lg p-2 w-full"/>
         </div>
         <div className="mb-4 text-xs col-span-full md:col-span-2 lg:col-span-3">
-        <PasswordInput name="password" label="Contraseña" register={register} />
+        <PasswordInputRegister name="password" label="Contraseña" register={register} />
       </div>
         <div className="mb-4 text-xs col-span-full md:col-span-2 lg:col-span-3">
           <label>Nombres:</label>
