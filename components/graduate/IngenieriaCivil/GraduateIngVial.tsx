@@ -45,10 +45,12 @@ const GraduateIngenieriaV = () => {
     <div id="irrigation" className="">
       <div className="md:px-20 flex flex-col sm:flex-row justify-center mb-16 ">
         <div className="sm:w-96 mb-4 sm:mb-0">
-        <img
-            className="bg-cover h-96 w-96 sm:h-auto rounded-3xl  transform hover:-translate-y-1 transition duration-600"
+        <Image
+            className="flex items-center sm:justify-center bg-cover h-96 w-96 sm:h-auto rounded-3xl mx-auto"
             src="/graduate/ingenieria-vial.webp"
-            alt="image_sayan"
+            alt="icon"
+            width={1200}
+            height={1200}
           />
         </div>
         <div className="p-5 sm:w-1/2 md:px-20 sm:px-5 lg:mt-8 ">
@@ -149,7 +151,7 @@ const GraduateIngenieriaV = () => {
             </div>
           </div>
 
-          <div className="z-0">
+          <div className="">
             <button
               onClick={toggleAccordion1}
               className="p-1 px-4 border flex items-center justify-between mb-4 text-gray-100 bg-primaryblue font-bold rounded-xl w-full hover:scale-105 duration-300"

@@ -22,7 +22,7 @@ const Header = () => {
       
       </div>
         <div className="flex space-x-6 rtl:space-x-reverse">
-            <Link href="/certificate" className="text-lg text-gray-50 hover:underline font-semibold">Verificar certificado</Link>
+            <Link href="/certs" className="text-lg text-gray-50 hover:underline font-semibold">Verificar certificado</Link>
             <Link href="https://site2.q10.com/login?ReturnUrl=%2F&aplentId=0959465f-37c3-4032-803b-bbfc499af7a3"
               className="text-lg text-gray-50 hover:underline font-semibold" target='_blank'>
               Aula virtual

@@ -1,7 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Whatsapp from "@/components/whatsapp/Index";
+import { MdOutlineMailLock } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { useForm } from "react-hook-form";
+import PasswordInputs from "@/components/utils/format/passwordHash";
 import "./login.css";
 
 type ResErrors = {
@@ -23,9 +27,17 @@ const dataForm = {
   token: "",
 };
 
+const { PasswordInput } = PasswordInputs;
 const Login: React.FC = () => {
+  const { register } = useForm();
   const [resErrors, setResErrors] = useState<ResErrors | null>(null);
   const [form, setForm] = useState<Auth>(dataForm);
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      onSubmit();
+    }
+  };
 
   const handleFormData = (
     { target }: React.ChangeEvent<HTMLInputElement>,
@@ -65,76 +77,86 @@ const Login: React.FC = () => {
             errorContent: data.errorContent,
           });
         } else {
-          setResErrors({ message: "Datos incorrectos", errorContent: "" });
+          setResErrors({
+            message: "La contraseña o gmail es incorrecta",
+            errorContent: "",
+          });
         }
       } else {
         setResErrors({ message: "Error en el servidor", errorContent: "" });
       }
     }
   };
-  const buttonStyle = {
-    background: "#12a9be",
-  };
+
+  useEffect(() => {
+    if (resErrors?.message === "La contraseña o gmail es incorrecta") {
+      setResErrors(null);
+    }
+  }, [form.email, form.password]);
+
   return (
-    <section className="flex justify-center items-center h-screen bg-primaryceleste" style={{ backgroundImage: "url('image/login.jpg')" }}>
-  <div className="container p-4 lg:p-10">
-    <div className="slider-login">
-      <form className="form-login  rounded-lg shadow-lg p-8 max-w-sm mx-auto">
-        <div className="text-center mb-4">
-          <img
-            className="mx-auto w-24 lg:w-32"
-            src="/certificate/logo_blanco.png"
-            alt="logo"
-          />
+    <section
+      className="flex justify-center items-center h-screen bg-primaryceleste"
+      style={{ backgroundImage: "url('image/login.jpg')" }}
+    >
+      <div className="container p-4 lg:p-10">
+        <div className="">
+          <form className="form-login  rounded-lg shadow-lg p-8 max-w-sm mx-auto ">
+
+            <div className="text-center mb-4 ">
+              <img
+                className="mx-auto w-24 lg:w-40"
+                src="/certificate/logo_blanco.png"
+                alt="logo"
+              />
+            </div>
+          
+            {resErrors?.message && (
+              <span className="text-gray-100 bg-red-600/50 w-full p-2 rounded-xl font-semibold text-sm">
+                {resErrors.message}
+              </span>
+            )}
+
+
+            <div className="relative ">
+              <div className="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-primaryceleste">
+                <MdOutlineMailLock />
+              </div>
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-72 bg-[#FFFFFF40] py-2 px-12 text-white rounded-full focus:bg-[#00000050] focus:outline-none focus:ring-1 focus:ring-primaryceleste focus:drop-shadow-lg"
+                onChange={(event) => handleFormData(event, "email")}
+                onKeyDown={handleKeyDown}
+              />
+            </div>
+
+            <div className="relative">
+              <div className="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-primaryceleste">
+                <RiLockPasswordLine />
+              </div>
+              <PasswordInput
+                name="password"
+                register={register}
+                placeholder="Password"
+                onChange={(event) => handleFormData(event, "password")}
+                onKeyDown={(event) => handleKeyDown(event)}
+                
+              />
+            </div>
+
+            <button
+              type="button"
+              value="login"
+              className="bg-gradient-to-r from-primaryceleste to-primarygreen text- w-72 font-semibold rounded-full py-2 mb-4"
+              onClick={() => onSubmit()}
+            >
+              Iniciar sesión
+            </button>
+          </form>
         </div>
-        <h2 className="text-center text-xl lg:text-2xl font-semibold mb-4 text-white">Inicio de Sesión</h2>
-        {resErrors?.message && (
-          <div className="border border-red-800 bg-red-600 text-white text-sm p-2 rounded-md mb-4">
-            {resErrors.message}
-          </div>
-        )}
-
-        <div className="form-control mb-4">
-          <input
-            type="text"
-            id="exampleFormControlInput1"
-            className="input-login"
-            autoComplete="off"
-            required
-            onChange={(event) =>
-              handleFormData(event, "email")
-            }
-          />
-          <label className="label-login">Correo</label>
-        </div>
-
-        <div className="form-control mb-4">
-          <input
-            type="password"
-            className="input-login"
-            required
-            id="exampleFormControlInput11"
-            onChange={(event) =>
-              handleFormData(event, "password")
-            }
-          />
-          <label className="label-login">Contraseña</label>
-        </div>
-        <button
-          onClick={onSubmit}
-          type="button"
-          value="login"
-          className="buttonLog w-full  text-white font-semibold py-2 px-4 rounded"
-        >
-          Iniciar Sesión
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-
-
+      </div>
+    </section>
   );
 };
 

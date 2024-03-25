@@ -42,19 +42,42 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ label, name }) => {
 export default PasswordInput;
  */
 
-import React from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { UseFormRegister } from 'react-hook-form';
 
 interface PasswordInputProps {
+  name: string;
+  register: UseFormRegister<any>;
+  placeholder?: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown: (event: KeyboardEvent<HTMLInputElement>) => void;
+}
+
+const PasswordInput: React.FC<PasswordInputProps> = ({ name, register, placeholder, onChange, onKeyDown }) => {
+  return (
+    <div className="relative">
+      <input
+        type="password"
+        placeholder={placeholder}
+        {...register(name)}
+        onChange={onChange}
+        onKeyDown={onKeyDown}
+        className="w-72 bg-[#FFFFFF30] py-2 px-12 text-white rounded-full focus:bg-[#00000050] focus:outline-none focus:ring-1 focus:ring-primaryceleste focus:drop-shadow-lg"
+      />
+    </div>
+  );
+};
+
+interface PasswordInputRegisterProps {
   label: string;
   name: string;
   register: UseFormRegister<any>; // Ajusta el tipo según tu formulario principal
 }
 
-const PasswordInput: React.FC<PasswordInputProps> = ({ label, name, register }) => {
+const PasswordInputRegister: React.FC<PasswordInputRegisterProps> = ({ label, name, register }) => {
   return (
-    <div className="relative">
+    <div className="relative ">
       <label>{label}:</label>
       <input
         type="password"
@@ -64,5 +87,9 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ label, name, register }) 
     </div>
   );
 };
+const exports = {
+  PasswordInput,
+  PasswordInputRegister
+};
 
-export default PasswordInput;
+export default exports;

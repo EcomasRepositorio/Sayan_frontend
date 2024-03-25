@@ -47,11 +47,14 @@ const GraduateTecnico = () => {
     <div id="irrigation" className="">
       <div className="md:px-20 flex flex-col sm:flex-row justify-center mb-16 ">
         <div className="sm:w-96 mb-4 sm:mb-0">
-        <img
-            className="bg-cover h-96 w-96 sm:h-auto rounded-3xl  transform hover:-translate-y-1 transition duration-600"
+        <Image
+            className="flex items-center sm:justify-center bg-cover h-96 w-96 sm:h-auto rounded-3xl mx-auto"
             src="/graduate/tecnico_obras.webp"
             alt="icon"
+            width={1200}
+            height={1200}
           />
+        
         </div>
         <div className="p-5 sm:w-1/2 md:px-20 sm:px-5 lg:mt-8 ">
           <div className="text-primaryblue font-extrabold font-poppins lg:text-4xl text-3xl my-2 mb-2">
@@ -118,8 +121,8 @@ const GraduateTecnico = () => {
                 </a>
               </div>
               <div>
-                <a
-                  className="border-2 border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+              <a
+                  className="border-2  border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
                   onClick={() => handleImageClick("/image/image.jpg")}
                 >
                   <div className="items-center text-xs uppercase inline-flex cursor-pointer">
@@ -140,11 +143,11 @@ const GraduateTecnico = () => {
               </div>
             </div>
           </div>
-          <div className="z-0">
+          <div className="">
             <button
               onClick={toggleAccordion1}
               className="p-1 px-4 border flex items-center justify-between mb-4 text-gray-100 bg-primaryblue font-bold rounded-xl w-full hover:scale-105 duration-300"
-              style={{ zIndex: 0 }}
+        
             >
               <h1 className="hover:scale-110 duration-300 uppercase text-">
                 Lista de Módulos
