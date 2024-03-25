@@ -46,27 +46,27 @@ const Header = () => {
             }
             </div>
 
-            <ul className="hidden uppercase font-semibold lg:flex text-slate-200 flex-wrap p-5 mx-auto space-x-8 rtl:space-x-reverse text-xm">
-                <li>
-                    <Link href="/" className="hover:text-textgreen" aria-current="page">Inicio</Link>
+            <ul className="hidden uppercase font-semibold lg:flex text-white  flex-wrap p-5 mx-auto space-x-8 rtl:space-x-reverse text-xm">
+                <li className='hover:scale-110 duration-300'>
+                    <Link href="/" className="p-2 hover:bg-primaryblue hover:text-primarygreen rounded-lg " aria-current="page">Inicio</Link>
                 </li>
-                <li>
-                    <Link href="/graduate" className="hover:text-textgreen">Diplomados</Link>
+                <li className='hover:scale-110 duration-300'>
+                    <Link href="/graduate" className="p-2 hover:bg-primaryblue hover:text-primarygreen rounded-lg">Diplomados</Link>
                 </li>
-                <li>
-                    <Link href="/certs" className="hover:text-textgreen">Certificados</Link>
+                <li className='hover:scale-110 duration-300'>
+                    <Link href="/certs" className="p-2 hover:bg-primaryblue hover:text-primarygreen rounded-lg">Certificados</Link>
                 </li>
-                <li>
-                    <Link href="/about" className="hover:text-textgreen">Nosotros</Link>
+                <li className='hover:scale-110 duration-300'>
+                    <Link href="/about" className="p-2 hover:bg-primaryblue hover:text-primarygreen rounded-lg">Nosotros</Link>
                 </li>
-                <li>
-                    <Link href="#" className="hover:text-textgreen">Blog</Link>
+                <li className='hover:scale-110 duration-300'>
+                    <Link href="#" className="p-2 hover:bg-primaryblue hover:text-primarygreen rounded-lg">Blog</Link>
                 </li>
                 <li>
                 </li>
             </ul>
 
-            <div className=" hidden lg:flex flex-wrap justify-end max-w-screen-2xl space-x-9">
+0            <div className=" hidden lg:flex flex-wrap justify-end max-w-screen-2xl space-x-9">
                   <Link href='https://api.whatsapp.com/send?phone=51978490739' target='_blank'
                     className="text-lg font-semibold text-green-600 hover:text-green-500">
 
