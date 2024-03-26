@@ -17,11 +17,11 @@ export const Footer = () => {
               <p className="mb-5 text-x1 font-bold tracking-wider text-gray-50 uppercase">Contáctanos</p>
               <a href="https://api.whatsapp.com/send?phone=51978490739" target='_blank' className="flex mb-3 text-lg font-medium transition md:mb-2">
                 <img src="/footer/footer_whatsapp.svg" alt="Phone Icon" className="w-6 h-6 mr-2" />
-                <button className="a text">978 490 739</button>
+                <button className=" text hover:text-primarygreen hover:scale-100 duration-300">978 490 739</button>
               </a>
               <a href="mailto:capacitaciones@cimade.edu.pe" className="flex mb-3 text-lg font-medium transition md:mb-2">
               <img src="/footer/footer_correo.svg" alt="Correo Icono" className="w-6 h-6 mr-2" />
-                <button className="a text">capacitaciones@sayan.edu.pe</button>
+                <button className="hover:text-primarygreen hover:scale-100 duration-300 text">capacitaciones@sayan.edu.pe</button>
               </a>
 
               <a className="flex mb-3 text-lg font-medium transition md:mb-2">
@@ -35,25 +35,25 @@ export const Footer = () => {
           </div>
           <nav className="mb-4 ml-8">
             <p className="text-center mb-3 text-xl font-bold tracking-wider text-gray-50 uppercase">Nuestra Empresa</p>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center  ">
               <a href="/">
-                <button className="a text mb-3 buttonFooter">Inicio</button>
+                <button className=" font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Inicio</button>
               </a>
 
               <a href="/graduate">
-                <button className="a text mb-3 buttonFooter">Diplomados</button>
+                <button className=" font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300 ">Diplomados</button>
               </a>
 
               <a href="/certificate">
-                <button className="a text mb-3">Certificados</button>
+                <button className="font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Certificados</button>
               </a>
 
               <a href="/about">
-                <button className="a text mb-3">Nosotros</button>
+                <button className="font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Nosotros</button>
               </a>
 
               <a href="#">
-                <button className="a text">Blog</button>
+                <button className="font-poppins  hover:text-primarygreen mb-3 hover:scale-125 duration-300">Blog</button>
               </a>
             </div>
           </nav>
@@ -66,7 +66,7 @@ export const Footer = () => {
 
             <Link href="/book" className='flex items-center justify-center mt-6 font-bold text-xl'>
             <SlBookOpen className='mr-2'/>
-              <p className='mr-8 text-gray-100'>Libro de Reclamaciones</p>
+              <p className='mr-8 text-gray-100 '>Libro de Reclamaciones</p>
             </Link>
           </nav>
         </div>
