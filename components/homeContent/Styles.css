@@ -206,12 +206,12 @@ button {  font-size: 18px;
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	padding: 30px;
+	padding: 5px;
 	text-align: center;
 	background: #0d617b;
 	transform: translateY(100%);
 	transition: transform 0.5s ease;
-	border-radius: 100px 100px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 .boxG:hover .figuree {
 	transform: translateY(0);

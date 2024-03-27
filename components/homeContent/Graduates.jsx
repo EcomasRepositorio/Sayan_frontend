@@ -21,7 +21,7 @@ const Graduates = () => {
                  <Link href="/graduate">
                  <div className="figuree">
                   
-                  <div className="lg:text-4xl md:text-4xl text-4xl font-bebas-neue mt-4">INGENIERÍA CIVIL</div>
+                  <div className="lg:text-4xl md:text-4xl text-4xl font-light mt-4">INGENIERÍA CIVIL</div>
             
                   <p className="socials">
                       <i className="fa fa-facebook"></i>
@@ -42,7 +42,7 @@ const Graduates = () => {
             <figure className="boxG">
                 <Link href="/graduate">
                 <div className="figuree">
-                    <div className="lg:text-4xl md:text-4xl text-4xl font-bebas-neue mt-4">INGENIERÍA AMBIENTAL</div>
+                    <div className="lg:text-4xl md:text-4xl text-4xl font-light mt-4">INGENIERÍA AMBIENTAL</div>
                     <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
@@ -61,7 +61,7 @@ const Graduates = () => {
             <figure className="boxG">
                 <Link href="/graduate">
                 <div className="figuree">
-                    <div className="lg:text-4xl md:text-4xl text-4xl  font-bebas-neue mt-4">INGENIERÍA AGRÓNOMA</div>
+                    <div className="lg:text-4xl md:text-4xl text-4xl  font-light mt-4">INGENIERÍA AGRÓNOMA</div>
                     <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
@@ -84,7 +84,7 @@ const Graduates = () => {
             <figure className="boxG">
                 <Link href="/graduate">
                 <div className="figuree">
-                    <div className="lg:text-4xl md:text-4xl text-4xl  font-bebas-neue mt-4">INGENIERÍA AlIMENTARIA</div>
+                    <div className="lg:text-4xl md:text-4xl text-4xl  font-light mt-4">INGENIERÍA AlIMENTARIA</div>
                     <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
@@ -102,7 +102,7 @@ const Graduates = () => {
             <figure className="boxG">
                 <Link href="/graduate">
                 <div className="figuree">
-                    <div className="lg:text-4xl md:text-4xl text-4xl font-bebas-neue mt-4">PROFESIONES EN GENERAL</div>
+                    <div className="lg:text-4xl md:text-4xl text-4xl font-light mt-4">PROFESIONES EN GENERAL</div>
                     <p></p>
                     <p className="socials">
                         <i className="fa fa-facebook"></i>
