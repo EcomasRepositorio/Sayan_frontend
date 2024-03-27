@@ -252,6 +252,7 @@ const Book = () => {
             //autoFocus
             className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5" placeholder=""/>
         </div>
+        
         </div>
 
         <div className='text-gray-500'>

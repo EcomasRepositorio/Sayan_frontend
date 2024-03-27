@@ -396,7 +396,7 @@ const Student = () => {
                   Instituto
                 </th>
                 <th scope="col" className="px-6 py-4">
-                  Hora
+                  Horas - créditos
                 </th>
                 <th scope="col" className="px-6 py-4">
                   Fecha
