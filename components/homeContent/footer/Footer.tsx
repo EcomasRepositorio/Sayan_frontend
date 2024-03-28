@@ -44,7 +44,7 @@ export const Footer = () => {
                 <button className=" font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300 ">Diplomados</button>
               </a>
 
-              <a href="/certificate">
+              <a href="/certs">
                 <button className="font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Certificados</button>
               </a>
 

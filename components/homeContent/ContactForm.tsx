@@ -139,7 +139,21 @@ const ContactForm = () => {
       <input type="submit" value={sending ? 'Enviando...' : 'Enviar'} className=' border-2 p-2 mb-6 rounded-xl bg-primaryblue text-gray-200 text-xl font-bold cursor-pointer'/>
     </form>
     </div>
+
+    <div className='mt-8' style={{ display: 'flex', justifyContent: 'center' }}> {/* Contenedor que centra horizontalmente el botón */}
+  <button
+    className='' // Estilos para el botón
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Manejador de clic para desplazar hacia arriba
+    style={{ display: 'flex', alignItems: 'center' }} // Estilos para el botón y centrar el contenido verticalmente
+  >
+    <img src="icons/subir.png" alt="Icono" style={{ width: '60px', marginRight: '5px' }} /> {/* Ajusta la ruta y el tamaño de la imagen según tus necesidades */}
+  </button>
+</div>
+
+
+
   </section>
+  
   );
 }
 
