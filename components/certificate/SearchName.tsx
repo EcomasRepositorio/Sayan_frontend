@@ -20,7 +20,7 @@ const SearchName:React.FC<SearchNameProps> = ({ onSearchName }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [isNameIncomplete, setIsNameIncomplete] = useState(false);
   const [selectedStudentData, setSelectedStudentData] = useState<StudentCode | null>(null);
-  const [openModals, setOpenModals] = useState<boolean[]>(Array(selectedStudentData ? 1 : 0).fill(false));
+  const [openModals, setOpenModals] = useState<boolean[]>([]);
 
   const openStudentModal = (selectedStudent: StudentCode, index: number) => {
     setSelectedStudentData(selectedStudent);
@@ -91,12 +91,35 @@ const SearchName:React.FC<SearchNameProps> = ({ onSearchName }) => {
       setLoading(false);
     }
   };
+
+  const splitText = (text: string): string[] => {
+    const words = text.trim().split(" ");
+    if (words.length > 7) {
+      const firstLine = words.slice(0, words.length - 6).join(" ");
+      const secondLine = words.slice(words.length - 6, words.length - 2).join(" ");
+      const thirdLine = words.slice(words.length - 2, words.length).join(" ");
+      return [firstLine, secondLine, thirdLine];
+    } else if (words.length === 7) {
+      const firstLine = words.slice(0, 4).join(" ");
+      const secondLine = words.slice(4, 5).join(" ");
+      const thirdLine = words.slice(5, 7).join(" ");
+      return [firstLine, secondLine, thirdLine];
+    } else if (words.length === 6) {
+      const firstLine = words.slice(0, 4).join(" ");
+      const secondLine = words.slice(4, 6).join(" ");
+      const thirdLine = words.slice(5, 5).join(" ");
+      return [firstLine, secondLine, thirdLine];
+    } else {
+      return [text];
+    }
+  };
+
   const tableRows = [
-    { imgSrc:'/icons/organizadopor.svg', label: 'Organizado por:', value: selectedStudentData?.institute },
-    { imgSrc:'/icons/otorgado.svg', label: 'Otorgado a:', value: selectedStudentData?.name },
-    { imgSrc:'/icons/nom_evento.svg', label: 'Nombre del evento:', value: selectedStudentData?.activityAcademy },
-    { imgSrc:'/icons/creditos_horas.svg', label: 'Creditos/Horas:', value: selectedStudentData?.hour },
-    { imgSrc:'/icons/fecha_emision.svg', label: 'Fecha de emisión:', value: selectedStudentData?.date },
+    { imgSrc: '/icons/organizadopor.svg', label: 'Organizado por:', value: 'institute' },
+    { imgSrc: '/icons/otorgado.svg', label: 'Otorgado a:', value: 'name' },
+    { imgSrc: '/icons/nom_evento.svg', label: 'Nombre del evento:', value: 'activityAcademy' },
+    { imgSrc: '/icons/creditos_horas.svg', label: 'Creditos/Horas:', value: 'hour' },
+    { imgSrc: '/icons/fecha_emision.svg', label: 'Fecha de emisión:', value: 'date' },
   ];
 
   return (
@@ -170,20 +193,28 @@ const SearchName:React.FC<SearchNameProps> = ({ onSearchName }) => {
                 </td>
                 {selectedStudentData && (
                   <Modal open={openModals[index]} onClose={() => closeStudentModal(index)}>
-                    <div className='flex justify-center mb-4'>
-                      <img src={'/certificate/logo_unp.png'} className="lg:w-32 lg:h-32 w-28 h-28 object-contain"/>
-                      <img src={'/certificate/logo_certificados.png'} className="lg:w-24 lg:h-32 w-28 h-28 object-contain"/>
+                    <div className='flex justify-center items-center mb-4 gap-10'>
+                      <img src={'/certificate/logo_unp.png'} className="md:w-32 md:h-32 w-32 h-32 object-contain"/>
+                      <img src={'/certificate/logo_certificados.png'} className="md:w-24 md:h-32 w-24 h-24 object-contain"/>
                     </div>
                     <div className="max-w-md mx-auto p-6 bg-white rounded-md">
-                      {tableRows.map((row, index) => (
-                        <div key={index} className="mb-4">
-                        <div className="flex items-center text-gray-100 text-sm p-1 lg:ml-5 ml-0 lg:w-80 w-full rounded-lg bg-slate-600 font-semibold">
-                          {row.imgSrc && <img src={row.imgSrc} alt={row.label} className="flex lg:w-5 lg:h-5 w-5 h-5 object-contain ml-1" />}
-                          <div className='flex-1 text-center'>
-                          {row.label}
+                      {tableRows.map((row, idx) => (
+                        <div key={idx} className="mb-4">
+                          <div className="flex items-center text-gray-100 text-sm p-1 lg:ml-5 ml-0 lg:w-80 w-full rounded-lg bg-slate-600 font-semibold">
+                            {row.imgSrc && <img src={row.imgSrc} alt={row.label} className="flex lg:w-5 lg:h-5 w-5 h-5 object-contain ml-1" />}
+                            <div className='flex-1 text-center'>
+                              {row.label}
+                            </div>
                           </div>
-                        </div>
-                          <div className="text-gray-600 mt-3 mb-5 text-sm font-semibold">{row.value}</div>
+                          <div className="text-gray-600 mt-3 mb-5 text-sm font-semibold">
+                            {row.value === 'institute' ? (
+                              splitText(selectedStudentData[row.value as keyof StudentCode] as string).map((text, index) => (
+                                <p key={index}>{text}</p>
+                              ))
+                            ) : (
+                              <div>{selectedStudentData ? selectedStudentData[row.value as keyof StudentCode] : ''}</div>
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>

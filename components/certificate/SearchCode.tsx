@@ -3,7 +3,6 @@ import { URL } from "@/components/utils/format/tokenConfig";
 import axios from "axios";
 import { SearchCodeProps, StudentCode } from "../../interface/interface";
 import Modal from "../share/Modal";
-import Image from "next/image";
 
 const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   const [isActive, setIsActive] = useState(false);
@@ -58,16 +57,6 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     }
   };
 
-  const splitText = (text: string) => {
-    if (text.length > 30) {
-      const firstLine = text.substring(0, 30);
-      const secondLine = text.substring(30);
-      return [firstLine, secondLine];
-    } else {
-      return [text];
-    }
-  };
-
   const tableRows = [
     {
       imgSrc: "/icons/organizadopor.svg",
@@ -95,6 +84,28 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
       value: studentData?.date,
     },
   ];
+
+  const splitText = (text: string): string[] => {
+    const words = text.trim().split(" ");
+    if (words.length > 7) {
+      const firstLine = words.slice(0, words.length - 6).join(" ");
+      const secondLine = words.slice(words.length - 6, words.length - 2).join(" ");
+      const thirdLine = words.slice(words.length - 2, words.length).join(" ");
+      return [firstLine, secondLine, thirdLine];
+    } else if (words.length === 7) {
+      const firstLine = words.slice(0, 4).join(" ");
+      const secondLine = words.slice(4, 5).join(" ");
+      const thirdLine = words.slice(5, 7).join(" ");
+      return [firstLine, secondLine, thirdLine];
+    } else if (words.length === 6) {
+      const firstLine = words.slice(0, 4).join(" ");
+      const secondLine = words.slice(4, 6).join(" ");
+      const thirdLine = words.slice(5, 5).join(" ");
+      return [firstLine, secondLine, thirdLine];
+    } else {
+      return [text];
+    }
+  };
 
   return (
     <div className="max-w-screen-xl mx-auto mb-8 text-center lg:mb-12">
@@ -149,14 +160,14 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
       {loading && <p>Cargando...</p>}
       {studentData && (
         <Modal open={open} onClose={() => setOpen(false)}>
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center items-center gap-10 mb-4">
             <img
               src={"/certificate/logo_unp.png"}
-              className="lg:w-32 lg:h-32 w-28 h-28 object-contain"
+              className="md:w-32 md:h-32 w-32 h-32 object-contain"
             />
             <img
               src={"/certificate/logo_certificados.png"}
-              className="lg:w-24 lg:h-32 w-28 h-28 object-contain"
+              className="md:w-24 md:h-32 w-24 h-24 object-contain"
             />
           </div>
           <div className="max-w-md mx-auto p-6 bg-white rounded-md">
