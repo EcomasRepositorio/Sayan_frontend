@@ -71,20 +71,21 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
         });
         return;
       };
-      if (!isNum(data.code) || data.code. length !== 9) {
+      if (!isNum(data.code) || (data.code.length !== 9 && data.code.length !== 8)) {
         setError('code', {
           type: 'manual',
-          message: 'El codigo debe contener solo números y exactamente 9 digitos',
+          message: 'El código debe contener solo números y exactamente 9 o 8 dígitos',
         });
         return;
-      };
-      if (!isNum(data.hour)) {
-        setError('hour', {
-          type: 'manual',
-          message: 'La hora debe contener solo números',
-        });
-        return;
-      };
+      }
+      
+      // if (!isNum(data.hour)) {
+      //   setError('hour', {
+      //     type: 'manual',
+      //     message: 'La hora debe contener solo números',
+      //   });
+      //   return;
+      // };
       if (id) {
       await axios.put(`${URL()}/student/${id}`, data, tokenConfig(validToken));
       setModalOpen(true);
@@ -151,9 +152,9 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
           <label className="text-xs font-bold">Hora: </label>
           <input {...register('hour')}
           className={`border rounded-lg p-2 lg:w-32 w-24 ${errors?.hour?.message ? 'border-red-500' : ''}`} />
-          {errors?.hour && (
+          {/* {errors?.hour && (
             <span className="text-left text-xs font-mono block text-red-400">{errors.hour.message}</span>
-          )}
+          )} */}
         </div>
         <div className="mb-4">
           <label className="text-xs font-bold ">Fecha: </label>
