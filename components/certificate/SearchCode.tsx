@@ -85,25 +85,19 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     },
   ];
 
+  // Modificación en la función splitText para asegurar que "Corporación Sayan" esté en una sola línea
   const splitText = (text: string): string[] => {
     const words = text.trim().split(" ");
-    if (words.length > 7) {
-      const firstLine = words.slice(0, words.length - 6).join(" ");
-      const secondLine = words.slice(words.length - 6, words.length - 2).join(" ");
-      const thirdLine = words.slice(words.length - 2, words.length).join(" ");
-      return [firstLine, secondLine, thirdLine];
-    } else if (words.length === 7) {
-      const firstLine = words.slice(0, 4).join(" ");
-      const secondLine = words.slice(4, 5).join(" ");
-      const thirdLine = words.slice(5, 7).join(" ");
-      return [firstLine, secondLine, thirdLine];
-    } else if (words.length === 6) {
-      const firstLine = words.slice(0, 4).join(" ");
-      const secondLine = words.slice(4, 6).join(" ");
-      const thirdLine = words.slice(5, 5).join(" ");
+    if (words.length > 15) {
+      const firstLine = words.slice(0, 9).join(" "); // Primera línea
+      const secondLine = words.slice(9, 10).join(" "); // Segunda línea (FUNDENORP)
+      const thirdLine = words.slice(10).join(" "); // Tercera línea (Corporación Sayan)
       return [firstLine, secondLine, thirdLine];
     } else {
-      return [text];
+      const firstLine = words.slice(0, 9).join(" "); // Primera línea
+      const secondLine = words.slice(9, 10).join(" "); // Segunda línea (FUNDENORP)
+      const thirdLine = words.slice(10).join(" "); // Tercera línea (Corporación Sayan)
+      return [firstLine, secondLine, thirdLine].filter(line => line.length > 0);
     }
   };
 
@@ -149,7 +143,7 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
           />
           <button
             type="submit"
-            className=" cursor-pointer bg-primaryblue absolute end-1.5 bottom-3 focus:ring-4 focus:outline-none text-white font-medium rounded-lg text-sm px-4 py-1.5"
+            className="cursor-pointer bg-primaryblue absolute end-1.5 bottom-3 focus:ring-4 focus:outline-none text-white font-medium rounded-lg text-sm px-4 py-1.5"
             onClick={() => setOpen(true)}
           >
             Buscar
@@ -186,7 +180,7 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
                 <div className="text-gray-600 mt-3 mb-5 text-sm font-semibold">
                   {row.value === studentData?.institute && row.value &&
                     splitText(row.value).map((line, index) => (
-                      <p key={index}>{line}</p>
+                      <p key={index} className="mb-1">{line}</p>
                     ))
                   }
                   {row.value !== studentData?.institute && row.value}

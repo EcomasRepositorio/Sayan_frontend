@@ -8,7 +8,7 @@ const Modal: React.FC<{
 
   return (
     <div
-      className={`fixed inset-0 p-4 flex justify-center items-center transition-colors ${overlayClass}`}
+      className={`fixed inset-0 p-4  flex justify-center items-center transition-colors ${overlayClass}`}
       onClick={onClose}>
       <div
         className={`bg-white rounded-2xl shadow p-5 transition-all max-w-md sm:w-full w-full ${modalClass}`}
