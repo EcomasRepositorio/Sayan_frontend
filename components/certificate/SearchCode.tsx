@@ -87,18 +87,30 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
 
   // Modificación en la función splitText para asegurar que "Corporación Sayan" esté en una sola línea
   const splitText = (text: string): string[] => {
-    const words = text.trim().split(" ");
-    if (words.length > 15) {
-      const firstLine = words.slice(0, 9).join(" "); // Primera línea
-      const secondLine = words.slice(9, 10).join(" "); // Segunda línea (FUNDENORP)
-      const thirdLine = words.slice(10).join(" "); // Tercera línea (Corporación Sayan)
+    // Primero eliminamos espacios innecesarios y verificamos si el texto tiene las palabras clave.
+    const cleanText = text.trim();
+
+    // Identificamos la posición de las palabras clave
+    const indexFundenorp = cleanText.indexOf("FUNDENORP");
+    const indexCorporacion = cleanText.indexOf("Corporación SAYAN");
+
+    // Si las palabras clave existen, dividimos el texto en las tres partes exactas.
+    if (indexFundenorp !== -1 && indexCorporacion !== -1) {
+      const firstLine = cleanText.substring(0, indexFundenorp).trim(); // Desde el inicio hasta "FUNDENORP"
+      const secondLine = cleanText
+        .substring(indexFundenorp, indexCorporacion)
+        .trim(); // "FUNDENORP"
+      const thirdLine = cleanText.substring(indexCorporacion).trim(); // "Corporación SAYAN"
+
       return [firstLine, secondLine, thirdLine];
-    } else {
-      const firstLine = words.slice(0, 9).join(" "); // Primera línea
-      const secondLine = words.slice(9, 10).join(" "); // Segunda línea (FUNDENORP)
-      const thirdLine = words.slice(10).join(" "); // Tercera línea (Corporación Sayan)
-      return [firstLine, secondLine, thirdLine].filter(line => line.length > 0);
     }
+
+    // Si no encuentra las palabras clave, tratamos de hacer una separación por cantidad de palabras como fallback
+    const words = cleanText.split(" ");
+    const firstLine = words.slice(0, 9).join(" "); // Primera línea
+    const secondLine = words.slice(9, 10).join(" "); // Segunda línea
+    const thirdLine = words.slice(10).join(" "); // Tercera línea
+    return [firstLine, secondLine, thirdLine].filter((line) => line.length > 0);
   };
 
   return (
@@ -178,11 +190,13 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
                   <div className="flex-1 text-center">{row.label}</div>
                 </div>
                 <div className="text-gray-600 mt-3 mb-5 text-sm font-semibold">
-                  {row.value === studentData?.institute && row.value &&
+                  {row.value === studentData?.institute &&
+                    row.value &&
                     splitText(row.value).map((line, index) => (
-                      <p key={index} className="mb-1">{line}</p>
-                    ))
-                  }
+                      <p key={index} className="mb-1">
+                        {line}
+                      </p>
+                    ))}
                   {row.value !== studentData?.institute && row.value}
                 </div>
               </div>
