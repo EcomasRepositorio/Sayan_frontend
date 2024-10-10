@@ -3,6 +3,9 @@ import { URL } from "@/components/utils/format/tokenConfig";
 import axios from "axios";
 import { SearchCodeProps, StudentCode } from "../../interface/interface";
 import Modal from "../share/Modal";
+import { Button } from "@nextui-org/react";
+import { Spinner } from "@nextui-org/react";
+import Image from "next/image";
 
 const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   const [isActive, setIsActive] = useState(false);
@@ -16,8 +19,8 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   const toggleIsActive = () => {
     setIsActive(!isActive);
   };
-
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value, "onChange ejecutado");
     setQueryValue(event.target.value);
     setSearchType(event.target.value);
   };
@@ -25,7 +28,6 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   const openErrorModal = () => {
     setModalOpen(true);
   };
-
   const closeErrorModal = () => {
     setModalOpen(false);
   };
@@ -36,27 +38,27 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     if (queryValue.trim()) {
       setLoading(true);
     }
-
     try {
       const value = queryValue.trim();
       const apiUrl = `${URL()}/student/code/${value}/type/${searchType}`;
-      const res = await axios.get(apiUrl);
-
+      console.log(apiUrl);
+      const res = await axios.get(
+        `${URL()}/student/code/${value.trim()}/type/${searchType}`
+      );
+      console.log(res);
       setStudentData(res.data);
       onSearchCode(res.data);
-
       if (queryValue.trim() !== "") {
         setOpen(true);
       }
     } catch (error) {
-      console.error("Error: Código inválido", error);
+      console.error("Error: Codigo invalido", error);
       openErrorModal();
       setOpen(false);
     } finally {
       setLoading(false);
     }
   };
-
   const tableRows = [
     {
       imgSrc: "/icons/organizadopor.svg",
@@ -75,7 +77,7 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     },
     {
       imgSrc: "/icons/creditos_horas.svg",
-      label: "Créditos/Horas:",
+      label: "Creditos/Horas:",
       value: studentData?.hour,
     },
     {
@@ -85,7 +87,6 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     },
   ];
 
-  // Modificación en la función splitText para asegurar que "Corporación Sayan" esté en una sola línea
   const splitText = (text: string): string[] => {
     // Primero eliminamos espacios innecesarios y verificamos si el texto tiene las palabras clave.
     const cleanText = text.trim();
@@ -114,82 +115,73 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto mb-8 text-center lg:mb-12">
-      <form
-        onSubmit={searchCode}
-        className="w-full md:w-2/3 lg:w-full xl:w-2/3 mx-auto"
-      >
-        <label
-          htmlFor="default-search"
-          className="mb-2 text-sm font-medium "
-        ></label>
-        <div className="relative lg:mx-auto mr-4 ml-4">
-          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg
-              className="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
+    <div className="">
+      <form onSubmit={searchCode} className="w-full ">
+        <div className="flex items-center  justify-center">
+          <div className=" flex-1">
+            <input
+              type="search"
+              id="default-search"
+              className=" font-normal text-sm text-gray-900 border-1 border-gray-300 rounded-lg bg-white  focus:border-primaryblue  m-0"
+              placeholder={`Buscar por código ${
+                searchType === "code" ? "código" : ""
+              }`}
+              required
+              onClick={toggleIsActive}
+              onChange={onChange}
+              value={queryValue}
+            />
           </div>
-          <input
-            type="search"
-            id="default-search"
-            className="block w-full font-semibold p-4 ps-10 text-sm text-gray-900 border-2 border-primarygreen rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-black"
-            placeholder={`Buscar por código ${
-              searchType === "code" ? "código" : ""
-            }`}
-            required
-            onClick={toggleIsActive}
-            onChange={onChange}
-            value={queryValue}
-          />
-          <button
-            type="submit"
-            className="cursor-pointer bg-primaryblue absolute end-1.5 bottom-3 focus:ring-4 focus:outline-none text-white font-medium rounded-lg text-sm px-4 py-1.5"
-            onClick={() => setOpen(true)}
-          >
-            Buscar
-          </button>
+          <div className=" ml-2 h-full">
+            <Button
+              color="primary"
+              type="submit"
+              className="bg-primaryblue text-white border border-white/50 rounded-lg"
+            >
+              Buscar
+            </Button>
+          </div>
         </div>
       </form>
 
-      {loading && <p>Cargando...</p>}
+      {loading && <Spinner color="primary"/>}
       {studentData && (
         <Modal open={open} onClose={() => setOpen(false)}>
-          <div className="flex justify-center items-center gap-10 mb-4">
-            <img
-              src={"/certificate/logo_unp.png"}
-              className="md:w-32 md:h-32 w-32 h-32 object-contain"
+          <div className=" flex justify-center mb-4 gap-2">
+            <Image
+              src={"/certificate/logo_sayan.png"}
+              alt="ecomas"
+              className="md:w-20 w-16  object-contain mt-2"
+              width={200}
+              height={200}
+              priority={true}
             />
-            <img
-              src={"/certificate/logo_certificados.png"}
-              className="md:w-24 md:h-32 w-24 h-24 object-contain"
+            <Image
+              src={"/certificate/uni.png"}
+              alt="ecomas"
+              className="md:w-20 w-16  object-contain mt-2"
+              width={400}
+              height={400}
+              priority={true}
             />
           </div>
-          <div className="max-w-md mx-auto p-6 bg-white rounded-md">
+          <div className=" max-w-md text-center  rounded-md mx-auto">
             {tableRows.map((row, index) => (
               <div key={index} className="mb-4">
-                <div className="flex items-center text-gray-100 text-sm p-1 lg:ml-5 ml-0 lg:w-80 w-full rounded-lg bg-slate-600 font-semibold">
+                <div className="inline-flex items-center text-white  text-sm p-1 md:w-80 w-72 rounded-lg bg-slate-600 font-semibold">
                   {row.imgSrc && (
-                    <img
+                    <Image
                       src={row.imgSrc}
                       alt={row.label}
                       className="flex lg:w-5 lg:h-5 w-5 h-5 object-contain ml-1"
+                      width={800}
+                      height={800}
                     />
                   )}
                   <div className="flex-1 text-center">{row.label}</div>
                 </div>
-                <div className="text-gray-600 mt-3 mb-5 text-sm font-semibold">
+
+                <div className="text-gray-300 mt-3 mb-5 text-sm font-semibold">
                   {row.value === studentData?.institute &&
                     row.value &&
                     splitText(row.value).map((line, index) => (
@@ -199,18 +191,18 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
                     ))}
                   {row.value !== studentData?.institute && row.value}
                 </div>
+
               </div>
             ))}
           </div>
         </Modal>
       )}
-
       <Modal open={modalOpen} onClose={closeErrorModal}>
-        <div className="border-2 p-2 rounded-lg">
-          <h2 className="text-md font-bold text-red-600 mb-4">
+        <div className="p-2 rounded-lg">
+          <h2 className="text-md font-bold text-red-500 mb-4">
             Código incorrecto
           </h2>
-          <h3 className="text-sm font-semibold text-gray-600">
+          <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-100">
             El código que ingresaste no se encuentra en nuestra base de datos.
           </h3>
         </div>

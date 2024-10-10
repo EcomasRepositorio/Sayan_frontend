@@ -1,101 +1,123 @@
 "use client";
-import React, { useState } from "react";
-import SearchCode from "@/components/certificate/SearchCode";
-import SearchDNI from "@/components/certificate/SearchDNI";
-import SearchName from "@/components/certificate/SearchName";
-import { BsQrCodeScan } from "react-icons/bs";
-import { BsPersonVcard, BsPersonSquare } from "react-icons/bs";
-import Whatsapp from "@/components/whatsapp/Index";
-import "./Styles.css";
+import React from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 
-const Certificate: React.FC = () => {
-  const [isActive, setIsActive] = useState(false);
-  const [searchType, setSearchType] = useState<string | null>(null);
+const SearchCode = dynamic(() => import("@/components/certificate/SearchCode"));
+const SearchDNI = dynamic(() => import("@/components/certificate/SearchDNI"));
+const SearchName = dynamic(() => import("@/components/certificate/SearchName"));
 
-  const handleButton = (type: string) => {
-    setSearchType(type);
-    setIsActive(true);
-  };
+interface Props {
+  // Define any props if needed
+}
 
-  const handleSearch = (data: string) => {
+const TestingPage: React.FC<Props> = () => {
+  const handleSearch = (data: any) => {
     console.log(data);
   };
 
   return (
-    <section id="certs" className="p-2 fondoos blur-background"  >
-      
-    <div className="bg-primaryblue max-w-screen-lg mx-auto  mb-12 border mt-24 rounded-3xl shadow-2xl text-center lg:mb-24 p-2  ">
-        <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500 ">
-          <div className=" flex justify-center mb-4 gap-10 mt-12 ">
-            <img
-              src={"/certificate/unp_blanco.png"}
-              className="lg:w-44 lg:h-44 w-26 h-26 object-contain md:w-26 md:h-26 sm:w-24 sm:h-24"
-              alt="Logo UNP"
-            />
-            <img
-              src={"/certificate/logo_blanco.png"}
-              className="lg:w-34 lg:h-44 w-28 h-48 object-contain md:w-32 md:h-32 sm:w-16 sm:h-16"
-              alt="Logo de Certificados"
-            />
-          </div>
-        </div>
-        <div className="">
-          <h2 className="mb-4 lg:mt-10 mt-4 lg:text-4xl text-2xl font-extrabold text-gray-50 ">
-            Búsqueda de certificados:
-          </h2>
-          <p className="font-semibold text-gray-50 lg:text-xl sm:text-2xl px-26 lg:ml-32 lg:mr-32">
-            
-          </p>
-          <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-gray-50">
-         
-          </p>
-
-          <div className="lg:flex flex-wrap justify-center items-center text-center lg:ml-32 lg:mr-32">
-
-            <button
-              onClick={() => handleButton("documentNumber")}
-              className={`buttonGloball  lg:mb-20 mb-4 font-bold rounded-lg text-md px-7 py-3 text-center inline-block
-              ${searchType === "documentNumber" && ""}`}
+    <section className=" bg-fixed " style={{}}>
+      <div
+        className=""
+        style={{
+          backgroundAttachment: "fixed",
+          backgroundImage: "url(/certificate/bg-cert.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="py-8  mx-auto max-w-screen-xl lg:py-10">
+          <div className="" style={{ position: "relative", width: "100%" }}>
+            <div
+              className="bg-primaryblue/85 rounded-lg p-8 md:p-12 mb-50 mx-2"
+              style={{
+                marginBottom: "20px",
+              }}
             >
-              <BsPersonVcard className="text-xl inline-block align-text-top mr-1" />
-              Buscar por DNI
-            </button>
-            <button
-              onClick={() => handleButton("name")}
-              className={`buttonGloball lg:mb-20 mb-4 ml-6 mr-6 font-bold rounded-lg text-md px-3 py-3 text-center
-              ${searchType === "name" && ""}`}
-            >
-              <BsPersonSquare className="text-lg inline-block align-text-top mr-1" />
-              Buscar por nombre
-            </button>
-            <button
-              onClick={() => handleButton("code")}
-              className={`buttonGloball lg:mb-20 mb-5 font-bold rounded-lg text-md px-4 py-3 text-center inline-block
-            ${searchType === "code" && ""}`}
-            >
-              <BsQrCodeScan className="text-lg inline-block align-text-top mr-1" />{" "}
-              Buscar por código
-            </button>
-          </div>
+              <div className="flex flex-col md:flex-row mx-auto max-w-screen-xl  md:mr-0 md:p-4  ">
+                <div className="md:mr-12">
+                  <div className="flex flex-col">
+                    <h2 className=" mb-4 text-2xl font-bold text-white md:mb-6 lg:text-4xl">
+                      Verifica tu certificado
+                    </h2>
+                    <p className="text-blackblue2 dark:text-gray-300 md:text-xl mb-4 text-justify ">
+                      Verifica la autenticidad de tu certificado ingresando tu
+                      DNI, nombres o código de certificación proporcionado al
+                      obtenerlo. Nos aseguramos de proteger tu privacidad y la
+                      confidencialidad de tus datos.
+                    </p>
 
-          {isActive && (
-            <div >
-              {searchType === "documentNumber" && (
-                <SearchDNI  onSearchDNI={handleSearch} />
-              )}
-              {searchType === "name" && (
-                <SearchName onSearchName={handleSearch} />
-              )}
-              {searchType === "code" && (
-                <SearchCode onSearchCode={handleSearch} />
-              )}
+                    <Tabs
+                      aria-label="Options"
+                      color="primary"
+                      classNames={{
+                        tabList: "w-full flex flex-col md:flex-row bg-transparent rounded-md border border-gray-300/40",
+                        cursor: "bg-primarygreen/80 text-gray-100 rounded-lg",
+                        tab: "py-2 px-4 rounded-t-lg text-gray-100",
+                        tabContent: "group-data-[selected=true]:text-gray-100 text-g-100 ",
+                      }}
+                    >
+                      <Tab key="dni"  title="Buscar por DNI" className="">
+                        <Card>
+                          <CardBody className="bg-transparent roun">
+                            <div className=""> 
+                              <SearchDNI onSearchDNI={handleSearch} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                      </Tab>
+                      <Tab key="name" title="Buscar por Código">
+                        <Card>
+                          <CardBody className="bg-transparent dark:bg-blackblue2">
+                            <div>
+                              <SearchCode onSearchCode={handleSearch} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                      </Tab>
+                      <Tab key="code" title="Buscar por nombres">
+                        <Card>
+                          <CardBody className="bg-transparent dark:bg-blackblue2">
+                            <div>
+                              <SearchName onSearchName={handleSearch} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                      </Tab>
+                    </Tabs>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-1 mt-4 md:mt-0 md:w-full  md:grid-cols-1 md:grid-rows-1 md:gap-y-8  justify-items-center md:items-center ">
+                  <div>
+                    <Image
+                      src="/certificate/uni.png"
+                      alt="ecomas"
+                      width={150}
+                      height={150}
+                      className=""
+                    />
+                  </div>
+                
+                  <div>
+                    <Image
+                      src="/certificate/logo_sayan.png"
+                      alt="ecomas"
+                      width={150}
+                      height={150}
+                     
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
-      <Whatsapp />
     </section>
   );
 };
 
-export default Certificate;
+export default TestingPage;

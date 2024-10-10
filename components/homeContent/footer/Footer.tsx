@@ -61,7 +61,7 @@ export const Footer = () => {
             {/* INFORMACION DEL FOOTER */}
             <p className="text-center text-1 font-bold tracking-wider text-gray-50 uppercase mb-4 mr-8">Acerca de nosotros </p>
             <p className="hidden md:block text-center mr-8">Corporación Sayan se erige como una destacada institución dedicada con firmeza a la excelencia, calidad y profesionalismo, orientada a ofrecer una educación online de primer nivel, marcando un estándar insuperable en el ámbito educativo.</p>
-            <p className="md:hidden text-center mr-8">Corporación Cimade, calidad y profesionalismo dedicada a brindar una educación online de excelencia. </p>
+            <p className="md:hidden text-center mr-8">Corporación Sayan, calidad y profesionalismo dedicada a brindar una educación online de excelencia. </p>
            
 
             <Link href="/book" className='flex items-center justify-center mt-6 font-bold text-xl'>
