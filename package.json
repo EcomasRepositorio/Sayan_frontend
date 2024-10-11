@@ -21,7 +21,8 @@
     "react-slick": "^0.30.2",
     "scroll-carousel-react": "^1.0.0",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "20.11.5",

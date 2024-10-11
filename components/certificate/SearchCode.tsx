@@ -92,8 +92,9 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     const cleanText = text.trim();
 
     // Identificamos la posición de las palabras clave
-    const indexFundenorp = cleanText.indexOf("FUNDENORP");
     const indexCorporacion = cleanText.indexOf("Corporación SAYAN");
+    const indexFundenorp = cleanText.indexOf("FUNDENORP");
+    
 
     // Si las palabras clave existen, dividimos el texto en las tres partes exactas.
     if (indexFundenorp !== -1 && indexCorporacion !== -1) {

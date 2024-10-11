@@ -3,7 +3,7 @@ const Modal: React.FC<{
   onClose: () => void;
   children: React.ReactNode;
 }> = ({ open, onClose, children }) => {
-  const overlayClass = open ? 'visible bg-black bg-opacity-60' : 'invisible';
+  const overlayClass = open ? 'visible bg-black bg-opacity-30' : 'invisible';
   const modalClass = open ? 'scale-100 opacity-100 z-100' : 'scale-110 opacity-0';
 
   return (
