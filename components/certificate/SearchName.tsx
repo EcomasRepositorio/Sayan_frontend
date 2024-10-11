@@ -235,9 +235,9 @@ const SearchName: React.FC<SearchNameProps> = ({ onSearchName }) => {
                       open={openModals[index]}
                       onClose={() => closeStudentModal(index)}
                     >
-                      <div className="flex justify-center items-center mb-4 gap-2">
+                      <div className=" flex justify-center mb-4 gap-2">
                         <Image
-                          src={"/certificate/UNP.png"}
+                          src={"/certificate/logo_sayan.png"}
                           alt="ecomas"
                           className="md:w-20 w-16  object-contain mt-2"
                           width={200}
@@ -245,43 +245,11 @@ const SearchName: React.FC<SearchNameProps> = ({ onSearchName }) => {
                           priority={true}
                         />
                         <Image
-                          src={"/certificate/LOGO-VERTICAL-COLOR.png"}
+                          src={"/certificate/uni.png"}
                           alt="ecomas"
-                          className="block dark:hidden md:w-20  w-16 h-[125px] md:mt-[13px] mt-[11px] object-contain"
-                          width={200}
-                          height={200}
-                          priority={true}
-                        />
-                        <Image
-                          src={"/image/EcomasVert_dark.png"}
-                          alt="ecomas"
-                          className="hidden dark:block md:w-20  w-16 h-[125px] md:mt-[13px] mt-[11px] object-contain"
-                          width={200}
-                          height={200}
-                          priority={true}
-                        />
-                        <Image
-                          src={"/certificate/CAL.png"}
-                          alt="ecomas"
-                          className="md:w-20  w-16 object-contain mt-2"
-                          width={200}
-                          height={200}
-                          priority={true}
-                        />
-                        <Image
-                          src={"/certificate/CIP.png"}
-                          alt="ecomas"
-                          className="block dark:hidden md:w-20  w-16 object-contain mt-2"
-                          width={200}
-                          height={200}
-                          priority={true}
-                        />
-                        <Image
-                          src={"/image/CIP_dark.png"}
-                          alt="ecomas"
-                          className="hidden dark:block md:w-20  w-16 object-contain mt-2"
-                          width={200}
-                          height={200}
+                          className="md:w-20 w-16  object-contain mt-2"
+                          width={400}
+                          height={400}
                           priority={true}
                         />
                       </div>

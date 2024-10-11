@@ -23,7 +23,7 @@ const TestingPage: React.FC<Props> = () => {
         className=""
         style={{
           backgroundAttachment: "fixed",
-          backgroundImage: "url(/certificate/bg-cert.jpg)",
+          backgroundImage: "url(/certificate/bg-cert5.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -31,7 +31,7 @@ const TestingPage: React.FC<Props> = () => {
         <div className="py-8  mx-auto max-w-screen-xl lg:py-10">
           <div className="" style={{ position: "relative", width: "100%" }}>
             <div
-              className="bg-primaryblue/85 rounded-lg p-8 md:p-12 mb-50 mx-2"
+              className="bg-primaryblue/75 rounded-lg p-8 md:p-12 mb-50 mx-2"
               style={{
                 marginBottom: "20px",
               }}
@@ -39,10 +39,10 @@ const TestingPage: React.FC<Props> = () => {
               <div className="flex flex-col md:flex-row mx-auto max-w-screen-xl  md:mr-0 md:p-4  ">
                 <div className="md:mr-12">
                   <div className="flex flex-col">
-                    <h2 className=" mb-4 text-2xl font-bold text-white md:mb-6 lg:text-4xl">
-                      Verifica tu certificado
+                    <h2 className=" mb-4 text-2xl font-extrabold text-center text-white md:mb-6 lg:text-4xl">
+                    VERIFICA TU CERTIFICADO
                     </h2>
-                    <p className="text-blackblue2 dark:text-gray-300 md:text-xl mb-4 text-justify ">
+                    <p className="text-white  font-light text-center md:text-xl mb-8  ">
                       Verifica la autenticidad de tu certificado ingresando tu
                       DNI, nombres o código de certificación proporcionado al
                       obtenerlo. Nos aseguramos de proteger tu privacidad y la

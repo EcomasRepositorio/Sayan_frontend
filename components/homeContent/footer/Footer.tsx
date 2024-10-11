@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div className=''>
     <div className='flex-grow'>
-    <footer className="px-4 py-20 bg-black text-white" >
+    <footer className="px-4 py-6 bg-black text-white" >
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-2 gap-4 mb-3 md:grid-cols-3">
           <div title="Go to Kutty Home Page" className="col-span-2 mb-6 md:col-span-1 text-white">

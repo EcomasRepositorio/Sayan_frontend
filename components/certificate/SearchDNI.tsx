@@ -20,6 +20,7 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
   const [studentData, setStudentData] = useState<Student[]>();
   const [closeTable, setCloseTable] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
   const [selectedStudentData, setSelectedStudentData] =
     useState<StudentCode | null>(null);
   const [openModals, setOpenModals] = useState<boolean[]>(
@@ -224,6 +225,24 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
           open={openModals.findIndex(Boolean) !== -1}
           onClose={() => closeStudentModal(openModals.findIndex(Boolean))}
         >
+          <div className=" flex justify-center mb-4 gap-2">
+            <Image
+              src={"/certificate/logo_sayan.png"}
+              alt="ecomas"
+              className="md:w-20 w-16  object-contain mt-2"
+              width={200}
+              height={200}
+              priority={true}
+            />
+            <Image
+              src={"/certificate/uni.png"}
+              alt="ecomas"
+              className="md:w-20 w-16  object-contain mt-2"
+              width={400}
+              height={400}
+              priority={true}
+            />
+          </div>
           <div className="max-w-md text-center mx-auto">
             {tableRows.map((row, index) => (
               <div key={index} className="mb-4">
