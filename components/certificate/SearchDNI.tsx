@@ -73,23 +73,36 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
 
   // Función para dividir el texto según palabras clave o cantidad de palabras
   const splitText = (text: string): string[] => {
+    // Primero eliminamos espacios innecesarios
     const cleanText = text.trim();
-    const indexFundenorp = cleanText.indexOf("FUNDENORP");
-    const indexCorporacion = cleanText.indexOf("Corporación SAYAN");
 
-    if (indexFundenorp !== -1 && indexCorporacion !== -1) {
-      const firstLine = cleanText.substring(0, indexFundenorp).trim();
-      const secondLine = cleanText
-        .substring(indexFundenorp, indexCorporacion)
-        .trim();
-      const thirdLine = cleanText.substring(indexCorporacion).trim();
-      return [firstLine, secondLine, thirdLine];
+    // Identificamos las posiciones de las palabras clave dentro del texto
+    const indexCorporacion = cleanText.indexOf("Corporación SAYAN");
+    const indexFundenorp = cleanText.indexOf("FUNDENORP");
+    const indexEscuela = cleanText.indexOf("Escuela de Posgrado");
+
+    // Verificamos que todas las palabras clave estén presentes
+    if (
+      indexCorporacion !== -1 &&
+      indexFundenorp !== -1 &&
+      indexEscuela !== -1
+    ) {
+      // Extraemos cada sección basándonos en las posiciones
+      const corporacion = cleanText
+        .substring(indexCorporacion, indexEscuela)
+        .trim(); // Desde "Corporación SAYAN" hasta "Escuela de Posgrado"
+      const escuela = cleanText.substring(indexEscuela, indexFundenorp).trim(); // Desde "Escuela de Posgrado" hasta "FUNDENORP"
+      const fundenorp = cleanText.substring(indexFundenorp).trim(); // Desde "FUNDENORP" hasta el final
+
+      // Retornar las partes en el orden: [Corporación SAYAN, Escuela, FUNDENORP]
+      return [corporacion, escuela, fundenorp];
     }
 
+    // Si alguna palabra clave falta, devolvemos el texto dividido en palabras como respaldo
     const words = cleanText.split(" ");
-    const firstLine = words.slice(0, 9).join(" ");
-    const secondLine = words.slice(9, 10).join(" ");
-    const thirdLine = words.slice(10).join(" ");
+    const firstLine = words.slice(0, 9).join(" "); // Primeras 9 palabras
+    const secondLine = words.slice(9, 10).join(" "); // Palabra 10
+    const thirdLine = words.slice(10).join(" "); // Resto de las palabras
     return [firstLine, secondLine, thirdLine].filter((line) => line.length > 0);
   };
 
@@ -154,7 +167,7 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
       {closeTable && studentData && (
         <div className="relative overflow-x-auto shadow-xl sm:rounded-xl mt-8">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 font-semibold">
-          <thead className="text-xm text-center text-gray-600 uppercase bg-gray-300">
+            <thead className="text-xm text-center text-gray-600 uppercase bg-gray-300">
               <tr>
                 <th scope="col" className="px-6 py-3">
                   #
@@ -174,7 +187,7 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
               </tr>
             </thead>
             <tbody>
-            {studentData?.map((student, index) => (
+              {studentData?.map((student, index) => (
                 <tr
                   key={index}
                   className="bg-white border-b text-center hover:bg-gray-100"

@@ -95,6 +95,41 @@ const SearchName: React.FC<SearchNameProps> = ({ onSearchName }) => {
       setLoading(false);
     }
   };
+  // Función para dividir el texto según palabras clave o cantidad de palabras
+  const splitText = (text: string): string[] => {
+    // Primero eliminamos espacios innecesarios
+    const cleanText = text.trim();
+
+    // Identificamos las posiciones de las palabras clave dentro del texto
+    const indexCorporacion = cleanText.indexOf("Corporación SAYAN");
+    const indexFundenorp = cleanText.indexOf("FUNDENORP");
+    const indexEscuela = cleanText.indexOf("Escuela de Posgrado");
+
+    // Verificamos que todas las palabras clave estén presentes
+    if (
+      indexCorporacion !== -1 &&
+      indexFundenorp !== -1 &&
+      indexEscuela !== -1
+    ) {
+      // Extraemos cada sección basándonos en las posiciones
+      const corporacion = cleanText
+        .substring(indexCorporacion, indexEscuela)
+        .trim(); // Desde "Corporación SAYAN" hasta "Escuela de Posgrado"
+      const escuela = cleanText.substring(indexEscuela, indexFundenorp).trim(); // Desde "Escuela de Posgrado" hasta "FUNDENORP"
+      const fundenorp = cleanText.substring(indexFundenorp).trim(); // Desde "FUNDENORP" hasta el final
+
+      // Retornar las partes en el orden: [Corporación SAYAN, Escuela, FUNDENORP]
+      return [corporacion, escuela, fundenorp];
+    }
+
+    // Si alguna palabra clave falta, devolvemos el texto dividido en palabras como respaldo
+    const words = cleanText.split(" ");
+    const firstLine = words.slice(0, 9).join(" "); // Primeras 9 palabras
+    const secondLine = words.slice(9, 10).join(" "); // Palabra 10
+    const thirdLine = words.slice(10).join(" "); // Resto de las palabras
+    return [firstLine, secondLine, thirdLine].filter((line) => line.length > 0);
+  };
+
   const tableRows = [
     {
       imgSrc: "/icons/organizadopor.svg",
@@ -232,8 +267,10 @@ const SearchName: React.FC<SearchNameProps> = ({ onSearchName }) => {
                   </td>
                   {selectedStudentData && (
                     <Modal
-                      open={openModals[index]}
-                      onClose={() => closeStudentModal(index)}
+                      open={openModals.findIndex(Boolean) !== -1}
+                      onClose={() =>
+                        closeStudentModal(openModals.findIndex(Boolean))
+                      }
                     >
                       <div className=" flex justify-center mb-4 gap-2">
                         <Image
@@ -253,49 +290,29 @@ const SearchName: React.FC<SearchNameProps> = ({ onSearchName }) => {
                           priority={true}
                         />
                       </div>
-                      <div className="max-w-md text-center rounded-md mx-auto">
+                      <div className="max-w-md text-center mx-auto">
                         {tableRows.map((row, index) => (
                           <div key={index} className="mb-4">
-                            <div className="inline-flex items-center text-white text-sm p-1 md:w-80 w-72 rounded-lg bg-slate-600 font-semibold">
+                            <div className="inline-flex items-center text-white text-sm p-1 w-72 rounded-lg bg-slate-600 font-semibold">
                               {row.imgSrc && (
                                 <Image
                                   src={row.imgSrc}
                                   alt={row.label}
-                                  className="flex lg:w-5 lg:h-5 w-5 h-5 object-contain ml-1"
-                                  width={800}
-                                  height={800}
+                                  className="w-5 h-5 object-contain ml-1"
+                                  width={200}
+                                  height={200}
                                 />
                               )}
                               <div className="flex-1 text-center">
                                 {row.label}
                               </div>
                             </div>
-
-                            <div className="flex justify-center text-gray-600 dark:text-white mt-3 mb-5 md:text-sm text-xs md:w-[410px] px-[2px] font-semibold">
-                              {row.label === "Organizado por:" ? (
-                                <span>
-                                  {row.value && (
-                                    <span>
-                                      {row.value
-                                        .split(" ")
-                                        .map((word, i, arr) => (
-                                          <React.Fragment key={i}>
-                                            {i !== arr.length - 1 ? (
-                                              word + " "
-                                            ) : (
-                                              <>
-                                                <br />
-                                                {word}
-                                              </>
-                                            )}
-                                          </React.Fragment>
-                                        ))}
-                                    </span>
-                                  )}
-                                </span>
-                              ) : (
-                                <span>{row.value}</span>
-                              )}
+                            <div className="text-gray-300 mt-3 mb-5 text-sm font-semibold">
+                              {row.label === "Organizado por:" && row.value
+                                ? splitText(row.value).map((line, index) => (
+                                    <p key={index}>{line}</p>
+                                  ))
+                                : row.value}
                             </div>
                           </div>
                         ))}

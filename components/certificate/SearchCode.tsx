@@ -88,32 +88,40 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   ];
 
   const splitText = (text: string): string[] => {
-    // Primero eliminamos espacios innecesarios y verificamos si el texto tiene las palabras clave.
+    // Primero eliminamos espacios innecesarios
     const cleanText = text.trim();
 
-    // Identificamos la posición de las palabras clave
+    // Identificamos las posiciones de las palabras clave dentro del texto
     const indexCorporacion = cleanText.indexOf("Corporación SAYAN");
     const indexFundenorp = cleanText.indexOf("FUNDENORP");
-    
+    const indexEscuela = cleanText.indexOf("Escuela de Posgrado");
 
-    // Si las palabras clave existen, dividimos el texto en las tres partes exactas.
-    if (indexFundenorp !== -1 && indexCorporacion !== -1) {
-      const firstLine = cleanText.substring(0, indexFundenorp).trim(); // Desde el inicio hasta "FUNDENORP"
-      const secondLine = cleanText
-        .substring(indexFundenorp, indexCorporacion)
-        .trim(); // "FUNDENORP"
-      const thirdLine = cleanText.substring(indexCorporacion).trim(); // "Corporación SAYAN"
+    // Verificamos que todas las palabras clave estén presentes
+    if (
+      indexCorporacion !== -1 &&
+      indexFundenorp !== -1 &&
+      indexEscuela !== -1
+    ) {
+      // Extraemos cada sección basándonos en las posiciones
+      const corporacion = cleanText
+        .substring(indexCorporacion, indexEscuela)
+        .trim(); // Desde "Corporación SAYAN" hasta "Escuela de Posgrado"
+      const escuela = cleanText.substring(indexEscuela, indexFundenorp).trim(); // Desde "Escuela de Posgrado" hasta "FUNDENORP"
+      const fundenorp = cleanText.substring(indexFundenorp).trim(); // Desde "FUNDENORP" hasta el final
 
-      return [firstLine, secondLine, thirdLine];
+      // Retornar las partes en el orden: [Corporación SAYAN, Escuela, FUNDENORP]
+      return [corporacion, escuela, fundenorp];
     }
 
-    // Si no encuentra las palabras clave, tratamos de hacer una separación por cantidad de palabras como fallback
+    // Si alguna palabra clave falta, devolvemos el texto dividido en palabras como respaldo
     const words = cleanText.split(" ");
-    const firstLine = words.slice(0, 9).join(" "); // Primera línea
-    const secondLine = words.slice(9, 10).join(" "); // Segunda línea
-    const thirdLine = words.slice(10).join(" "); // Tercera línea
+    const firstLine = words.slice(0, 9).join(" "); // Primeras 9 palabras
+    const secondLine = words.slice(9, 10).join(" "); // Palabra 10
+    const thirdLine = words.slice(10).join(" "); // Resto de las palabras
     return [firstLine, secondLine, thirdLine].filter((line) => line.length > 0);
   };
+
+ 
 
   return (
     <div className="">
@@ -145,7 +153,7 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
         </div>
       </form>
 
-      {loading && <Spinner color="primary"/>}
+      {loading && <Spinner color="primary" />}
       {studentData && (
         <Modal open={open} onClose={() => setOpen(false)}>
           <div className=" flex justify-center mb-4 gap-2">
@@ -192,7 +200,6 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
                     ))}
                   {row.value !== studentData?.institute && row.value}
                 </div>
-
               </div>
             ))}
           </div>
