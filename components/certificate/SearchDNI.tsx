@@ -161,7 +161,7 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
               type="search"
               id="default-search"
               className=" font-normal text-sm text-gray-900 border-1 border-gray-300 rounded-lg bg-white  focus:border-primaryblue  m-0"
-              placeholder={`Buscar por nombres y apellidos ${
+              placeholder={`Buscar por DNI${
                 searchType === "name" ? "nombre" : ""
               }`}
               required
