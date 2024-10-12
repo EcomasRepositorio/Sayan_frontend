@@ -2,7 +2,8 @@ import React, { useState, FormEvent } from "react";
 import { URL } from "@/components/utils/format/tokenConfig";
 import axios from "axios";
 import { SearchNameProps, Student } from "@/interface/interface";
-import Modal from "../share/Modal";
+import Modal from "../share/ModalName";
+import "../../style/globals.css";
 import { Button, Spinner } from "@nextui-org/react";
 import Image from "next/image";
 
