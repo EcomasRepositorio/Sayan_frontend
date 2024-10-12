@@ -1,9 +1,8 @@
 import React from 'react';
-import Social from "../content/Social";
 import { SlBookOpen } from "react-icons/sl";
 import './Styles.css';
 import Link from 'next/link';
-
+import Social from '../../homeContent/content/Social';
 export const Footer = () => {
   return (
     <div className=''>
@@ -17,11 +16,11 @@ export const Footer = () => {
               <p className="mb-5 text-x1 font-bold tracking-wider text-gray-50 uppercase">Contáctanos</p>
               <a href="https://api.whatsapp.com/send?phone=51978490739" target='_blank' className="flex mb-3 text-lg font-medium transition md:mb-2">
                 <img src="/footer/footer_whatsapp.svg" alt="Phone Icon" className="w-6 h-6 mr-2" />
-                <button className=" text hover:text-primarygreen hover:scale-100 duration-300">978 490 739</button>
+                <p className=" text hover:text-primarygreen hover:scale-100 duration-300">978 490 739</p>
               </a>
               <a href="mailto:capacitaciones@cimade.edu.pe" className="flex mb-3 text-lg font-medium transition md:mb-2">
               <img src="/footer/footer_correo.svg" alt="Correo Icono" className="w-6 h-6 mr-2" />
-                <button className="hover:text-primarygreen hover:scale-100 duration-300 text">capacitaciones@sayan.edu.pe</button>
+                <p className="hover:text-primarygreen hover:scale-100 duration-300 text">capacitaciones@sayan.edu.pe</p>
               </a>
 
               <a className="flex mb-3 text-lg font-medium transition md:mb-2">
@@ -30,30 +29,30 @@ export const Footer = () => {
               </a>
             </nav>
             <div className='justify-items-center ml-12'>
-              <Social />
+              <Social/>
             </div>
           </div>
           <nav className="mb-4 ml-8">
             <p className="text-center mb-3 text-xl font-bold tracking-wider text-gray-50 uppercase">Nuestra Empresa</p>
             <div className="flex flex-col items-center  ">
               <a href="/">
-                <button className=" font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Inicio</button>
+                <p className=" font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Inicio</p>
               </a>
 
               <a href="/graduate">
-                <button className=" font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300 ">Diplomados</button>
+                <p className=" font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300 ">Diplomados</p>
               </a>
 
               <a href="/certs">
-                <button className="font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Certificados</button>
+                <p className="font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Certificados</p>
               </a>
 
               <a href="/about">
-                <button className="font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Nosotros</button>
+                <p className="font-poppins  mb-3 hover:text-primarygreen hover:scale-125 duration-300">Nosotros</p>
               </a>
 
               <a href="#">
-                <button className="font-poppins  hover:text-primarygreen mb-3 hover:scale-125 duration-300">Blog</button>
+                <p className="font-poppins  hover:text-primarygreen mb-3 hover:scale-125 duration-300">Blog</p>
               </a>
             </div>
           </nav>

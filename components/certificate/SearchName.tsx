@@ -349,7 +349,7 @@ const SearchName: React.FC<SearchNameProps> = ({ onSearchName }) => {
           <h2 className="text-md font-bold text-red-600 mb-4">
             Nombre incorrecto
           </h2>
-          <h3 className="text-sm font-semibold text-gray-600">
+          <h3 className="text-sm font-semibold text-white">
             El nombre que ingresaste no se encuentra en nuestra base de datos.
           </h3>
         </div>
