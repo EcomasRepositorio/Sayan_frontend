@@ -1,16 +1,17 @@
 "use client";
-import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { FaUserPlus } from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import './Styles.css';
-
-
+import "./Styles.css";
 
 const ContactForm = () => {
-
-  const { register, formState: { errors }, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
   const [sending, setSending] = useState(false);
 
   const [reclamoChecked, setReclamoChecked] = useState(false);
@@ -37,14 +38,14 @@ const ContactForm = () => {
     if (refForm.current) {
       try {
         await emailjs.sendForm(serviceID, templateID, refForm.current, apiKey);
-        alert('¡Mensaje Enviado!');
+        alert("¡Mensaje Enviado!");
       } catch (err) {
         alert(JSON.stringify(err));
       } finally {
         setSending(false);
       }
     }
-  }
+  };
 
   const validateCheckbox = () => {
     if (!reclamoChecked && !sugerenciaChecked) {
@@ -53,108 +54,129 @@ const ContactForm = () => {
     return true;
   };
   return (
-    <section className='mt-20 mb-20'>
-    <div className='max-w-screen-lg mx-auto bg-gradient-to-r from-primaryblue to-primaryceleste rounded-xl p-8'>
-     
-    <div className='p-8 '>
-      <h1 className=' uppercase font-extrabold text-white lg:text-5xl md:text-5xl text-4xl mt-8 mb-8 text-center'>CONTÁCTANOS</h1>
-     
-      <h2 className='bg-primarygreen p-1 text-lg font-semibold text-gray-50 rounded-xl'></h2>
-    </div>
-  <form ref={refForm} onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-1 md:grid-cols-2 gap-4 p-2'>
-      <div className='text-slate-300 md:mt-4'>
-        <label
-          className=' font-bold absolute text-lg duration-500 scale-75 origin-[0]'>
+    <section
+      className=" bg-cover bg-center p-20"
+      style={{ backgroundImage: "url(/certificate/bg-cert3.jpg)" }}
+    >
+      <div className="max-w-screen-lg mx-auto bg-primaryblue/80 rounded-xl p-8">
+        <div className="p-8">
+          <h1 className="uppercase font-extrabold text-white text-center text-4xl lg:text-5xl mt-8 mb-8">
+            CONTÁCTANOS
+          </h1>
+
+          <h2 className="bg-primarygreen p-0.5 font-semibold text-gray-50 rounded-xl"></h2>
+        </div>
+
+        <form
+          ref={refForm}
+          onSubmit={handleSubmit(onSubmit)}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2"
+        >
+          {/* Nombres y Apellidos */}
+          <div className="text-slate-300 md:mt-4">
+            <label className="font-bold absolute text-lg scale-75 origin-[0]">
               Nombres y Apellidos:
-        </label>
-        <div className='relative'>
-        <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-          <FaUserPlus  />
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+                <FaUserPlus />
+              </div>
+              <input
+                type="text"
+                {...register("firstName", { required: true })}
+                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                placeholder=""
+              />
+            </div>
+            {errors.firstName && (
+              <p className="text-red-500">
+                El campo Nombres y Apellidos es obligatorio.
+              </p>
+            )}
           </div>
-        <input
-          type="text" {...register('firstName', { required: true })}
-          id='nombres'
-          name='firstName'
-          //autoFocus
-          className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5" placeholder=""/>
-        </div>
-        </div>
 
-        <div className='text-slate-300 md:mt-4'>
-        <label
-          className='font-bold absolute text-lg duration-500 scale-75 origin-[0]'>
-            Correo Electrónico:
-        </label>
-        <div className='relative'>
-        <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-          <FaUserPlus />
+          {/* Correo Electrónico */}
+          <div className="text-slate-300 md:mt-4">
+            <label className="font-bold absolute text-lg scale-75 origin-[0]">
+              Correo Electrónico:
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+                <FaUserPlus />
+              </div>
+              <input
+                type="email"
+                {...register("gmail", { required: true })}
+                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                placeholder=""
+              />
+            </div>
+            {errors.gmail && (
+              <p className="text-red-500">
+                El campo Correo Electrónico es obligatorio.
+              </p>
+            )}
           </div>
-        <input
-          type="text" {...register('gmail', { required: true })}
-          id='correo'
-          name='gmail'
-          //autoFocus
-          className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5" placeholder=""/>
-      </div>
-      </div>
 
-      <div className='text-slate-300'>
-        <label
-          className='font-bold absolute text-lg duration-500 scale-75 origin-[0]'>
-            Celular:
-        </label>
-        <div className='relative'>
-        <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-        <BsFillTelephoneFill />
+          {/* Celular */}
+          <div className="text-slate-300">
+            <label className="font-bold absolute text-lg scale-75 origin-[0]">
+              Celular:
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+                <BsFillTelephoneFill />
+              </div>
+              <input
+                type="text"
+                {...register("phoneNumber", { required: true, maxLength: 20 })}
+                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                placeholder=""
+              />
+            </div>
+            {errors.phoneNumber && (
+              <p className="text-red-500">
+                El campo Celular es obligatorio y debe tener menos de 20
+                caracteres.
+              </p>
+            )}
           </div>
-        <input
-          type="text" {...register('phoneNumber', { required: true })}
-          id='number'
-          name='phoneNumber'
-          //autoFocus
-          className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5" placeholder=""/>
-      </div>
-        {errors.nombres && <p>El campo nombre es obligatorio</p>}
-        {errors.nombres && <p>El campo nombre debe contener menos de 20 caracteres</p>}
-      </div>
 
-      <div className='text-slate-300'>
-        <label
-          className='font-bold absolute text-lg duration-500 scale-75 origin-[0]'>
-            Mensaje:
-        </label>
-        <div className='relative'>
-        <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-         
+          {/* Mensaje */}
+          <div className="text-slate-300">
+            <label className="font-bold absolute text-lg scale-75 origin-[0]">
+              Mensaje:
+            </label>
+            <div className="relative">
+              <input
+                type="text"
+                {...register("message", { required: true })}
+                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                placeholder=""
+              />
+            </div>
+            {errors.message && (
+              <p className="text-red-500">El campo Mensaje es obligatorio.</p>
+            )}
           </div>
-        <input
-          type="text" {...register('message', { required: true })}
-          id='message'
-          name='message'
-          //autoFocus
-          className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5" placeholder=""/>
+          <input
+            type="submit"
+            value={sending ? "Enviando..." : "Enviar"}
+            className="border-2 p-2 mb-6 rounded-xl bg-primaryblue flex justify-center  text-gray-200 text-xl font-bold cursor-pointer"
+          />  
+        </form>
       </div>
+
+      <div className="mt-8 flex justify-center">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center"
+        >
+          <img src="/icons/run.svg" alt="Icono" className="w-16 flex justify-center animate-bounce mt-5" />
+        </button>
       </div>
-
-      <input type="submit" value={sending ? 'Enviando...' : 'Enviar'} className=' border-2 p-2 mb-6 rounded-xl bg-primaryblue text-gray-200 text-xl font-bold cursor-pointer'/>
-    </form>
-    </div>
-
-    <div className='mt-8' style={{ display: 'flex', justifyContent: 'center' }}> {/* Contenedor que centra horizontalmente el botón */}
-  <button
-    className='' // Estilos para el botón
-    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Manejador de clic para desplazar hacia arriba
-    style={{ display: 'flex', alignItems: 'center' }} // Estilos para el botón y centrar el contenido verticalmente
-  >
-    <img src="icons/subir.png" alt="Icono" style={{ width: '60px', marginRight: '5px' }} /> {/* Ajusta la ruta y el tamaño de la imagen según tus necesidades */}
-  </button>
-</div>
-
-
-
-  </section>
-  
+    </section>
   );
-}
+};
 
 export default ContactForm;
