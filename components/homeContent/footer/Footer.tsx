@@ -60,7 +60,7 @@ export const Footer = () => {
           <nav className="mb-4 ml-8">
             {/* INFORMACION DEL FOOTER */}
             <p className="text-center text-1 font-bold tracking-wider text-gray-50 uppercase mb-4 mr-8">Acerca de nosotros </p>
-            <p className="hidden md:block text-center mr-8">Corporación Sayan se erige como una destacada institución dedicada con firmeza a la excelencia, calidad y profesionalismo, orientada a ofrecer una educación online de primer nivel, marcando un estándar insuperable en el ámbito educativo.</p>
+            <p className="hidden md:block text-center mr-8">Corporación Sayan se consolida como una institución destacada, comprometida firmemente con la excelencia, calidad y profesionalismo. Nuestra misión está orientada a ofrecer una educación online de primer nivel, estableciendo un estándar insuperable en el ámbito educativo.</p>
             <p className="md:hidden text-center mr-8">Corporación Sayan, calidad y profesionalismo dedicada a brindar una educación online de excelencia. </p>
            
 

@@ -43,7 +43,7 @@ const DeleteAllStudent = () => {
         open={deleteOpen}
         onClose={handleCloseDelete}>
         <div className="border-2 border-red-500 p-4 rounded-xl">
-          <p className='mb-5 text-center font-bold text-lg'>¿Estás seguro de que deseas eliminar todos los datos?</p>
+          <p className='mb-5 text-center text-white font-bold text-lg'>¿Estás seguro de que deseas eliminar todos los datos?</p>
           <div className="flex justify-between">
             <button
               onClick={handleDeleteAllData}

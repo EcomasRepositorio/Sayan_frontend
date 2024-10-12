@@ -88,38 +88,57 @@ const SearchName: React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   ];
 
   const splitText = (text: string): string[] => {
-    // Primero eliminamos espacios innecesarios
+    // Elimina espacios innecesarios
     const cleanText = text.trim();
-
+  
     // Identificamos las posiciones de las palabras clave dentro del texto
     const indexCorporacion = cleanText.indexOf("Corporación SAYAN");
     const indexFundenorp = cleanText.indexOf("FUNDENORP");
     const indexEscuela = cleanText.indexOf("Escuela de Posgrado");
-
-    // Verificamos que todas las palabras clave estén presentes
+    const indexUniversidad = cleanText.indexOf("Universidad Nacional de Piura");
+  
+    // Si contiene "Escuela de Posgrado"
     if (
       indexCorporacion !== -1 &&
       indexFundenorp !== -1 &&
       indexEscuela !== -1
     ) {
-      // Extraemos cada sección basándonos en las posiciones
       const corporacion = cleanText
         .substring(indexCorporacion, indexEscuela)
         .trim(); // Desde "Corporación SAYAN" hasta "Escuela de Posgrado"
-      const escuela = cleanText.substring(indexEscuela, indexFundenorp).trim(); // Desde "Escuela de Posgrado" hasta "FUNDENORP"
+      const escuela = cleanText
+        .substring(indexEscuela, indexFundenorp)
+        .trim(); // Desde "Escuela de Posgrado" hasta "FUNDENORP"
       const fundenorp = cleanText.substring(indexFundenorp).trim(); // Desde "FUNDENORP" hasta el final
-
-      // Retornar las partes en el orden: [Corporación SAYAN, Escuela, FUNDENORP]
+  
       return [corporacion, escuela, fundenorp];
     }
-
-    // Si alguna palabra clave falta, devolvemos el texto dividido en palabras como respaldo
+  
+    // Si contiene "Universidad Nacional de Piura" (y no "Escuela de Posgrado")
+    if (
+      indexCorporacion !== -1 &&
+      indexFundenorp !== -1 &&
+      indexUniversidad !== -1
+    ) {
+      const corporacion = cleanText
+        .substring(indexCorporacion, indexUniversidad)
+        .trim(); // Desde "Corporación SAYAN" hasta "Universidad Nacional de Piura"
+      const universidad = cleanText
+        .substring(indexUniversidad, indexFundenorp)
+        .trim(); // Desde "Universidad Nacional de Piura" hasta "FUNDENORP"
+      const fundenorp = cleanText.substring(indexFundenorp).trim(); // Desde "FUNDENORP" hasta el final
+  
+      return [corporacion, universidad, fundenorp];
+    }
+  
+    // Si no encuentra las palabras clave, devuelve el texto dividido en palabras
     const words = cleanText.split(" ");
     const firstLine = words.slice(0, 9).join(" "); // Primeras 9 palabras
     const secondLine = words.slice(9, 10).join(" "); // Palabra 10
     const thirdLine = words.slice(10).join(" "); // Resto de las palabras
     return [firstLine, secondLine, thirdLine].filter((line) => line.length > 0);
   };
+  
 
  
 
