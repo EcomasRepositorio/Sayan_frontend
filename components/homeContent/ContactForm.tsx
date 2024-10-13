@@ -55,12 +55,12 @@ const ContactForm = () => {
   };
   return (
     <section
-      className=" bg-cover bg-center p-20"
+      className="bg-cover bg-center p-10 sm:p-20"
       style={{ backgroundImage: "url(/certificate/bg-cert3.jpg)" }}
     >
-      <div className="max-w-screen-lg mx-auto bg-primaryblue/80 rounded-xl p-8">
-        <div className="p-8">
-          <h1 className="uppercase font-extrabold text-white text-center text-4xl lg:text-5xl mt-8 mb-8">
+      <div className="max-w-screen-lg mx-auto bg-primaryblue/80 rounded-xl p-4 sm:p-8">
+        <div className="p-4 sm:p-8">
+          <h1 className="uppercase font-extrabold text-white text-center text-3xl sm:text-4xl lg:text-5xl mt-4 sm:mt-8 mb-4 sm:mb-8">
             CONTÁCTANOS
           </h1>
 
@@ -70,21 +70,21 @@ const ContactForm = () => {
         <form
           ref={refForm}
           onSubmit={handleSubmit(onSubmit)}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2"
+          className="grid grid-cols-1 gap-4 p-2 sm:grid-cols-2"
         >
           {/* Nombres y Apellidos */}
-          <div className="text-slate-300 md:mt-4">
-            <label className="font-bold absolute text-lg scale-75 origin-[0]">
+          <div className="text-slate-300 sm:mt-4">
+            <label className="font-bold text-lg scale-75 origin-[0]">
               Nombres y Apellidos:
             </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+            <div className="relative mt-6">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
                 <FaUserPlus />
               </div>
               <input
                 type="text"
                 {...register("firstName", { required: true })}
-                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                className="bg-gray-100 border-2 border-gray-300 text-gray-600 text-sm rounded-lg block w-full pl-8 p-2.5"
                 placeholder=""
               />
             </div>
@@ -96,18 +96,18 @@ const ContactForm = () => {
           </div>
 
           {/* Correo Electrónico */}
-          <div className="text-slate-300 md:mt-4">
-            <label className="font-bold absolute text-lg scale-75 origin-[0]">
+          <div className="text-slate-300 sm:mt-4">
+            <label className="font-bold text-lg scale-75 origin-[0]">
               Correo Electrónico:
             </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+            <div className="relative mt-6">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
                 <FaUserPlus />
               </div>
               <input
                 type="email"
                 {...register("gmail", { required: true })}
-                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                className="bg-gray-100 border-2 border-gray-300 text-gray-600 text-sm rounded-lg block w-full pl-8 p-2.5"
                 placeholder=""
               />
             </div>
@@ -119,18 +119,18 @@ const ContactForm = () => {
           </div>
 
           {/* Celular */}
-          <div className="text-slate-300">
-            <label className="font-bold absolute text-lg scale-75 origin-[0]">
+          <div className="text-slate-300 sm:mt-4">
+            <label className="font-bold text-lg scale-75 origin-[0]">
               Celular:
             </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+            <div className="relative mt-6">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
                 <BsFillTelephoneFill />
               </div>
               <input
                 type="text"
                 {...register("phoneNumber", { required: true, maxLength: 20 })}
-                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                className="bg-gray-100 border-2 border-gray-300 text-gray-600 text-sm rounded-lg block w-full pl-8 p-2.5"
                 placeholder=""
               />
             </div>
@@ -143,15 +143,15 @@ const ContactForm = () => {
           </div>
 
           {/* Mensaje */}
-          <div className="text-slate-300">
-            <label className="font-bold absolute text-lg scale-75 origin-[0]">
+          <div className="text-slate-300 sm:col-span-2">
+            <label className="font-bold text-lg scale-75 origin-[0]">
               Mensaje:
             </label>
-            <div className="relative">
+            <div className="relative mt-6">
               <input
                 type="text"
                 {...register("message", { required: true })}
-                className="bg-gray-100 border-2 mt-6 border-gray-300 text-gray-600 text-sm rounded-lg block w-full ps-8 p-2.5"
+                className="bg-gray-100 border-2 border-gray-300 text-gray-600 text-sm rounded-lg block w-full pl-8 p-2.5"
                 placeholder=""
               />
             </div>
@@ -159,11 +159,12 @@ const ContactForm = () => {
               <p className="text-red-500">El campo Mensaje es obligatorio.</p>
             )}
           </div>
+
           <input
             type="submit"
             value={sending ? "Enviando..." : "Enviar"}
-            className="border-2 p-2 mb-6 rounded-xl bg-primaryblue flex justify-center  text-gray-200 text-xl font-bold cursor-pointer"
-          />  
+            className="border-2 p-2 mb-6 rounded-xl bg-primaryblue text-gray-200 text-xl font-bold cursor-pointer sm:col-span-2"
+          />
         </form>
       </div>
 
@@ -172,7 +173,11 @@ const ContactForm = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center"
         >
-          <img src="/icons/run.svg" alt="Icono" className="w-16 flex justify-center animate-bounce mt-5" />
+          <img
+            src="/icons/run.svg"
+            alt="Icono"
+            className="w-12 sm:w-16 animate-bounce mt-5"
+          />
         </button>
       </div>
     </section>
