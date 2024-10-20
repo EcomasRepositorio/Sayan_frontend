@@ -111,26 +111,10 @@ const GraduateIngenieriaV = () => {
                   </div>
                 </Link>
               </div>
-
-              <div className="w-full cursor-pointer">
-                <div>
-                  <a
-                    onClick={handleClick}
-                    className="border-2 border-primaryceleste w-full flex items-center justify-center text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="items-center text-xs uppercase inline-flex">
-                      <FaRegFilePdf className="text-red-500 text-lg" />
-                      <h1 className="ml-1">Plan de estudios</h1>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
               <div className="w-full">
                 <a
                   className="border-2  border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
-                  onClick={() => handleImageClick("/image/image.jpg")}
+                  onClick={() => handleImageClick("/image/cert.png")}
                 >
                   <div className="items-center text-xs uppercase inline-flex cursor-pointer">
                     <PiCertificate className="text-primaryceleste text-lg" />

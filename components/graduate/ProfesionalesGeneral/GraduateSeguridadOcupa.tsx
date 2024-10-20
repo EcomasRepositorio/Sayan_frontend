@@ -105,22 +105,10 @@ const GraduateTecnico = () => {
                   </div>
                 </Link>
               </div>
-              <div className="w-full">
-                <a
-                  onClick={handleClick}
-                  className="cursor-pointer border-2 border-primaryceleste w-full flex items-center justify-center mb- text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
-                  rel="noopener noreferrer"
-                >
-                  <div className="items-center text-xs uppercase inline-flex">
-                    <FaRegFilePdf className="text-red-500 text-lg" />
-                    <h1 className="ml-1">Plan de estudios</h1>
-                  </div>
-                </a>
-              </div>
               <div>
                 <a
                   className="cursor-pointer border-2 border-primaryceleste w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
-                  onClick={() => handleImageClick("/image/image.jpg")}
+                  onClick={() => handleImageClick("/image/cert.png")}
                 >
                   <div className=" items-center text-xs uppercase inline-flex">
                     <PiCertificate className="text-primaryceleste text-lg" />
@@ -146,14 +134,14 @@ const GraduateTecnico = () => {
               className="p-1 px-4 border flex items-center justify-between mb-4 text-gray-100 bg-primaryblue font-bold rounded-xl w-full hover:scale-105 duration-300"
               style={{ zIndex: 0 }}
             >
-              <h1 className="hover:scale-110 duration-300 uppercase text-">
+              <h1 className="hover:scale-110 duration-100 uppercase text-">
                 Lista de Módulos
               </h1>
               <div>
                 {isAccordionOpen1 ? (
-                  <BiChevronUp className="z-0 text-5xl hover:scale-150 duration-300" />
+                  <BiChevronUp className="z-index text-5xl hover:scale-150 duration-300" />
                 ) : (
-                  <BiChevronDown className="z-0 text-5xl hover:scale-150 duration-300" />
+                  <BiChevronDown className="z-index text-5xl hover:scale-150 duration-300" />
                 )}
               </div>
             </button>
