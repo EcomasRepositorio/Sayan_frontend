@@ -28,7 +28,7 @@ const TestingPage: React.FC<Props> = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="py-8  mx-auto max-w-screen-xl lg:py-10">
+        <div className="py-8 mx-auto max-w-screen-xl lg:py-10">
           <div className="" style={{ position: "relative", width: "100%" }}>
             <div
               className="bg-primaryblue/75 rounded-lg p-8 md:p-12 mb-50 mx-2"
