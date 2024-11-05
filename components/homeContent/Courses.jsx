@@ -88,28 +88,27 @@ const Course = () => {
         </p>
       </div>
 
-      {/* Carrusel para pantallas móviles */}
-      <div className="block md:hidden">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={10}
-          slidesPerView={1}
-          centeredSlides={true}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          className="w-full mx-auto"
-        >
-          {courses.map((course, index) => (
-            <SwiperSlide key={index}>{renderCourseCard(course, index)}</SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* Grid para pantallas medianas y grandes */}
-      <div className="hidden md:grid lg:grid-cols-3 md:grid-cols-2 max-w-screen-xl mx-auto justify-center items-center gap-10 text-white mb-6">
-        {courses.map(renderCourseCard)}
-      </div>
+      {/* Carrusel para todos los tamaños de pantalla */}
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
+        centeredSlides={false}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        loop={true}
+        breakpoints={{
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 40 },
+        }}
+        className="w-full mx-auto max-w-[1400px]"
+      >
+        {courses.map((course, index) => (
+          <SwiperSlide key={index}>{renderCourseCard(course, index)}</SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };

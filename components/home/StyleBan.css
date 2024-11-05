@@ -54,8 +54,8 @@
 }
 .carousel .list .item .buttons{
     display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
+    grid-template-columns: repeat(2, 430px);
+    grid-template-rows: 900px;
     gap: 5px;
     margin-top: 20px;
 
