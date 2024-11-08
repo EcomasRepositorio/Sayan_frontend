@@ -9,40 +9,99 @@ const Course = () => {
   const courses = [
     {
       title: "Valoración Económica Ambiental",
-      image: "/courses/valorizacion_economica.png",
+      image: "/CURSOS/1.webp",
       description:
         "La valoración económica ambiental implica evaluar tanto los beneficios directos como los indirectos que proporciona el medio ambiente...",
     },
     {
       title: "Fundamentos e Interpretación de ISO 9001",
-      image: "/courses/fundamentos.png",
+      image: "/CURSOS/2.webp",
       description:
         "Los sistemas de gestión de calidad ISO 9001 se basan en principios y directrices para garantizar que una organización cumpla con los estándares de calidad...",
     },
     {
       title: "Control técnico y calidad en obras",
-      image: "/courses/control_calidad.png",
+      image: "/CURSOS/3.webp",
       description:
         "El control técnico y la calidad en obras son procesos y prácticas utilizadas para garantizar que los proyectos de construcción se lleven a cabo de manera eficiente...",
     },
     {
       title: "Monitoreo y evaluación de la calidad de aire",
-      image: "/courses/monitoreo.png",
+      image: "/CURSOS/4.webp",
       description:
         "El monitoreo y la evaluación de la calidad del aire se centran en medir y analizar los contaminantes presentes en la atmósfera...",
     },
     {
       title: "Análisis de suelo, agua y foliar",
-      image: "/courses/agua_suelo.png",
+      image: "/CURSOS/5.webp",
       description:
         "El análisis de suelo, agua y foliar son procedimientos esenciales en la evaluación de la calidad y características de elementos en el entorno natural...",
     },
     {
       title: "Fertirriego de cultivos y monitoreo",
-      image: "/courses/fertirriego.png",
+      image: "/CURSOS/6.webp",
       description:
         "El fertirriego de cultivos es una técnica agrícola que combina fertilización y riego al aplicar nutrientes directamente a través del agua de riego...",
     },
+/* 
+    {
+      title: "Arqueología en proyectos viales",
+      image: "/courses/valorizacion_economica.png",
+      description:
+        "Explora la preservación del patrimonio cultural en la construcción de infraestructuras viales.",
+    },
+    {
+      title: "Monitoreo Biológico",
+      image: "/courses/fundamentos.png",
+      description:
+        "Aprende técnicas para evaluar la salud de ecosistemas y biodiversidad.",
+    },
+    {
+      title: "Estructuras en carreteras - puentes",
+      image: "/CURSOS/8.webp",
+      description:
+        "Diseño y construcción de estructuras viales seguras y eficientes.",
+    },
+    {
+      title: "Nutrición vegetal y principios de fertirriego",
+      image: "/courses/monitoreo.png",
+      description:
+        "Optimiza el riego y la nutrición de cultivos con técnicas avanzadas.",
+    },
+    {
+      title: "* Técnicas de laboratorio forense",
+      image: "/courses/agua_suelo.png",
+      description:
+        "Análisis de evidencias en el laboratorio para la resolución de crímenes.",
+    },
+    {
+      title: "* Monitoreo de agentes ocupacionales",
+      image: "/courses/fertirriego.png",
+      description: "Identifica y evalúa riesgos en el ambiente laboral.",
+    },
+    {
+      title: "* Inspección y muestreo de alimentos",
+      image: "/courses/valorizacion_economica.png",
+      description:
+        "Asegura la calidad e inocuidad de los productos alimentarios.",
+    },
+    {
+      title: "* Control tecnico y calidad en obras",
+      image: "/courses/fundamentos.png",
+      description: "Gestión de calidad y control en proyectos de construcción.",
+    },
+    {
+      title: "* Monitoreo de la calidad de agua",
+      image: "/CURSOS/8.webp",
+      description:
+        "Evalúa y protege los recursos hídricos para la salud pública.",
+    },
+    {
+      title: "* Sistemas de riego tecnificado por goteo",
+      image: "/courses/monitoreo.png",
+      description:
+        "Aprende a implementar riego por goteo para una agricultura eficiente.",
+    }, */
   ];
 
   const renderCourseCard = (course, index) => (
@@ -106,7 +165,9 @@ const Course = () => {
         className="w-full mx-auto max-w-[1400px]"
       >
         {courses.map((course, index) => (
-          <SwiperSlide key={index}>{renderCourseCard(course, index)}</SwiperSlide>
+          <SwiperSlide key={index}>
+            {renderCourseCard(course, index)}
+          </SwiperSlide>
         ))}
       </Swiper>
     </section>

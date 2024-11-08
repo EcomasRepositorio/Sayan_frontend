@@ -1,39 +1,35 @@
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 const Graduates = () => {
   // Función para renderizar las tarjetas de diplomados
   const renderCourseCards = () => (
     <>
-      {graduates.map((graduate, index) => (
-        <SwiperSlide key={index}>
-          <figure className="boxG relative m-3 overflow-hidden rounded-xl shadow-lg max-w-xs transition-transform duration-300 transform hover:scale-105">
-            <Link href={graduate.link}>
-              <div className="figuree absolute w-full bottom-0 p-4 text-center bg-blue-800 text-white transform translate-y-full transition-transform duration-500 hover:translate-y-0 max-h-[300px] overflow-hidden">
-                <div className="lg:text-2xl md:text-xl text-lg font-light mt-4">
-                  {graduate.title}
+      {graduates.map((graduate, index) => {
+        const whatsappLink = `https://api.whatsapp.com/send?phone=51978490739&text=${encodeURIComponent(`Hola, estoy interesado en el diplomado de ${graduate.title}`)}`;
+  
+        return (
+          <SwiperSlide key={index}>
+            <figure className="boxG relative m-3 overflow-hidden rounded-xl shadow-lg w-[900px] h-[350px] transition-transform duration-300 transform hover:scale-105">
+              <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <div className="figuree absolute w-full bottom-0 p-4 text-center bg-blue-800 text-white transform translate-y-full transition-transform duration-500 hover:translate-y-0">
+                  <div className="lg:text-2xl md:text-xl text-lg font-light mt-4">
+                    {graduate.title}
+                  </div>
+                  <p className="socials mt-4">
+                    {graduate.socials.map((icon, idx) => (
+                      <i key={idx} className={`fa ${icon.class} mx-2 text-lg`}></i>
+                    ))}
+                  </p>
                 </div>
-                <p className="socials mt-4">
-                  {graduate.socials.map((icon, idx) => (
-                    <i
-                      key={idx}
-                      className={`fa ${icon.class} mx-2 text-lg`}
-                    ></i>
-                  ))}
-                </p>
-              </div>
-
-              <img
-                className="w-[800px] rounded-xl"
-                alt={graduate.alt}
-                src={graduate.image}
-              />
-            </Link>
-          </figure>
-        </SwiperSlide>
-      ))}
+                <img className=" h-full object-cover rounded-xl" alt={graduate.alt} src={graduate.image} />
+              </Link>
+            </figure>
+          </SwiperSlide>
+        );
+      })}
     </>
   );
 
@@ -47,11 +43,10 @@ const Graduates = () => {
 
       {/* Carrusel para todos los tamaños de pantalla */}
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
         centeredSlides={false}
-        navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         loop={true}
@@ -60,7 +55,7 @@ const Graduates = () => {
           768: { slidesPerView: 2, spaceBetween: 30 },
           1024: { slidesPerView: 3, spaceBetween: 40 },
         }}
-        className="w-full mx-auto max-w-[1400px]"
+        className="w-full mx-auto max-w-[1500px]"
       >
         {renderCourseCards()}
       </Swiper>
@@ -68,11 +63,12 @@ const Graduates = () => {
   );
 };
 
+
 // Datos de los diplomados
 const graduates = [
   {
     title: "ASISTENTE TÉCNICO EN OBRAS",
-    image: "/DIPLOMADOS/1.webp",
+    image: "/DIPLOMADOS-02/1.webp",
     alt: "Ingeniería Civil",
     link: "/graduate",
     socials: [
@@ -84,9 +80,10 @@ const graduates = [
   },
   {
     title: "INGENIERÍA VIAL",
-    image: "/DIPLOMADOS/2.webp",
+    image: "/DIPLOMADOS-02/2.webp",
     alt: "Ingeniería Ambiental",
-    link: "/graduate",
+    link: `#`,
+    target: "_blank" ,
     socials: [
       { class: "fa-facebook" },
       { class: "fa-twitter" },
@@ -96,7 +93,7 @@ const graduates = [
   },
   {
     title: "INGENIERÍA DE PUENTES",
-    image: "/DIPLOMADOS/3.webp",
+    image: "/DIPLOMADOS-02/3.webp",
     alt: "Ingeniería Agrónoma",
     link: "/graduate",
     socials: [
@@ -108,7 +105,7 @@ const graduates = [
   },
   {
     title: "ESTUDIO DE IMPACTO AMBIENTAL",
-    image: "/DIPLOMADOS/4.webp",
+    image: "/DIPLOMADOS-02/4.webp",
     alt: "Ingeniería Alimentaria",
     link: "/graduate",
     socials: [
@@ -120,7 +117,7 @@ const graduates = [
   },
   {
     title: "GESTIÓN Y MANEJO INTEGRAL DE RESIDUOS SÓLIDOS",
-    image: "/DIPLOMADOS/5.webp",
+    image: "/DIPLOMADOS-02/5.webp",
     alt: "Profesiones en General",
     link: "/graduate",
     socials: [
@@ -132,7 +129,7 @@ const graduates = [
   },
   {
     title: "MONITOREO Y EVALUACIÓN DE LA CALIDAD AMBIENTAL",
-    image: "/DIPLOMADOS/6.webp",
+    image: "/DIPLOMADOS-02/6.webp",
     alt: "Profesiones en General",
     link: "/graduate",
     socials: [
@@ -144,7 +141,7 @@ const graduates = [
   },
   {
     title: "RIEGO Y FERTIRRIEGO",
-    image: "/DIPLOMADOS/7.webp",
+    image: "/DIPLOMADOS-02/7.webp",
     alt: "Profesiones en General",
     link: "/graduate",
     socials: [
@@ -156,7 +153,7 @@ const graduates = [
   },
   {
     title: "SISTEMA DE RIEGO TECNIFICADO",
-    image: "/DIPLOMADOS/8.webp",
+    image: "/DIPLOMADOS-02/8.webp",
     alt: "Profesiones en General",
     link: "/graduate",
     socials: [
@@ -168,7 +165,7 @@ const graduates = [
   },
   {
     title: "GESTIÓN DE LA CALIDAD E INOCUIDAD ALIMENTARIA",
-    image: "/DIPLOMADOS/10.webp",
+    image: "/DIPLOMADOS-02/9.webp",
     alt: "Profesiones en General",
     link: "/graduate",
     socials: [
@@ -180,7 +177,7 @@ const graduates = [
   },
   {
     title: "SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE",
-    image: "/DIPLOMADOS/11.webp",
+    image: "/DIPLOMADOS-02/10.webp",
     alt: "Profesiones en General",
     link: "/graduate",
     socials: [
@@ -190,6 +187,12 @@ const graduates = [
       { class: "fa-linkedin" },
     ],
   },
+
+
+
+  /* 
+  
+  */
 ];
 
 export default Graduates;
