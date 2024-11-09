@@ -9,6 +9,11 @@ import styles from "@/style/index";
 //ingenieria de puentes
 //IngBridge
 
+
+
+
+
+
 const modulesIngBridge = [
   { name: "Diseño sísmico en puentes AASHTO-LRFD", image: "/cursos_gpt/9ing_puentes/1.webp" },
   { name: "Mantenimiento y conservación de puentes", image: "/cursos_gpt/9ing_puentes/2.webp" },

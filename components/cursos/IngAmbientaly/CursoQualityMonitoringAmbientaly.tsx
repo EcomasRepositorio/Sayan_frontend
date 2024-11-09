@@ -11,6 +11,9 @@ import { pagination } from "@nextui-org/react";
 //MONITOREO Y EVALUACIÓN DE LA CALIDAD AMBIENTAL
 
 
+
+
+
 const modulesQualityMonitoringAmbientaly = [
   { name: "Monitoreo y evaluación de la calidad de suelo", image: "/cursos_gpt/3calidad-ambiental/1.webp" },
   { name: "Monitoreo y evaluación de radiaciones no ionizantes", image: "/cursos_gpt/3calidad-ambiental/2.webp" },

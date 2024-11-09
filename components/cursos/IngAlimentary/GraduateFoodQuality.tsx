@@ -9,6 +9,11 @@ import styles from '@/style/index';
 //GESTIÓN DE LA CALIDAD E INOCUIDAD ALIMENTARIA
 //FoodQuality
 
+
+
+
+
+
 const modulesFoodQuality = [
   { name: "Interpretación e implementación de la norma ISO 31000 - Gestión de Riesgos", image: "/cursos_gpt/11gestion_calidad/1.webp" },
   { name: "Programas Pre-requisitos con base en ISO 22002-1 y BRC v.09", image: "/cursos_gpt/11gestion_calidad/2.webp" },

@@ -11,6 +11,9 @@ import styles from '@/style/index';
 //GESTIÓN Y MANEJO INTEGRAL DE RESIDUOS SÓLIDOS
 
 
+
+
+
 const modulesSolidWaste = [
   { name: "Gestión y manejo de residuos sólidos en minería", image: "/cursos_gpt/2gestionymanejo/1.webp" },
   { name: "Gestión y manejo de residuos sólidos de construcción", image: "/cursos_gpt/2gestionymanejo/2.webp" },

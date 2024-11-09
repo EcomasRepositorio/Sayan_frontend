@@ -10,6 +10,11 @@ import styles from '@/style/index';
 //sistema de riego tecnificado 
 
 
+
+
+
+
+
 const modulesTechnicalIrrigation = [
   { name: "Sistemas de riego tecnificado por goteo", image: "/cursos_gpt/6riego-tec/1.webp" },
   { name: "Fertiirrigación", image: "/cursos_gpt/6riego-tec/2.webp" },

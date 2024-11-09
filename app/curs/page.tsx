@@ -13,6 +13,10 @@ import Whatsapp from "@/components/whatsapp/Index";
 import CursoQualityMonitoringAmbientaly from "@/components/cursos/IngAmbientaly/CursoQualityMonitoringAmbientaly";
 import CursoManagementAmbientaly from "@/components/cursos/IngAmbientaly/CursoManagementAmbientaly";
 
+
+
+
+
 const Graduate = () => {
   return (
     <section id="/graduate">

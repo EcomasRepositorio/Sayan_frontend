@@ -8,6 +8,11 @@ import styles from '@/style/index';
 
 //riego y fetiriengo
 
+
+
+
+
+
 const modulesirrigation = [
   { name: "Nutrición vegetal y principios de fertirriego", image: "/cursos_gpt/5riegoyferti/1.webp" },
   { name: "Riego tecnificado por aspersión", image: "/cursos_gpt/5riegoyferti/2.webp" },

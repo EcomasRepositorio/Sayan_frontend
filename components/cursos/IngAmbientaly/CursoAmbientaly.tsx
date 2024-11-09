@@ -6,6 +6,9 @@ import "swiper/swiper-bundle.css";
 import Image from "next/image";
 import styles from "@/style/index";
 
+
+
+
 //ESTUDIO DE IMPACTO AMBIENTAL
 
 

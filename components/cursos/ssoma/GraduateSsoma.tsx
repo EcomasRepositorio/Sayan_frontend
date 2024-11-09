@@ -9,6 +9,11 @@ import styles from '@/style/index';
 //SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE
 //Ssoma
 
+
+
+
+
+
 const modulesSsoma = [
   { name: "Elaboración de matriz IPERC - mapa de riesgos", image: "/cursos_gpt/12ssoma/1.webp" },
   { name: "Comité de seguridad y salud en el trabajo", image: "/cursos_gpt/12ssoma/2.webp" },

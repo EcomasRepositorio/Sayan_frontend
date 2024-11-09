@@ -9,6 +9,10 @@ import styles from '@/style/index';
 //ASISTENTE TECNICO EN OBRAS
 //TechnicalAssistant
 
+
+
+
+
 const modulesTechnicalAssistant = [
   { name: "Planificación y programación de obras", image: "/cursos_gpt/7asistente-obras/1.webp" },
   { name: "Control de obras", image: "/cursos_gpt/7asistente-obras/2.webp" },

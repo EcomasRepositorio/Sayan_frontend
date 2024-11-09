@@ -9,6 +9,9 @@ import styles from '@/style/index';
 //RESIDENCIA Y SUPERVISIÓN DE OBRAS
 //WorksSupervision
 
+
+
+
 const modulesWorksSupervision = [
   { name: "Planeamiento Y Programación de Obras", image: "/cursos_gpt/10planeacion_obras/1.webp" },
   { name: "Informes de obra", image: "/cursos_gpt/10planeacion_obras/2.webp" },
