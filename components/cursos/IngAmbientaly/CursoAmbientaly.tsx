@@ -8,6 +8,9 @@ import styles from "@/style/index";
 
 //ESTUDIO DE IMPACTO AMBIENTAL
 
+
+
+
 const modulesAmbientaly = [
   {name: "Elaboración de mapas temáticos con ArcGIS",image: "/CURSOS/costos.webp",},
   { name: "Participación ciudadana", image: "/CURSOS/esquema.webp" },
