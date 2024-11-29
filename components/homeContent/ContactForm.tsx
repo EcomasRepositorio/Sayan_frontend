@@ -31,7 +31,7 @@ const ContactForm = () => {
   const onSubmit: SubmitHandler<any> = async (data, event) => {
     event?.preventDefault();
     setSending(true);
-    const serviceID = "service_i88as6f";
+    const serviceID = "service_t41ltgf";
     const templateID = "template_5xocaql";
     const apiKey = "g-1IPnSH_2rU34udz";
     if (refForm.current) {
